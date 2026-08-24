@@ -31,6 +31,9 @@ db.exec(`
     mjj_kbji_label TEXT NOT NULL,
     sample_count INTEGER DEFAULT 1,
     variants TEXT,
+    action_type TEXT CHECK(action_type IN ('CREATE', 'UPDATE', 'DELETE')) DEFAULT 'CREATE',
+    target_case_id INTEGER,
+    proposer_notes TEXT,
     status TEXT CHECK(status IN ('PENDING', 'APPROVED', 'REJECTED')) DEFAULT 'PENDING',
     admin_notes TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -42,6 +45,13 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_kbli ON survey_cases(mjj_kbli_code);
   CREATE INDEX IF NOT EXISTS idx_kbji ON survey_cases(mjj_kbji_code);
 `);
+
+// Apply column migrations if table already existed
+try { db.exec("ALTER TABLE survey_cases ADD COLUMN sample_count INTEGER DEFAULT 1;"); } catch {}
+try { db.exec("ALTER TABLE survey_cases ADD COLUMN variants TEXT;"); } catch {}
+try { db.exec("ALTER TABLE survey_cases ADD COLUMN action_type TEXT DEFAULT 'CREATE';"); } catch {}
+try { db.exec("ALTER TABLE survey_cases ADD COLUMN target_case_id INTEGER;"); } catch {}
+try { db.exec("ALTER TABLE survey_cases ADD COLUMN proposer_notes TEXT;"); } catch {}
 
 export function reseedDatabase() {
   console.log('Re-seeding SQLite database with consolidated deduplicated records...');
@@ -66,6 +76,9 @@ export function reseedDatabase() {
       mjj_kbji_label TEXT NOT NULL,
       sample_count INTEGER DEFAULT 1,
       variants TEXT,
+      action_type TEXT CHECK(action_type IN ('CREATE', 'UPDATE', 'DELETE')) DEFAULT 'CREATE',
+      target_case_id INTEGER,
+      proposer_notes TEXT,
       status TEXT CHECK(status IN ('PENDING', 'APPROVED', 'REJECTED')) DEFAULT 'PENDING',
       admin_notes TEXT,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP,

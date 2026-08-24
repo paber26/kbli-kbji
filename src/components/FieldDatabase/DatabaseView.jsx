@@ -14,7 +14,10 @@ import {
   Edit3, 
   Trash2, 
   PlusCircle, 
-  RotateCcw
+  RotateCcw,
+  User,
+  HelpCircle,
+  FileQuestion
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import CaseDetailModal from './CaseDetailModal';
@@ -22,7 +25,8 @@ import {
   fetchAdminContributions, 
   approveContribution, 
   rejectContribution, 
-  deleteContribution, 
+  proposeEditContribution, 
+  proposeDeleteContribution, 
   fetchStats 
 } from '../../utils/api';
 
@@ -32,7 +36,15 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
   const [sectorFilter, setSectorFilter] = useState('ALL');
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedRecord, setSelectedRecord] = useState(null);
-  const [editingItem, setEditingItem] = useState(null);
+
+  // Proposal Modals
+  const [editProposalItem, setEditProposalItem] = useState(null);
+  const [deleteProposalItem, setDeleteProposalItem] = useState(null);
+  const [proposerName, setProposerName] = useState('');
+  const [proposerNotes, setProposerNotes] = useState('');
+  const [isSubmittingProposal, setIsSubmittingProposal] = useState(false);
+
+  // Admin Reject Modal
   const [rejectingItem, setRejectingItem] = useState(null);
   const [rejectReason, setRejectReason] = useState('');
 
@@ -41,7 +53,6 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
   const [stats, setStats] = useState({ total: 0, approved: 0, pending: 0, rejected: 0 });
   const pageSize = 15;
 
-  // Load items from API based on active sub tab
   const loadData = async () => {
     setLoading(true);
     try {
@@ -101,8 +112,67 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
     }
   };
 
-  // Actions
-  const handleQuickApprove = async (item) => {
+  // Submit Public Edit Proposal
+  const handleSubmitEditProposal = async (e) => {
+    e.preventDefault();
+    if (!editProposalItem) return;
+
+    setIsSubmittingProposal(true);
+    try {
+      await proposeEditContribution({
+        target_case_id: editProposalItem.db_id,
+        contributor_name: proposerName.trim() || 'Pengusul Lapangan',
+        occtle: editProposalItem.mjj.occtle,
+        occmtd: editProposalItem.mjj.occmtd,
+        bidang: editProposalItem.mjj.bidang,
+        kbli_code: editProposalItem.mjj.kbli_code,
+        kbli_label: editProposalItem.mjj.kbli_label,
+        kbji_code: editProposalItem.mjj.kbji_code,
+        kbji_label: editProposalItem.mjj.kbji_label,
+        notes: proposerNotes.trim()
+      });
+
+      alert('Usulan perbaikan data berhasil dikirim! Perubahan akan ditinjau dan disetujui terlebih dahulu oleh Admin BPS.');
+      setEditProposalItem(null);
+      setProposerName('');
+      setProposerNotes('');
+      await loadData();
+      if (onDataUpdated) onDataUpdated();
+    } catch (err) {
+      alert(err.message || 'Gagal mengirim usulan perbaikan.');
+    } finally {
+      setIsSubmittingProposal(false);
+    }
+  };
+
+  // Submit Public Delete Proposal
+  const handleSubmitDeleteProposal = async (e) => {
+    e.preventDefault();
+    if (!deleteProposalItem) return;
+
+    setIsSubmittingProposal(true);
+    try {
+      await proposeDeleteContribution({
+        target_case_id: deleteProposalItem.db_id,
+        contributor_name: proposerName.trim() || 'Pengusul Lapangan',
+        reason: proposerNotes.trim() || 'Data tidak sesuai atau duplikasi'
+      });
+
+      alert('Permohonan penghapusan data telah diajukan dan menunggu persetujuan Admin BPS.');
+      setDeleteProposalItem(null);
+      setProposerName('');
+      setProposerNotes('');
+      await loadData();
+      if (onDataUpdated) onDataUpdated();
+    } catch (err) {
+      alert(err.message || 'Gagal mengirim permohonan penghapusan.');
+    } finally {
+      setIsSubmittingProposal(false);
+    }
+  };
+
+  // Admin Approve Action (executes CREATE / UPDATE / DELETE)
+  const handleAdminApprove = async (item) => {
     try {
       await approveContribution(item.db_id, { reviewed_by: 'Admin BPS Minsel' });
       try {
@@ -111,56 +181,23 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
       await loadData();
       if (onDataUpdated) onDataUpdated();
     } catch (err) {
-      alert(err.message || 'Gagal menyetujui data.');
+      alert(err.message || 'Gagal menyetujui usulan.');
     }
   };
 
-  const handleSaveEditAndApprove = async (e) => {
-    e.preventDefault();
-    if (!editingItem) return;
-
-    try {
-      await approveContribution(editingItem.db_id, {
-        occtle: editingItem.mjj.occtle,
-        occmtd: editingItem.mjj.occmtd,
-        bidang: editingItem.mjj.bidang,
-        kbli_code: editingItem.mjj.kbli_code,
-        kbli_label: editingItem.mjj.kbli_label,
-        kbji_code: editingItem.mjj.kbji_code,
-        kbji_label: editingItem.mjj.kbji_label,
-        reviewed_by: 'Admin BPS Minsel'
-      });
-      setEditingItem(null);
-      await loadData();
-      if (onDataUpdated) onDataUpdated();
-    } catch (err) {
-      alert(err.message || 'Gagal menyimpan perubahan.');
-    }
-  };
-
-  const handleConfirmReject = async (e) => {
+  // Admin Reject Action
+  const handleAdminReject = async (e) => {
     e.preventDefault();
     if (!rejectingItem) return;
 
     try {
-      await rejectContribution(rejectingItem.db_id, rejectReason || 'Uraian tidak memenuhi standar klasifikasi BPS.');
+      await rejectContribution(rejectingItem.db_id, rejectReason || 'Usulan tidak disetujui oleh admin.');
       setRejectingItem(null);
       setRejectReason('');
       await loadData();
       if (onDataUpdated) onDataUpdated();
     } catch (err) {
-      alert(err.message || 'Gagal menolak data.');
-    }
-  };
-
-  const handleDelete = async (id) => {
-    if (!window.confirm('Hapus data ini secara permanen dari database?')) return;
-    try {
-      await deleteContribution(id);
-      await loadData();
-      if (onDataUpdated) onDataUpdated();
-    } catch (err) {
-      alert(err.message || 'Gagal menghapus data.');
+      alert(err.message || 'Gagal menolak usulan.');
     }
   };
 
@@ -189,7 +226,7 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
               className="btn btn-primary"
               style={{ fontSize: '0.84rem', padding: '7px 14px', background: '#10b981' }}
             >
-              <PlusCircle size={15} /> + Tambah Kasus Baru
+              <PlusCircle size={15} /> + Ajukan Kasus Baru
             </button>
             <button onClick={loadData} className="btn btn-secondary" style={{ fontSize: '0.84rem', padding: '7px 12px' }}>
               <RotateCcw size={14} />
@@ -260,7 +297,7 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
               gap: '6px'
             }}
           >
-            <AlertCircle size={16} /> Ditolak ({stats.rejected || 0})
+            <AlertCircle size={16} /> Usulan Ditolak ({stats.rejected || 0})
           </button>
 
           <button
@@ -282,7 +319,6 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
 
         {/* Filter & Search Bar */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px' }}>
-          {/* Search Box */}
           <div style={{ position: 'relative' }}>
             <Search size={17} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
             <input
@@ -295,7 +331,6 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
             />
           </div>
 
-          {/* Sector Filter */}
           <select
             className="select-input"
             value={sectorFilter}
@@ -316,7 +351,7 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
       <div className="glass-card" style={{ padding: '0px', overflow: 'hidden' }}>
         <div style={{ padding: '14px 20px', borderBottom: '1px solid var(--border-card)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ fontWeight: 700, fontSize: '0.88rem' }}>
-            Menampilkan {filteredCases.length} Data Kasus
+            {activeSubTab === 'PENDING' ? 'Antrean Usulan Menunggu Persetujuan Admin' : `Menampilkan ${filteredCases.length} Data Kasus`}
           </div>
           {loading && <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Memuat data...</span>}
         </div>
@@ -325,11 +360,11 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.86rem' }}>
             <thead>
               <tr style={{ background: 'var(--bg-subtle)', borderBottom: '1px solid var(--border-card)', color: 'var(--text-muted)' }}>
-                <th style={{ padding: '12px 16px', fontWeight: 700, width: '110px' }}>ID Kasus</th>
+                <th style={{ padding: '12px 16px', fontWeight: 700, width: '130px' }}>ID & Jenis Usulan</th>
                 <th style={{ padding: '12px 16px', fontWeight: 700 }}>Uraian Lapangan Responden</th>
                 <th style={{ padding: '12px 16px', fontWeight: 700, width: '220px' }}>KBLI 2025 (5-Digit)</th>
                 <th style={{ padding: '12px 16px', fontWeight: 700, width: '220px' }}>KBJI 2014 (4-Digit)</th>
-                <th style={{ padding: '12px 16px', fontWeight: 700, textAlign: 'center', width: '140px' }}>Aksi</th>
+                <th style={{ padding: '12px 16px', fontWeight: 700, textAlign: 'center', width: '150px' }}>Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -344,14 +379,28 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--bg-subtle)'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                   >
-                    {/* ID & Status */}
+                    {/* ID & Type */}
                     <td style={{ padding: '14px 16px' }}>
-                      <div className="font-mono" style={{ fontWeight: 800, color: '#0284c7', fontSize: '0.85rem' }}>
+                      <div className="font-mono" style={{ fontWeight: 800, color: '#0284c7', fontSize: '0.83rem' }}>
                         {row.id}
                       </div>
-                      <span className={`badge ${row.status === 'APPROVED' ? 'badge-high' : row.status === 'PENDING' ? 'badge-medium' : 'badge-low'}`} style={{ fontSize: '0.66rem', marginTop: '4px' }}>
-                        {row.status}
-                      </span>
+
+                      {/* Action Type Badge */}
+                      {row.action_type === 'CREATE' && (
+                        <span className="badge badge-high" style={{ fontSize: '0.65rem', marginTop: '4px' }}>
+                          + Usulan Baru
+                        </span>
+                      )}
+                      {row.action_type === 'UPDATE' && (
+                        <span className="badge badge-medium" style={{ fontSize: '0.65rem', marginTop: '4px' }}>
+                          ✎ Usulan Edit
+                        </span>
+                      )}
+                      {row.action_type === 'DELETE' && (
+                        <span className="badge badge-low" style={{ fontSize: '0.65rem', marginTop: '4px' }}>
+                          ✕ Permohonan Hapus
+                        </span>
+                      )}
                     </td>
 
                     {/* Uraian */}
@@ -362,7 +411,19 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                       <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
                         <span style={{ fontWeight: 600 }}>Komoditas:</span> {row.mjj.occmtd} • <span style={{ fontWeight: 600 }}>Tempat:</span> {row.mjj.bidang}
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap', marginTop: '6px' }}>
+                      
+                      {row.proposer_notes && (
+                        <div style={{ fontSize: '0.74rem', color: '#0284c7', marginTop: '4px', fontStyle: 'italic' }}>
+                          Catatan Pengusul: "{row.proposer_notes}"
+                        </div>
+                      )}
+                      {row.admin_notes && (
+                        <div style={{ fontSize: '0.74rem', color: '#dc2626', marginTop: '4px', fontStyle: 'italic' }}>
+                          Catatan Admin: "{row.admin_notes}"
+                        </div>
+                      )}
+
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap', marginTop: '4px' }}>
                         {row.sample_count > 1 && (
                           <span className="badge badge-medium" style={{ fontSize: '0.66rem' }}>
                             x{row.sample_count} Sampel Serupa
@@ -402,26 +463,18 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                         {row.status === 'PENDING' ? (
                           <>
                             <button
-                              onClick={() => handleQuickApprove(row)}
+                              onClick={() => handleAdminApprove(row)}
                               className="btn btn-success"
                               style={{ fontSize: '0.76rem', padding: '5px 10px' }}
-                              title="Setujui dan Publikasikan"
+                              title="Setujui Usulan"
                             >
                               <Check size={14} /> Setujui
-                            </button>
-                            <button
-                              onClick={() => setEditingItem(JSON.parse(JSON.stringify(row)))}
-                              className="btn btn-secondary btn-icon"
-                              style={{ width: '30px', height: '30px' }}
-                              title="Edit"
-                            >
-                              <Edit3 size={13} />
                             </button>
                             <button
                               onClick={() => { setRejectingItem(row); setRejectReason(''); }}
                               className="btn btn-secondary btn-icon"
                               style={{ width: '30px', height: '30px', color: '#dc2626' }}
-                              title="Tolak"
+                              title="Tolak Usulan"
                             >
                               <X size={13} />
                             </button>
@@ -432,23 +485,31 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                               onClick={() => setSelectedRecord(row)}
                               className="btn btn-secondary btn-icon"
                               style={{ width: '32px', height: '32px' }}
-                              title="Lihat Rincian Lengkap"
+                              title="Lihat Detail"
                             >
                               <Eye size={14} />
                             </button>
                             <button
-                              onClick={() => setEditingItem(JSON.parse(JSON.stringify(row)))}
+                              onClick={() => {
+                                setEditProposalItem(JSON.parse(JSON.stringify(row)));
+                                setProposerName('');
+                                setProposerNotes('');
+                              }}
                               className="btn btn-secondary btn-icon"
                               style={{ width: '32px', height: '32px' }}
-                              title="Edit Data"
+                              title="Ajukan Perbaikan (Edit)"
                             >
                               <Edit3 size={14} />
                             </button>
                             <button
-                              onClick={() => handleDelete(row.db_id)}
+                              onClick={() => {
+                                setDeleteProposalItem(row);
+                                setProposerName('');
+                                setProposerNotes('');
+                              }}
                               className="btn btn-secondary btn-icon"
                               style={{ width: '32px', height: '32px', color: '#dc2626' }}
-                              title="Hapus"
+                              title="Ajukan Permohonan Hapus"
                             >
                               <Trash2 size={14} />
                             </button>
@@ -461,7 +522,7 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
               ) : (
                 <tr>
                   <td colSpan={5} style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
-                    Tidak ada data kasus yang cocok dengan pencarian atau filter ini.
+                    Tidak ada data dalam kategori ini.
                   </td>
                 </tr>
               )}
@@ -511,8 +572,8 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
         record={selectedRecord}
       />
 
-      {/* Edit & Approve Modal */}
-      {editingItem && (
+      {/* Public Edit Proposal Modal */}
+      {editProposalItem && (
         <div style={{
           position: 'fixed',
           inset: 0,
@@ -531,24 +592,51 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
             padding: '24px',
             borderRadius: 'var(--radius-xl)'
           }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '4px' }}>
-              Edit Data Kasus: {editingItem.id}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+              <span className="badge badge-kbli"><Edit3 size={13} /> Ajukan Usulan Perbaikan</span>
+            </div>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>
+              Usulan Edit Data: {editProposalItem.id}
             </h3>
             <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
-              Perbaiki uraian atau kode KBLI/KBJI yang sesuai.
+              Perubahan yang Anda ajukan akan masuk ke antrean moderasi dan ditinjau oleh Admin BPS sebelum diterapkan.
             </p>
 
-            <form onSubmit={handleSaveEditAndApprove} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <form onSubmit={handleSubmitEditProposal} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                <div className="input-group">
+                  <label className="input-label">Nama Anda / Petugas</label>
+                  <input
+                    type="text"
+                    className="text-input"
+                    placeholder="Contoh: Budi (PCL)"
+                    value={proposerName}
+                    onChange={(e) => setProposerName(e.target.value)}
+                  />
+                </div>
+                <div className="input-group">
+                  <label className="input-label">Alasan / Catatan Perbaikan</label>
+                  <input
+                    type="text"
+                    className="text-input"
+                    placeholder="Contoh: Kode KBLI perlu disesuaikan..."
+                    value={proposerNotes}
+                    onChange={(e) => setProposerNotes(e.target.value)}
+                  />
+                </div>
+              </div>
+
               <div className="input-group">
                 <label className="input-label">R.10.2 Uraian Pekerjaan</label>
                 <input
                   type="text"
                   className="text-input"
-                  value={editingItem.mjj.occtle}
-                  onChange={(e) => setEditingItem({
-                    ...editingItem,
-                    mjj: { ...editingItem.mjj, occtle: e.target.value }
+                  value={editProposalItem.mjj.occtle}
+                  onChange={(e) => setEditProposalItem({
+                    ...editProposalItem,
+                    mjj: { ...editProposalItem.mjj, occtle: e.target.value }
                   })}
+                  required
                 />
               </div>
 
@@ -557,11 +645,12 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                 <input
                   type="text"
                   className="text-input"
-                  value={editingItem.mjj.occmtd}
-                  onChange={(e) => setEditingItem({
-                    ...editingItem,
-                    mjj: { ...editingItem.mjj, occmtd: e.target.value }
+                  value={editProposalItem.mjj.occmtd}
+                  onChange={(e) => setEditProposalItem({
+                    ...editProposalItem,
+                    mjj: { ...editProposalItem.mjj, occmtd: e.target.value }
                   })}
+                  required
                 />
               </div>
 
@@ -570,11 +659,12 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                 <input
                   type="text"
                   className="text-input"
-                  value={editingItem.mjj.bidang}
-                  onChange={(e) => setEditingItem({
-                    ...editingItem,
-                    mjj: { ...editingItem.mjj, bidang: e.target.value }
+                  value={editProposalItem.mjj.bidang}
+                  onChange={(e) => setEditProposalItem({
+                    ...editProposalItem,
+                    mjj: { ...editProposalItem.mjj, bidang: e.target.value }
                   })}
+                  required
                 />
               </div>
 
@@ -584,10 +674,10 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                   <input
                     type="text"
                     className="text-input font-mono"
-                    value={editingItem.mjj.kbli_code}
-                    onChange={(e) => setEditingItem({
-                      ...editingItem,
-                      mjj: { ...editingItem.mjj, kbli_code: e.target.value }
+                    value={editProposalItem.mjj.kbli_code}
+                    onChange={(e) => setEditProposalItem({
+                      ...editProposalItem,
+                      mjj: { ...editProposalItem.mjj, kbli_code: e.target.value }
                     })}
                   />
                 </div>
@@ -596,10 +686,10 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                   <input
                     type="text"
                     className="text-input"
-                    value={editingItem.mjj.kbli_label}
-                    onChange={(e) => setEditingItem({
-                      ...editingItem,
-                      mjj: { ...editingItem.mjj, kbli_label: e.target.value }
+                    value={editProposalItem.mjj.kbli_label}
+                    onChange={(e) => setEditProposalItem({
+                      ...editProposalItem,
+                      mjj: { ...editProposalItem.mjj, kbli_label: e.target.value }
                     })}
                   />
                 </div>
@@ -611,10 +701,10 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                   <input
                     type="text"
                     className="text-input font-mono"
-                    value={editingItem.mjj.kbji_code}
-                    onChange={(e) => setEditingItem({
-                      ...editingItem,
-                      mjj: { ...editingItem.mjj, kbji_code: e.target.value }
+                    value={editProposalItem.mjj.kbji_code}
+                    onChange={(e) => setEditProposalItem({
+                      ...editProposalItem,
+                      mjj: { ...editProposalItem.mjj, kbji_code: e.target.value }
                     })}
                   />
                 </div>
@@ -623,21 +713,21 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                   <input
                     type="text"
                     className="text-input"
-                    value={editingItem.mjj.kbji_label}
-                    onChange={(e) => setEditingItem({
-                      ...editingItem,
-                      mjj: { ...editingItem.mjj, kbji_label: e.target.value }
+                    value={editProposalItem.mjj.kbji_label}
+                    onChange={(e) => setEditProposalItem({
+                      ...editProposalItem,
+                      mjj: { ...editProposalItem.mjj, kbji_label: e.target.value }
                     })}
                   />
                 </div>
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
-                <button type="button" onClick={() => setEditingItem(null)} className="btn btn-secondary">
+                <button type="button" onClick={() => setEditProposalItem(null)} className="btn btn-secondary">
                   Batal
                 </button>
-                <button type="submit" className="btn btn-success">
-                  <Check size={14} /> Simpan Perubahan
+                <button type="submit" disabled={isSubmittingProposal} className="btn btn-primary">
+                  <Check size={14} /> {isSubmittingProposal ? 'Mengirim...' : 'Kirim Usulan Edit'}
                 </button>
               </div>
             </form>
@@ -645,7 +735,75 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
         </div>
       )}
 
-      {/* Reject Modal */}
+      {/* Public Delete Proposal Modal */}
+      {deleteProposalItem && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 100,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'rgba(0, 0, 0, 0.65)',
+          backdropFilter: 'blur(6px)',
+          padding: '20px'
+        }}>
+          <div className="glass-card animate-fade-in" style={{
+            maxWidth: '520px',
+            width: '100%',
+            backgroundColor: 'var(--bg-card-solid)',
+            padding: '24px',
+            borderRadius: 'var(--radius-xl)'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+              <span className="badge badge-low"><Trash2 size={13} /> Permohonan Hapus Data</span>
+            </div>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#dc2626' }}>
+              Ajukan Hapus Kasus: {deleteProposalItem.id}
+            </h3>
+            <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
+              Data: "{deleteProposalItem.mjj.occtle}" ({deleteProposalItem.mjj.occmtd})
+              <br />
+              Permohonan ini akan masuk ke antrean moderasi dan tidak langsung menghapus data sampai disetujui oleh Admin BPS.
+            </p>
+
+            <form onSubmit={handleSubmitDeleteProposal} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div className="input-group">
+                <label className="input-label">Nama Anda / Petugas</label>
+                <input
+                  type="text"
+                  className="text-input"
+                  placeholder="Contoh: Andi (PML Minsel)"
+                  value={proposerName}
+                  onChange={(e) => setProposerName(e.target.value)}
+                />
+              </div>
+
+              <div className="input-group">
+                <label className="input-label">Alasan Permohonan Penghapusan</label>
+                <textarea
+                  className="textarea-input"
+                  placeholder="Contoh: Data ganda dengan CASE-012 atau komoditas tidak valid..."
+                  value={proposerNotes}
+                  onChange={(e) => setProposerNotes(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '8px' }}>
+                <button type="button" onClick={() => setDeleteProposalItem(null)} className="btn btn-secondary">
+                  Batal
+                </button>
+                <button type="submit" disabled={isSubmittingProposal} className="btn btn-primary" style={{ background: '#dc2626' }}>
+                  {isSubmittingProposal ? 'Mengirim...' : 'Kirim Permohonan Hapus'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Admin Reject Confirmation Modal */}
       {rejectingItem && (
         <div style={{
           position: 'fixed',
@@ -666,15 +824,15 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
             borderRadius: 'var(--radius-xl)'
           }}>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '4px', color: '#dc2626' }}>
-              Tolak Data: {rejectingItem.id}
+              Tolak Usulan: {rejectingItem.id}
             </h3>
             <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
               Berikan alasan penolakan untuk catatan verifikasi.
             </p>
 
-            <form onSubmit={handleConfirmReject} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <form onSubmit={handleAdminReject} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div className="input-group">
-                <label className="input-label">Alasan Penolakan</label>
+                <label className="input-label">Alasan Penolakan Admin</label>
                 <textarea
                   className="textarea-input"
                   placeholder="Contoh: Uraian pekerjaan kurang spesifik..."

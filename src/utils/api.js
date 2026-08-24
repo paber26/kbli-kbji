@@ -19,7 +19,7 @@ export async function fetchApprovedCases() {
 }
 
 /**
- * Submit a new contribution (Status: PENDING)
+ * Submit a new contribution (Status: PENDING, Action: CREATE)
  */
 export async function submitContribution(payload) {
   const res = await fetch(`${API_BASE}/contribute`, {
@@ -30,6 +30,38 @@ export async function submitContribution(payload) {
   if (!res.ok) {
     const errData = await res.json().catch(() => ({}));
     throw new Error(errData.error || 'Gagal mengirim data kontribusi.');
+  }
+  return await res.json();
+}
+
+/**
+ * Submit proposal to edit existing case (Status: PENDING, Action: UPDATE)
+ */
+export async function proposeEditContribution(payload) {
+  const res = await fetch(`${API_BASE}/contribute/edit`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Gagal mengirim usulan perbaikan data.');
+  }
+  return await res.json();
+}
+
+/**
+ * Submit proposal to delete existing case (Status: PENDING, Action: DELETE)
+ */
+export async function proposeDeleteContribution(payload) {
+  const res = await fetch(`${API_BASE}/contribute/delete`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Gagal mengirim permohonan penghapusan data.');
   }
   return await res.json();
 }
