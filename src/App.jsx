@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import SmartCoderView from './components/SmartCoder/SmartCoderView';
 import ExplorerView from './components/Explorer/ExplorerView';
@@ -10,7 +11,6 @@ import { fetchApprovedCases, fetchStats } from './utils/api';
 import localFieldCases from './data/fieldCases.json';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('smart-coder');
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('bps_theme') || 'light';
   });
@@ -51,10 +51,8 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Header with Navigation */}
+      {/* Header with NavLink Routing */}
       <Header
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
         theme={theme}
         toggleTheme={toggleTheme}
         onOpenContribute={() => setIsContributeOpen(true)}
@@ -62,15 +60,19 @@ export default function App() {
         approvedCount={liveCases.length}
       />
 
-      {/* Main Content View */}
+      {/* Main Content with Route Matching */}
       <main className="main-content">
-        {activeTab === 'smart-coder' && <SmartCoderView liveCases={liveCases} />}
-        {activeTab === 'master-explorer' && <ExplorerView />}
-        {activeTab === 'field-database' && <DatabaseView liveCases={liveCases} />}
-        {activeTab === 'analytics' && <AnalyticsView liveCases={liveCases} />}
-        {activeTab === 'admin-moderation' && (
-          <AdminModerationView onCaseApproved={loadData} />
-        )}
+        <Routes>
+          <Route path="/" element={<SmartCoderView liveCases={liveCases} />} />
+          <Route path="/katalog" element={<ExplorerView />} />
+          <Route path="/bank-data" element={<DatabaseView liveCases={liveCases} />} />
+          <Route path="/statistik" element={<AnalyticsView liveCases={liveCases} />} />
+          <Route 
+            path="/admin" 
+            element={<AdminModerationView onCaseApproved={loadData} />} 
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
 
       {/* Public Contribution Modal */}
@@ -98,7 +100,7 @@ export default function App() {
             Badan Pusat Statistik Kabupaten Minahasa Selatan (Provinsi Sulawesi Utara)
           </div>
           <div>
-            Database: SQLite • Status: Terhubung
+            Database: SQLite • Routing: React Router
           </div>
         </div>
       </footer>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { 
   Search, 
   BookOpen, 
@@ -9,11 +10,8 @@ import {
   Sun, 
   Moon
 } from 'lucide-react';
-import analyticsSummary from '../data/analyticsSummary.json';
 
 export default function Header({ 
-  activeTab, 
-  setActiveTab, 
   theme, 
   toggleTheme, 
   onOpenContribute, 
@@ -21,12 +19,12 @@ export default function Header({
   approvedCount = 234
 }) {
   const navItems = [
-    { id: 'smart-coder', label: 'Pencarian Koding', icon: Search },
-    { id: 'master-explorer', label: 'Katalog KBLI & KBJI', icon: BookOpen },
-    { id: 'field-database', label: 'Bank Data Minsel', icon: Database, count: approvedCount },
-    { id: 'analytics', label: 'Statistik & Sebaran', icon: BarChart3 },
+    { path: '/', label: 'Pencarian Koding', icon: Search },
+    { path: '/katalog', label: 'Katalog KBLI & KBJI', icon: BookOpen },
+    { path: '/bank-data', label: 'Bank Data Minsel', icon: Database, count: approvedCount },
+    { path: '/statistik', label: 'Statistik & Sebaran', icon: BarChart3 },
     { 
-      id: 'admin-moderation', 
+      path: '/admin', 
       label: 'Verifikasi Admin', 
       icon: ShieldCheck, 
       badge: pendingCount > 0 ? `${pendingCount} Menunggu` : null,
@@ -38,7 +36,7 @@ export default function Header({
     <header className="header-wrapper">
       <div className="header-content">
         {/* Brand & Identity */}
-        <div className="brand-section">
+        <Link to="/" className="brand-section" style={{ textDecoration: 'none' }}>
           <div className="brand-logo-badge">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -51,44 +49,48 @@ export default function Header({
             </h1>
             <p>Sistem Klasifikasi & Pencarian KBLI 2020 & KBJI 2014</p>
           </div>
-        </div>
+        </Link>
 
-        {/* Tab Navigation */}
+        {/* Route Navigation */}
         <nav className="nav-tabs-container">
           {navItems.map((item) => {
             const Icon = item.icon;
-            const isActive = activeTab === item.id;
             return (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab(item.id)}
-                className={`nav-tab-btn ${isActive ? 'active' : ''}`}
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) => `nav-tab-btn ${isActive ? 'active' : ''}`}
+                style={{ textDecoration: 'none' }}
                 title={item.label}
               >
-                <Icon size={17} strokeWidth={isActive ? 2.5 : 2} />
-                <span>{item.label}</span>
-                {item.badge && (
-                  <span style={{
-                    fontSize: '0.65rem',
-                    fontWeight: 700,
-                    padding: '1px 6px',
-                    borderRadius: '10px',
-                    background: item.badgeColor || (isActive ? '#0284c7' : 'rgba(255,255,255,0.2)'),
-                    color: '#ffffff'
-                  }}>
-                    {item.badge}
-                  </span>
+                {({ isActive }) => (
+                  <>
+                    <Icon size={17} strokeWidth={isActive ? 2.5 : 2} />
+                    <span>{item.label}</span>
+                    {item.badge && (
+                      <span style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 700,
+                        padding: '1px 6px',
+                        borderRadius: '10px',
+                        background: item.badgeColor || '#0284c7',
+                        color: '#ffffff'
+                      }}>
+                        {item.badge}
+                      </span>
+                    )}
+                    {item.count && (
+                      <span style={{
+                        fontSize: '0.7rem',
+                        opacity: 0.8,
+                        fontWeight: 600
+                      }}>
+                        ({item.count})
+                      </span>
+                    )}
+                  </>
                 )}
-                {item.count && (
-                  <span style={{
-                    fontSize: '0.7rem',
-                    opacity: 0.8,
-                    fontWeight: 600
-                  }}>
-                    ({item.count})
-                  </span>
-                )}
-              </button>
+              </NavLink>
             );
           })}
         </nav>
