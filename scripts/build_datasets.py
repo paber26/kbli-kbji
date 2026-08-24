@@ -3,13 +3,12 @@ import json
 import re
 import os
 from collections import Counter, defaultdict
+from difflib import SequenceMatcher
 
 os.makedirs('src/data', exist_ok=True)
 
-wb = openpyxl.load_workbook('KBLI KBJI.xlsx', data_only=True)
-ws = wb['Sheet1']
-rows = list(ws.iter_rows(values_only=True))
-headers = rows[0]
+excel_path = 'KBLI KBJI.xlsx'
+wb = openpyxl.load_workbook(excel_path, data_only=True)
 
 def clean_val(v):
     if v is None:
@@ -44,6 +43,11 @@ def clean_label(label):
         return ''
     s = re.sub(r'^\[\d+\]\s*', '', str(label).strip())
     return s
+
+def normalize_str(s):
+    if not s:
+        return ""
+    return re.sub(r'\s+', ' ', str(s).strip())
 
 KBLI_CATEGORIES = {
     "A": {"name": "Pertanian, Kehutanan Dan Perikanan", "start": 1, "end": 3, "color": "#10B981", "desc": "Mencakup pemanfaatan sumber daya alam hayati nabati dan hewani."},
@@ -239,13 +243,29 @@ def get_kbji_major(code):
         return {"code": major_digit, "name": info["name"], "color": info["color"]}
     return {"code": "0", "name": "Lainnya", "color": "#94A3B8"}
 
-cases = []
+# 1. Load All Rows from Mei2026 and Ags2025
+raw_rows = []
+sheet_names = [s for s in wb.sheetnames if s in ['Mei2026', 'Ags2025']]
+if not sheet_names:
+    sheet_names = wb.sheetnames
+
+for sname in sheet_names:
+    ws = wb[sname]
+    srows = list(ws.iter_rows(values_only=True))
+    for r in srows[1:]:
+        if any(r):
+            raw_rows.append((sname, r))
+
+print(f"Total raw survey records read from Excel: {len(raw_rows)}")
+
 kbli_dict = {}
 kbji_dict = {}
 kbli_usage_counts = Counter()
 kbji_usage_counts = Counter()
 
-for idx, r in enumerate(rows[1:], 1):
+raw_cases = []
+
+for idx, (sname, r) in enumerate(raw_rows, 1):
     prov = clean_val(r[0])
     kab = clean_val(r[1])
     
@@ -259,69 +279,23 @@ for idx, r in enumerate(rows[1:], 1):
     mjj_kbji_lbl = clean_label(r[8])
     
     # 2. Secondary job (sjj)
-    sjj_kbli_val = clean_kbli_code(r[9], r[10])
-    sjj_kbli_lbl = clean_label(r[10])
-    sjj_kbji_val = clean_kbji_code(r[11], r[12])
-    sjj_kbji_lbl = clean_label(r[12])
+    sjj_kbli_val = clean_kbli_code(r[9], r[10]) if len(r) > 9 else ''
+    sjj_kbli_lbl = clean_label(r[10]) if len(r) > 10 else ''
+    sjj_kbji_val = clean_kbji_code(r[11], r[12]) if len(r) > 11 else ''
+    sjj_kbji_lbl = clean_label(r[12]) if len(r) > 12 else ''
     
     # 3. Past job (mpk)
-    mpk_kbli_val = clean_kbli_code(r[13], r[14])
-    mpk_kbli_lbl = clean_label(r[14])
-    mpk_kbji_val = clean_kbji_code(r[15], r[16])
-    mpk_kbji_lbl = clean_label(r[16])
-
-    kbli_cat = get_kbli_category(mjj_kbli_val)
-    kbji_maj = get_kbji_major(mjj_kbji_val)
+    mpk_kbli_val = clean_kbli_code(r[13], r[14]) if len(r) > 13 else ''
+    mpk_kbli_lbl = clean_label(r[14]) if len(r) > 14 else ''
+    mpk_kbji_val = clean_kbji_code(r[15], r[16]) if len(r) > 15 else ''
+    mpk_kbji_lbl = clean_label(r[16]) if len(r) > 16 else ''
 
     if mjj_kbli_val:
         kbli_usage_counts[mjj_kbli_val] += 1
     if mjj_kbji_val:
         kbji_usage_counts[mjj_kbji_val] += 1
 
-    case_entry = {
-        'id': f'CASE-{idx:03d}',
-        'index': idx,
-        'kode_prov': prov or '71',
-        'kode_kab': kab.zfill(2) if kab else '05',
-        'nama_wilayah': 'Kabupaten Minahasa Selatan, Sulawesi Utara',
-        'mjj': {
-            'occtle': mjj_occtle,
-            'occmtd': mjj_occmtd,
-            'bidang': mjj_bidang,
-            'kbli_code': mjj_kbli_val,
-            'kbli_label': mjj_kbli_lbl,
-            'kbli_category': kbli_cat,
-            'kbli_division': KBLI_DIVISIONS.get(mjj_kbli_val[:2], ""),
-            'kbji_code': mjj_kbji_val,
-            'kbji_label': mjj_kbji_lbl,
-            'kbji_major': kbji_maj,
-            'kbji_submajor': KBJI_SUBMAJORS.get(mjj_kbji_val[:2], "")
-        },
-        'sjj': {
-            'kbli_code': sjj_kbli_val,
-            'kbli_label': sjj_kbli_lbl,
-            'kbli_category': get_kbli_category(sjj_kbli_val),
-            'kbli_division': KBLI_DIVISIONS.get(sjj_kbli_val[:2], ""),
-            'kbji_code': sjj_kbji_val,
-            'kbji_label': sjj_kbji_lbl,
-            'kbji_major': get_kbji_major(sjj_kbji_val),
-            'kbji_submajor': KBJI_SUBMAJORS.get(sjj_kbji_val[:2], "")
-        } if sjj_kbli_val or sjj_kbji_val else None,
-        'mpk': {
-            'kbli_code': mpk_kbli_val,
-            'kbli_label': mpk_kbli_lbl,
-            'kbli_category': get_kbli_category(mpk_kbli_val),
-            'kbli_division': KBLI_DIVISIONS.get(mpk_kbli_val[:2], ""),
-            'kbji_code': mpk_kbji_val,
-            'kbji_label': mpk_kbji_lbl,
-            'kbji_major': get_kbji_major(mpk_kbji_val),
-            'kbji_submajor': KBJI_SUBMAJORS.get(mpk_kbji_val[:2], "")
-        } if mpk_kbli_val or mpk_kbji_val else None,
-        'full_text': f"{mjj_occtle} {mjj_occmtd} {mjj_bidang}".strip()
-    }
-    cases.append(case_entry)
-    
-    # Store unique KBLI definitions
+    # Store master dictionaries
     for code, lbl in [(mjj_kbli_val, mjj_kbli_lbl), (sjj_kbli_val, sjj_kbli_lbl), (mpk_kbli_val, mpk_kbli_lbl)]:
         if code and lbl:
             if code not in kbli_dict:
@@ -338,7 +312,6 @@ for idx, r in enumerate(rows[1:], 1):
             if mjj_occtle and mjj_occtle not in kbli_dict[code]["sample_cases"]:
                 kbli_dict[code]["sample_cases"].append(mjj_occtle)
             
-    # Store unique KBJI definitions
     for code, lbl in [(mjj_kbji_val, mjj_kbji_lbl), (sjj_kbji_val, sjj_kbji_lbl), (mpk_kbji_val, mpk_kbji_lbl)]:
         if code and lbl:
             if code not in kbji_dict:
@@ -354,7 +327,128 @@ for idx, r in enumerate(rows[1:], 1):
             if mjj_occtle and mjj_occtle not in kbji_dict[code]["sample_cases"]:
                 kbji_dict[code]["sample_cases"].append(mjj_occtle)
 
-# Update usage counts
+    raw_cases.append({
+        'periode': sname,
+        'kode_prov': prov or '71',
+        'kode_kab': kab.zfill(2) if kab else '05',
+        'mjj': {
+            'occtle': mjj_occtle,
+            'occmtd': mjj_occmtd,
+            'bidang': mjj_bidang,
+            'kbli_code': mjj_kbli_val,
+            'kbli_label': mjj_kbli_lbl,
+            'kbji_code': mjj_kbji_val,
+            'kbji_label': mjj_kbji_lbl
+        },
+        'sjj': {
+            'kbli_code': sjj_kbli_val,
+            'kbli_label': sjj_kbli_lbl,
+            'kbji_code': sjj_kbji_val,
+            'kbji_label': sjj_kbji_lbl
+        } if sjj_kbli_val or sjj_kbji_val else None,
+        'mpk': {
+            'kbli_code': mpk_kbli_val,
+            'kbli_label': mpk_kbli_lbl,
+            'kbji_code': mpk_kbji_val,
+            'kbji_label': mpk_kbji_lbl
+        } if mpk_kbli_val or mpk_kbji_val else None
+    })
+
+# 2. Perform Fuzzy Deduplication / Clustering
+grouped_by_pair = defaultdict(list)
+for c in raw_cases:
+    grouped_by_pair[(c['mjj']['kbli_code'], c['mjj']['kbji_code'])].append(c)
+
+consolidated_cases = []
+
+for (kbli, kbji), group in grouped_by_pair.items():
+    if len(group) == 1:
+        item = group[0]
+        item['sample_count'] = 1
+        item['variants'] = []
+        consolidated_cases.append(item)
+        continue
+
+    # Sub-cluster similar items
+    sub_clusters = []
+    for item in group:
+        item_occtle = normalize_str(item['mjj']['occtle']).lower()
+        item_occmtd = normalize_str(item['mjj']['occmtd']).lower()
+        item_bidang = normalize_str(item['mjj']['bidang']).lower()
+        combined = f"{item_occtle} {item_occmtd} {item_bidang}"
+
+        matched_cluster = None
+        best_sim = 0
+
+        for sc in sub_clusters:
+            rep = sc[0]
+            rep_occtle = normalize_str(rep['mjj']['occtle']).lower()
+            rep_occmtd = normalize_str(rep['mjj']['occmtd']).lower()
+            rep_bidang = normalize_str(rep['mjj']['bidang']).lower()
+            rep_combined = f"{rep_occtle} {rep_occmtd} {rep_bidang}"
+
+            sim = SequenceMatcher(None, combined, rep_combined).ratio()
+            com_sim = SequenceMatcher(None, item_occmtd, rep_occmtd).ratio()
+            occ_sim = SequenceMatcher(None, item_occtle, rep_occtle).ratio()
+
+            if sim > 0.50 or (com_sim > 0.70 and occ_sim > 0.40):
+                if sim > best_sim:
+                    best_sim = sim
+                    matched_cluster = sc
+
+        if matched_cluster is not None:
+            matched_cluster.append(item)
+        else:
+            sub_clusters.append([item])
+
+    for sc in sub_clusters:
+        # Choose the representative case with clearest description
+        sc_sorted = sorted(sc, key=lambda x: len(x['mjj']['occtle']) + len(x['mjj']['occmtd']) + len(x['mjj']['bidang']), reverse=True)
+        representative = sc_sorted[0]
+
+        # Gather variants
+        variants = []
+        seen_texts = set()
+        for x in sc:
+            t = f"{normalize_str(x['mjj']['occtle'])} | {normalize_str(x['mjj']['occmtd'])} | {normalize_str(x['mjj']['bidang'])}"
+            rep_t = f"{normalize_str(representative['mjj']['occtle'])} | {normalize_str(representative['mjj']['occmtd'])} | {normalize_str(representative['mjj']['bidang'])}"
+            if t != rep_t and t not in seen_texts:
+                seen_texts.add(t)
+                variants.append({
+                    "occtle": x['mjj']['occtle'],
+                    "occmtd": x['mjj']['occmtd'],
+                    "bidang": x['mjj']['bidang']
+                })
+
+        merged = {
+            'kode_prov': representative['kode_prov'],
+            'kode_kab': representative['kode_kab'],
+            'nama_wilayah': 'Kabupaten Minahasa Selatan, Sulawesi Utara',
+            'mjj': representative['mjj'],
+            'sjj': representative['sjj'],
+            'mpk': representative['mpk'],
+            'sample_count': len(sc),
+            'variants': variants
+        }
+        consolidated_cases.append(merged)
+
+# Assign formatted IDs
+final_cases = []
+for idx, c in enumerate(consolidated_cases, 1):
+    kbli_code = c['mjj']['kbli_code']
+    kbji_code = c['mjj']['kbji_code']
+    c['id'] = f'CASE-{idx:03d}'
+    c['index'] = idx
+    c['mjj']['kbli_category'] = get_kbli_category(kbli_code)
+    c['mjj']['kbli_division'] = KBLI_DIVISIONS.get(kbli_code[:2], "")
+    c['mjj']['kbji_major'] = get_kbji_major(kbji_code)
+    c['mjj']['kbji_submajor'] = KBJI_SUBMAJORS.get(kbji_code[:2], "")
+    c['full_text'] = f"{c['mjj']['occtle']} {c['mjj']['occmtd']} {c['mjj']['bidang']}".strip()
+    final_cases.append(c)
+
+print(f"Total consolidated clean cases generated: {len(final_cases)}")
+
+# Update usage counts on Master Dictionaries
 for code in kbli_dict:
     kbli_dict[code]["frequency"] = kbli_usage_counts.get(code, 0)
     kbli_dict[code]["sample_cases"] = kbli_dict[code]["sample_cases"][:5]
@@ -363,21 +457,20 @@ for code in kbji_dict:
     kbji_dict[code]["frequency"] = kbji_usage_counts.get(code, 0)
     kbji_dict[code]["sample_cases"] = kbji_dict[code]["sample_cases"][:5]
 
-# Convert dictionaries to sorted lists
 master_kbli_list = sorted(list(kbli_dict.values()), key=lambda x: x["code"])
 master_kbji_list = sorted(list(kbji_dict.values()), key=lambda x: x["code"])
 
 # Build Analytics Summary
 category_counts = Counter()
 kbji_major_counts = Counter()
-for c in cases:
+for c in final_cases:
     cat = c['mjj']['kbli_category']['code']
     cat_name = c['mjj']['kbli_category']['name']
-    category_counts[f"{cat} - {cat_name}"] += 1
+    category_counts[f"{cat} - {cat_name}"] += c['sample_count']
 
     maj = c['mjj']['kbji_major']['code']
     maj_name = c['mjj']['kbji_major']['name']
-    kbji_major_counts[f"Gol {maj}: {maj_name}"] += 1
+    kbji_major_counts[f"Gol {maj}: {maj_name}"] += c['sample_count']
 
 top_kbli = []
 for code, count in kbli_usage_counts.most_common(10):
@@ -398,11 +491,12 @@ for code, count in kbji_usage_counts.most_common(10):
     })
 
 analytics_summary = {
-    "total_cases": len(cases),
+    "total_samples": len(raw_cases),
+    "total_cases": len(final_cases),
     "unique_kbli": len(master_kbli_list),
     "unique_kbji": len(master_kbji_list),
-    "cases_with_secondary_job": sum(1 for c in cases if c['sjj']),
-    "cases_with_past_job": sum(1 for c in cases if c['mpk']),
+    "cases_with_secondary_job": sum(1 for c in final_cases if c['sjj']),
+    "cases_with_past_job": sum(1 for c in final_cases if c['mpk']),
     "top_kbli": top_kbli,
     "top_kbji": top_kbji,
     "category_distribution": dict(category_counts.most_common()),
@@ -415,7 +509,7 @@ analytics_summary = {
 
 # Write files
 with open('src/data/fieldCases.json', 'w', encoding='utf-8') as f:
-    json.dump(cases, f, ensure_ascii=False, indent=2)
+    json.dump(final_cases, f, ensure_ascii=False, indent=2)
 
 with open('src/data/masterKbli.json', 'w', encoding='utf-8') as f:
     json.dump(master_kbli_list, f, ensure_ascii=False, indent=2)
@@ -426,4 +520,5 @@ with open('src/data/masterKbji.json', 'w', encoding='utf-8') as f:
 with open('src/data/analyticsSummary.json', 'w', encoding='utf-8') as f:
     json.dump(analytics_summary, f, ensure_ascii=False, indent=2)
 
-print('Updated JSON datasets successfully generated in src/data/')
+print(f"[OK] Successfully generated {len(final_cases)} consolidated cases from {len(raw_cases)} raw survey samples across Mei2026 and Ags2025.")
+print(f"[OK] Master KBLI: {len(master_kbli_list)} codes | Master KBJI: {len(master_kbji_list)} codes.")

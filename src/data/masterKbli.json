@@ -18,7 +18,45 @@
       "MENCANGKUL DAN MENCABUT RUMPUT DI KEBUN",
       "MENCANGKUL DAN MENCABUT RUMPUT PADA TANAMAN JAGUNG MILIK ORANG LAIN"
     ],
-    "frequency": 9
+    "frequency": 30
+  },
+  {
+    "code": "01114",
+    "title": "PERTANIAN KACANG TANAH",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "011",
+    "subgroup": "0111",
+    "sample_cases": [
+      "MENANAM DAN MENJUAL KACANG TANAH"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "01121",
+    "title": "PERTANIAN PADI HIBRIDA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "011",
+    "subgroup": "0112",
+    "sample_cases": [
+      "MENCANGKUL DAN MENANAM PADI",
+      "MENCABUT RUMPUT, MENCANGKUL DAN MENANAM PADI",
+      "MENANAM PADI DI SAWAH",
+      "MENYIANGI LAHAN PERTANIAN PADI",
+      "MEMBERSIHKAN LAHAN PADI"
+    ],
+    "frequency": 11
   },
   {
     "code": "01122",
@@ -39,7 +77,7 @@
       "MENANAM PADI,PANEN PADI DI SAWAH",
       "MENANAM PADI SAWAH"
     ],
-    "frequency": 6
+    "frequency": 14
   },
   {
     "code": "01131",
@@ -57,9 +95,10 @@
       "MENANAM KEMANGI",
       "CABUT RUMPUT DI TANAMAN BAWANG DAUN",
       "BEKEEJA DITANAMAN BAWANG DAUN",
-      "BEKERJA DITANAMAN BAWANG DAUN"
+      "BEKERJA DITANAMAN BAWANG DAUN",
+      "BA SEKOP DI KEBUN BAWANG, KENTANG"
     ],
-    "frequency": 5
+    "frequency": 33
   },
   {
     "code": "01132",
@@ -80,7 +119,7 @@
       "MENCABUT RUMPUT DITANAMAN KOL",
       "BEKERJA DITANAMAN HORTIKULTURA"
     ],
-    "frequency": 4
+    "frequency": 10
   },
   {
     "code": "01133",
@@ -101,7 +140,27 @@
       "BEKERJA DITANAMAN TOMAT",
       "MENANAM WORTEL"
     ],
-    "frequency": 10
+    "frequency": 22
+  },
+  {
+    "code": "01134",
+    "title": "PERTANIAN HORTIKULTURA SAYURAN UMBI",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "011",
+    "subgroup": "0113",
+    "sample_cases": [
+      "BURUH HARIAN MENANAM DAN MENGGALI KENTANG",
+      "BEKERJA DI TANAMAN HORTIKULTURA",
+      "BEKERJA DITANAMAN HORTIKULTURA",
+      "MENGGALI KENTANG, MENCANGKUL, MENCABUT RUMPUT DI KEBUN BAWANG"
+    ],
+    "frequency": 8
   },
   {
     "code": "01135",
@@ -117,9 +176,33 @@
     "subgroup": "0113",
     "sample_cases": [
       "MENCANGKUL",
-      "MENCANGKUK DAN MENANAM PISANG DAN UMBI"
+      "MENCANGKUK DAN MENANAM PISANG DAN UMBI",
+      "MEMBANTU SUAMI MEMBERSIHKAN MENCANGKUL RUMPUT DI SEKITAR TANAMAN TALAS DI KEBUN MILIK SENDIRI",
+      "MEMBERSIHKAN MENCANGKUL RUMPUT DI SEKITAR TANAMAN TALAS DI KEBUN MILIK SENDIRI",
+      "HANYA DATANG MENGONTROL ORANG KERJA,"
     ],
-    "frequency": 2
+    "frequency": 8
+  },
+  {
+    "code": "01199",
+    "title": "PERTANIAN TANAMAN SEMUSIM LAINNYA YTDL",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "011",
+    "subgroup": "0119",
+    "sample_cases": [
+      "MENCANGKUL DAN MENCABUT RUMPUT DI KEBUN NILAM MILIK ORANG",
+      "MELAKUKAN PENGGALIAN TANAH DI DILAHAN KEBUN UNTUK DIJADIKAN TAMBANG PERIBADI",
+      "MEMBANTU ORANG TUA BEKERJA",
+      "MEMANEN NILAM",
+      "MEMANEN NILAM DIKEBUN SENDIRI"
+    ],
+    "frequency": 20
   },
   {
     "code": "01261",
@@ -140,7 +223,7 @@
       "MEMBERSIHKAN RUMPUT MENGGUNAKAN MESIN PARAS PADA TANAMAN KELAPA",
       "BURUH PANJAT KELAPA"
     ],
-    "frequency": 17
+    "frequency": 64
   },
   {
     "code": "01282",
@@ -161,7 +244,7 @@
       "DI SEWA MEMOTONG RUMPUT DIKEBUN ORANG",
       "MENGOLAH KELAPA MENJADI KOPRA"
     ],
-    "frequency": 1
+    "frequency": 15
   },
   {
     "code": "01283",
@@ -176,9 +259,13 @@
     "group": "012",
     "subgroup": "0128",
     "sample_cases": [
-      "MENANAM CABAI MILIK SENDIRI"
+      "MENANAM CABAI MILIK SENDIRI",
+      "PANEN CABE RAWIT",
+      "MEMANEN TANAMAN CABE RAWIT",
+      "BERKEBUN TANAMAN CABE RAWIT DAN PEPAYA",
+      "BURUH HARIAN MENJEMUR NILAM"
     ],
-    "frequency": 1
+    "frequency": 10
   },
   {
     "code": "01284",
@@ -199,7 +286,60 @@
       "CABUT RUMPUT DI TANAMAN NILAM",
       "TANAM,PANEN,CANGKUL"
     ],
-    "frequency": 20
+    "frequency": 141
+  },
+  {
+    "code": "01289",
+    "title": "PERTANIAN TANAMAN REMPAH-REMPAH, AROMATIK/PENYEGAR, DAN OBAT LAINNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "012",
+    "subgroup": "0128",
+    "sample_cases": [
+      "PANJAT KELAPA"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "01299",
+    "title": "PERTANIAN CEMARA DAN TANAMAN TAHUNAN LAINNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "012",
+    "subgroup": "0129",
+    "sample_cases": [
+      "MEMBERSIHKAN RUMPUT DAN MENGAWINKAN TANAMAN VANILI DI KEBUN MILIK SENDIRI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "01411",
+    "title": "PEMBIBITAN DAN BUDIDAYA SAPI POTONG",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "014",
+    "subgroup": "0141",
+    "sample_cases": [
+      "MEMELIHARA TERNAK SAPI",
+      "MENJUAL BARANG BARANG ELEKTRONIK DI PASAR",
+      "MEMBERSIHKAN DAN MENANAM TANAMAN NILAM DI KEBUN SENDIRI"
+    ],
+    "frequency": 1
   },
   {
     "code": "01450",
@@ -215,9 +355,85 @@
     "subgroup": "0145",
     "sample_cases": [
       "MENJUAL PAKAN TERNAK",
-      "BURUH HARIAN MENJEMUR PADI"
+      "BURUH HARIAN MENJEMUR PADI",
+      "PETERNAK BABI",
+      "MEMBERI MAKAN TERNAK BABI",
+      "MELAKUKAN PENGGILINHAN PADI"
     ],
-    "frequency": 0
+    "frequency": 4
+  },
+  {
+    "code": "01461",
+    "title": "BUDIDAYA AYAM RAS PEDAGING",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "014",
+    "subgroup": "0146",
+    "sample_cases": [
+      "MENJUAL AYAM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "01464",
+    "title": "BUDIDAYA AYAM LOKAL DAN PERSILANGANNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "014",
+    "subgroup": "0146",
+    "sample_cases": [
+      "PEKERJA DI PETERNAKAN AYAM DAGING",
+      "MEMANEN TANAMAN CABE RAWIT",
+      "MEMBERI MAKAN TERNAK AYAM",
+      "MEMELIHARA AYAM KAMPUNG"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "01611",
+    "title": "JASA PENGOLAHAN LAHAN",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "016",
+    "subgroup": "0161",
+    "sample_cases": [
+      "MEMOTONG RUMPUT DENGAN MESIN DI KEBUN ORANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "01619",
+    "title": "JASA PENUNJANG PERTANIAN LAINNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "016",
+    "subgroup": "0161",
+    "sample_cases": [
+      "PARAS RUMPUT DI KEBUN",
+      "MEMARAS RUMPUT DI KEBUN DENGAN MESIN PARAS",
+      "MEMOTONG RUMPUT DENGAN ALAT MESIN PARAS DILAHAN KEBUN KELAPA MILIK ORANG LAIN"
+    ],
+    "frequency": 4
   },
   {
     "code": "01712",
@@ -233,6 +449,41 @@
     "subgroup": "0171",
     "sample_cases": [
       "PANEN NILAM"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "01719",
+    "title": "PERBURUAN DAN PENANGKAPAN SATWA LIAR LAINNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "017",
+    "subgroup": "0171",
+    "sample_cases": [
+      "MEMANEN NILAM DI KEBUN ORANG",
+      "MENCARI TIKUS DI HUTAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "01727",
+    "title": "PENANGKARAN IKAN DAN CORAL/KARANG",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "01",
+    "division_name": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "group": "017",
+    "subgroup": "0172",
+    "sample_cases": [
+      "PEKERJA DI PETERNAKAN AYAM DAGING"
     ],
     "frequency": 0
   },
@@ -254,6 +505,58 @@
     "frequency": 0
   },
   {
+    "code": "02202",
+    "title": "USAHA PEMUNGUTAN KAYU",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "02",
+    "division_name": "Kehutanan dan Penebangan Kayu",
+    "group": "022",
+    "subgroup": "0220",
+    "sample_cases": [
+      "MENGANGKAT KAYU DAN MENJUAL BELI KAYU",
+      "BURUH HARIAN MENGANGKAT KAYU UNTUK DIJUAL"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "02209",
+    "title": "USAHA KEHUTANAN LAINNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "02",
+    "division_name": "Kehutanan dan Penebangan Kayu",
+    "group": "022",
+    "subgroup": "0220",
+    "sample_cases": [
+      "MEMBERSIHKAN KAYU SENGON MILIK ORANG LAIN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "02409",
+    "title": "JASA PENUNJANG KEHUTANAN LAINNYA",
+    "category": {
+      "code": "A",
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981"
+    },
+    "division_code": "02",
+    "division_name": "Kehutanan dan Penebangan Kayu",
+    "group": "024",
+    "subgroup": "0240",
+    "sample_cases": [
+      "PERANGKAT DESA"
+    ],
+    "frequency": 0
+  },
+  {
     "code": "03111",
     "title": "PENANGKAPAN PISCES/IKAN BERSIRIP DI LAUT",
     "category": {
@@ -268,9 +571,46 @@
     "sample_cases": [
       "MENCARI IKAN DI LAUT MEMAKAI PERAHU MOTOR KETINTING",
       "PENGOLAHAN LIMBA DI PEEUSAHAN TEPUNG KELAPA",
-      "KARYWAN PENYULINGAN NILAM"
+      "KARYWAN PENYULINGAN NILAM",
+      "TUKANG OJEK",
+      "MEMBERSIHKAN KEBUN NILAM"
+    ],
+    "frequency": 9
+  },
+  {
+    "code": "07102",
+    "title": "PERTAMBANGAN BIJIH BESI",
+    "category": {
+      "code": "B",
+      "name": "Pertambangan Dan Penggalian",
+      "color": "#64748B"
+    },
+    "division_code": "07",
+    "division_name": "Pertambangan Bijih Logam",
+    "group": "071",
+    "subgroup": "0710",
+    "sample_cases": [
+      "EXTERNAL RELATION DI PT ADIDAYA TANGGU"
     ],
     "frequency": 1
+  },
+  {
+    "code": "07295",
+    "title": "PERTAMBANGAN BIJIH NIKEL",
+    "category": {
+      "code": "B",
+      "name": "Pertambangan Dan Penggalian",
+      "color": "#64748B"
+    },
+    "division_code": "07",
+    "division_name": "Pertambangan Bijih Logam",
+    "group": "072",
+    "subgroup": "0729",
+    "sample_cases": [
+      "MENJAGA DAN MENGAWASI ORANG YANG BEKERJA PADA PENGOLAHAN EMAS MENTAH DI BAK PENGOLAHAN EMAS",
+      "PETANI CAP TIKUS"
+    ],
+    "frequency": 0
   },
   {
     "code": "07301",
@@ -291,7 +631,93 @@
       "MENGGALI,MENGAMBIL BATU REP DI LOKASI TAMBANG",
       "OPERATOR TAMBANG PT FREEPORT INDONESIA"
     ],
-    "frequency": 11
+    "frequency": 28
+  },
+  {
+    "code": "08104",
+    "title": "PENGGALIAN PASIR",
+    "category": {
+      "code": "B",
+      "name": "Pertambangan Dan Penggalian",
+      "color": "#64748B"
+    },
+    "division_code": "08",
+    "division_name": "Pertambangan dan Penggalian Lainnya",
+    "group": "081",
+    "subgroup": "0810",
+    "sample_cases": [
+      "MENGAMBIL PASIR DI PERBUKITAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "10130",
+    "title": "INDUSTRI PENGOLAHAN DAN PENGAWETAN PRODUK DAGING DAN DAGING UNGGAS",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "101",
+    "subgroup": "1013",
+    "sample_cases": [
+      "MERACIK BUMBU UNTUK MEMBUAT AYAM LALAPAN DAN MENJUAL AYAM LALAPAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "10314",
+    "title": "INDUSTRI PEMBEKUAN BUAH-BUAHAN DAN SAYURAN",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "103",
+    "subgroup": "1031",
+    "sample_cases": [
+      "PENYORTIRAN KELAPA PUTIH TANPA KULIT DI PERUSAHAN KELAPA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "10320",
+    "title": "INDUSTRI PENGOLAHAN DAN PENGAWETAN BUAH-BUAHAN DAN SAYURAN DALAM KALENG",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "103",
+    "subgroup": "1032",
+    "sample_cases": [
+      "SELER KELAPA/MENGUPAS KELAPA DI PERUSAHAN KELAPA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "10399",
+    "title": "INDUSTRI PENGOLAHAN DAN PENGAWETAN LAINNYA BUAH-BUAHAN DAN SAYURAN BUKAN KACANG-KACANGAN",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "103",
+    "subgroup": "1039",
+    "sample_cases": [
+      "SELER /PENGUPAS BUAH KELAPA DI PERUSAHAAN KELAPA",
+      "MENJUAL BUAH UNTUK DI JADIKAN RUJAK"
+    ],
+    "frequency": 2
   },
   {
     "code": "10421",
@@ -312,7 +738,42 @@
       "MEMBERSIHKAN RUMPUT MENGGUNAKAN MESIN PARAS PADA TANAMAN KELAPA",
       "BURUH PEKERJA KOPRA"
     ],
-    "frequency": 13
+    "frequency": 86
+  },
+  {
+    "code": "10532",
+    "title": "INDUSTRI PENGOLAHAN ES SEJENISNYA YANG DAPAT DIMAKAN (BUKAN ES BATU DAN ES BALOK)",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "105",
+    "subgroup": "1053",
+    "sample_cases": [
+      "MEMBANTU MEMBERSIHKAN TANAMAN NILAM DI KEBUN SENDIRI",
+      "MEMBANTU ORANG TUA MEMBUAT ES MAMBO"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "10616",
+    "title": "INDUSTRI TEPUNG TERIGU",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "106",
+    "subgroup": "1061",
+    "sample_cases": [
+      "PERKERJA HARIAN DI PERUSAHAAN KELAPA"
+    ],
+    "frequency": 1
   },
   {
     "code": "10631",
@@ -328,9 +789,11 @@
     "subgroup": "1063",
     "sample_cases": [
       "BURUH HARIAN MENJEMUR PADI",
-      "MEMBANTU PEKERJAAN ORANGTUA MENJEMUR PADI MILIK ORANG LAIN"
+      "MEMBANTU PEKERJAAN ORANGTUA MENJEMUR PADI MILIK ORANG LAIN",
+      "PEKERJA KELUARGA DI PENGGILINGAN PADI",
+      "MELAKUKAN PENGGILINHAN PADI"
     ],
-    "frequency": 2
+    "frequency": 4
   },
   {
     "code": "10710",
@@ -345,9 +808,30 @@
     "group": "107",
     "subgroup": "1071",
     "sample_cases": [
-      "USAHA DONAT BUATAN SENDIRI"
+      "USAHA DONAT BUATAN SENDIRI",
+      "MENJUAL KUE SESUAI PESANAN",
+      "MEMBUAT KUE BASAH"
     ],
-    "frequency": 1
+    "frequency": 3
+  },
+  {
+    "code": "10722",
+    "title": "INDUSTRI GULA MERAH",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "107",
+    "subgroup": "1072",
+    "sample_cases": [
+      "MEMBUAT GULA MERAH/AREN",
+      "MENGOLAH AIR NIRAH MENJADI GULA AREN",
+      "MENGOLAH AIR NIRA MENJADI GULA AREN"
+    ],
+    "frequency": 3
   },
   {
     "code": "10750",
@@ -362,9 +846,12 @@
     "group": "107",
     "subgroup": "1075",
     "sample_cases": [
-      "MEMASAK,MENJUAL SAYUR MASAK"
+      "MEMASAK,MENJUAL SAYUR MASAK",
+      "INDUSTRI PENGOLAHAN MAKANAN TAHU GORENG ISI SAYUR",
+      "PEMBUAT DAN PENJUAL GORENGAN DI RUMAH",
+      "MENJUAL ANEKA GORENGAN"
     ],
-    "frequency": 1
+    "frequency": 5
   },
   {
     "code": "10773",
@@ -385,7 +872,25 @@
       "PENGOLAHAN LIMBA DI PEEUSAHAN TEPUNG KELAPA",
       "PRODUKSI TEPUNG KELAPA DI PERUSAHAN TEPUNG KELAPA"
     ],
-    "frequency": 7
+    "frequency": 25
+  },
+  {
+    "code": "10779",
+    "title": "INDUSTRI PRODUK MASAK LAINNYA",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "107",
+    "subgroup": "1077",
+    "sample_cases": [
+      "MENGOLAH SAYUR MASAK DAN NASI JAAH DI RUMAH",
+      "MEMBANTU MENJUAL DI RUMAH DAN KELILING SAYUR MASAK DAN NASI JAAH"
+    ],
+    "frequency": 2
   },
   {
     "code": "10792",
@@ -402,9 +907,11 @@
     "sample_cases": [
       "MEMBUAT DAN MENJUAL KUE BASAH",
       "MENJUAL KUE BASAH",
-      "MEMBUAT MACAM - MACAM KUE BASAH DAN DI JUAL"
+      "MEMBUAT MACAM - MACAM KUE BASAH DAN DI JUAL",
+      "BERJUALAN KUE BASAH DAN GORENGAN",
+      "PENGOLAHAN KUE BASAH DAN GORENGAN"
     ],
-    "frequency": 3
+    "frequency": 20
   },
   {
     "code": "10794",
@@ -425,6 +932,23 @@
     "frequency": 2
   },
   {
+    "code": "10799",
+    "title": "INDUSTRI PRODUK MAKANAN LAINNYA",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "10",
+    "division_name": "Industri Makanan",
+    "group": "107",
+    "subgroup": "1079",
+    "sample_cases": [
+      "MENJUAL RUJAK"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "11010",
     "title": "INDUSTRI MINUMAN BERALKOHOL HASIL DESTILASI",
     "category": {
@@ -437,9 +961,82 @@
     "group": "110",
     "subgroup": "1101",
     "sample_cases": [
-      "MEMBUAT AIR NIRA MENJADI MINUMAN CAP TIKUS"
+      "MEMBUAT AIR NIRA MENJADI MINUMAN CAP TIKUS",
+      "PETANI CAPTIKUS DI KEBUN SENDIRI",
+      "MENGUPAS KELAPA DAN DIJADIKAN KOPRA DI KEBUN ORANG LAIN",
+      "MEMBUAT AIR NIRA MENJADI CAP TIKUS",
+      "MEMPRODUKSI DAN MENJUAL CAPTIKUS"
     ],
-    "frequency": 3
+    "frequency": 39
+  },
+  {
+    "code": "11020",
+    "title": "INDUSTRI MINUMAN BERALKOHOL HASIL FERMENTASI ANGGUR DAN HASIL PERTANIAN LAINNYA",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "11",
+    "division_name": "Industri Minuman",
+    "group": "110",
+    "subgroup": "1102",
+    "sample_cases": [
+      "MENGUMPULKAN SAGUER,MEMASAK SAGUER SAMPAI MENJADI CAP TIKUS"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "11051",
+    "title": "INDUSTRI AIR KEMASAN",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "11",
+    "division_name": "Industri Minuman",
+    "group": "110",
+    "subgroup": "1105",
+    "sample_cases": [
+      "SOPIR EXPEDISI AQUA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "11052",
+    "title": "INDUSTRI AIR MINUM ISI ULANG",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "11",
+    "division_name": "Industri Minuman",
+    "group": "110",
+    "subgroup": "1105",
+    "sample_cases": [
+      "USAHA DEPOT AIR ISI ULANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "14120",
+    "title": "PENJAHITAN DAN PEMBUATAN PAKAIAN SESUAI PESANAN",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "14",
+    "division_name": "Industri Pakaian Jadi",
+    "group": "141",
+    "subgroup": "1412",
+    "sample_cases": [
+      "PETANI KELAPA UNTUK DI JADIKAN KOPRA",
+      "PENJAHIT PAKAIAN"
+    ],
+    "frequency": 1
   },
   {
     "code": "16101",
@@ -454,9 +1051,49 @@
     "group": "161",
     "subgroup": "1610",
     "sample_cases": [
-      "PERANGKAT DESA"
+      "PERANGKAT DESA",
+      "MEMANEN KELAPA DI KEBUN ORANG",
+      "PENYEDIAAN JASA OPERATOR POTONG KAYU DENGAN ALAT POTONG",
+      "MEMOTONG KAYU UNTUK DIBUAT MENJADI PAPAN (MENGGUNAKAN SENSO SENDIRI) KAYU MILIK PEMBERI KERJA"
     ],
-    "frequency": 0
+    "frequency": 2
+  },
+  {
+    "code": "16221",
+    "title": "INDUSTRI BARANG BANGUNAN DARI KAYU",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "16",
+    "division_name": "Industri Kayu, Barang dari Kayu dan Gabus",
+    "group": "162",
+    "subgroup": "1622",
+    "sample_cases": [
+      "PEKERJAAN TUKANG BANGUNAN (MEMBUAT RUMAH PAPAN)",
+      "MENEBANG KAYU DAN MEMBUAT RAMUAN RUMAH KAYU",
+      "MEMBUAT KUSEN PINTU"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "16295",
+    "title": "INDUSTRI KAYU BAKAR DAN PELET KAYU",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "16",
+    "division_name": "Industri Kayu, Barang dari Kayu dan Gabus",
+    "group": "162",
+    "subgroup": "1629",
+    "sample_cases": [
+      "BURUH ANGKUT BATANG POHON YANG DI JADIKAN SEBAGAI KAYU BAKAR",
+      "MENGANGKAT KAYU BAKAR KE MOBIL ANGKUTAN"
+    ],
+    "frequency": 2
   },
   {
     "code": "20115",
@@ -474,9 +1111,10 @@
       "MEMBAKAR ARANG TEMPURUNG DI KEBUN MILIK ORANG",
       "MEMBANTU SUAMI MEMBAKAR TEMPURUNG UNTUK DIBUAT MENJADI ARANG",
       "MEMBAKAR TEMPURUNG KELAPA UNTUK DIBUAT MENJADI ARANG",
-      "MEMBAKAR TEMPURUNG KEKAPA UNTUK MEMBUAT ARANG TEMPURUNG"
+      "MEMBAKAR TEMPURUNG KEKAPA UNTUK MEMBUAT ARANG TEMPURUNG",
+      "MEMASUKKAN ARANG TEMPURUNG DI KARUNG UNTUK DISIMPAN DALAM GUDANG"
     ],
-    "frequency": 4
+    "frequency": 8
   },
   {
     "code": "20294",
@@ -491,7 +1129,62 @@
     "group": "202",
     "subgroup": "2029",
     "sample_cases": [
-      "KARYWAN PENYULINGAN NILAM"
+      "KARYWAN PENYULINGAN NILAM",
+      "MENGOPERASIKAN MESIN RONTOK NILAM",
+      "MEMINJAMKAN UANG KEPADA ORANG LAIN DENGAN BUNGA",
+      "SOPIR MOBIL ANGKUTAN KAYU BAKAR",
+      "USAHA PEMBUATAN MINYAK TAWAANG"
+    ],
+    "frequency": 8
+  },
+  {
+    "code": "20296",
+    "title": "INDUSTRI MINYAK ATSIRI RANTAI TENGAH",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "20",
+    "division_name": "Industri Bahan Kimia dan Barang dari Bahan Kimia",
+    "group": "202",
+    "subgroup": "2029",
+    "sample_cases": [
+      "MENJAGA TONG PENYULINGAN NILAM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "23929",
+    "title": "INDUSTRI BAHAN BANGUNAN DARI TANAH LIAT/KERAMIK BUKAN BATU BATA DAN GENTENG",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "23",
+    "division_name": "Industri Barang Galian Bukan Logam",
+    "group": "239",
+    "subgroup": "2392",
+    "sample_cases": [
+      "PENGUSAHA BATAKO"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "23951",
+    "title": "INDUSTRI BARANG DARI SEMEN",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "23",
+    "division_name": "Industri Barang Galian Bukan Logam",
+    "group": "239",
+    "subgroup": "2395",
+    "sample_cases": [
+      "MEMBUAT BATAKO"
     ],
     "frequency": 1
   },
@@ -508,9 +1201,10 @@
     "group": "239",
     "subgroup": "2395",
     "sample_cases": [
-      "MEMBUAT DAN MENJUAL BATAKO"
+      "MEMBUAT DAN MENJUAL BATAKO",
+      "MEMBUAT BATAKO"
     ],
-    "frequency": 1
+    "frequency": 2
   },
   {
     "code": "23959",
@@ -530,6 +1224,97 @@
     "frequency": 1
   },
   {
+    "code": "27201",
+    "title": "INDUSTRI BATU BATERAI",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "27",
+    "division_name": "Industri Peralatan Listrik",
+    "group": "272",
+    "subgroup": "2720",
+    "sample_cases": [
+      "DRIVER TREILER DI PERUSAHAAN HPAL HALMAHERA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "28250",
+    "title": "INDUSTRI MESIN PENGOLAHAN MAKANAN, MINUMAN DAN TEMBAKAU",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "28",
+    "division_name": "Industri Mesin dan Perlengkapan YTDL",
+    "group": "282",
+    "subgroup": "2825",
+    "sample_cases": [
+      "MENJAGA TONG SULINGAN NILAM",
+      "MENJUAL PISANG GORENG",
+      "MEMBANTU MENJAGA TEMPAT PENYULINGAN NILAM MILIK ANAK",
+      "MEBANTU MENJAGA TEMPAT PENYULINGAN NILAM MILIK ANAK",
+      "MENJAGA TONG PENYULINGAN MILIK ORANG LAIN"
+    ],
+    "frequency": 6
+  },
+  {
+    "code": "30912",
+    "title": "INDUSTRI KOMPONEN DAN PERLENGKAPAN SEPEDA MOTOR RODA DUA DAN TIGA",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "30",
+    "division_name": "Industri Alat Angkutan Lainnya",
+    "group": "309",
+    "subgroup": "3091",
+    "sample_cases": [
+      "BEKERJA SEBAGAI KOLEKTOR MOTOR (PERUSAHAAN LEASING)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "31001",
+    "title": "INDUSTRI FURNITUR DARI KAYU",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "31",
+    "division_name": "Industri Furnitur",
+    "group": "310",
+    "subgroup": "3100",
+    "sample_cases": [
+      "MEMBUAT FURNITUR DARI KAYU",
+      "PEMBUAT FURNITUR (LEMARI, MEJA, DLL DARI KAYU)",
+      "TUKANG MEMBUAT PERABOT RUMAH TANGGA ATAU PENGRAJIN MEBEL"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "32903",
+    "title": "INDUSTRI KERAJINAN YTDL",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "32",
+    "division_name": "Industri Pengolahan Lainnya",
+    "group": "329",
+    "subgroup": "3290",
+    "sample_cases": [
+      "MEMBUAT SAPU SEHO/LIDI"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "32909",
     "title": "INDUSTRI PENGOLAHAN LAINNYA YTDL",
     "category": {
@@ -542,9 +1327,30 @@
     "group": "329",
     "subgroup": "3290",
     "sample_cases": [
-      "WATUNG SEMBAKO"
+      "WATUNG SEMBAKO",
+      "PENJAGA TROMOL",
+      "MENGOLAH KAYU MENJADI PETI JENAZAH",
+      "MEMBANTU SUAMI MENJALANKAN USAHA",
+      "MENJUAL TELUR AYAM KELILING"
     ],
-    "frequency": 0
+    "frequency": 4
+  },
+  {
+    "code": "33190",
+    "title": "REPARASI PERALATAN LAINNYA",
+    "category": {
+      "code": "C",
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B"
+    },
+    "division_code": "33",
+    "division_name": "Jasa Reparasi dan Pemasangan Mesin dan Peralatan",
+    "group": "331",
+    "subgroup": "3319",
+    "sample_cases": [
+      "REPARASI SEPEDA DAN MENYEWAKAN SEPEDA MILIK SENDIRI"
+    ],
+    "frequency": 1
   },
   {
     "code": "35111",
@@ -559,7 +1365,26 @@
     "group": "351",
     "subgroup": "3511",
     "sample_cases": [
-      "SOPIR ALAT BERAT DI PLTU"
+      "SOPIR ALAT BERAT DI PLTU",
+      "OPERATOR ALAT BERAT",
+      "SATPAM DI PLTU"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "35112",
+    "title": "TRANSMISI TENAGA LISTRIK",
+    "category": {
+      "code": "D",
+      "name": "Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin",
+      "color": "#EAB308"
+    },
+    "division_code": "35",
+    "division_name": "Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "group": "351",
+    "subgroup": "3511",
+    "sample_cases": [
+      "MEMPERBAIKI LISTRIK"
     ],
     "frequency": 1
   },
@@ -576,7 +1401,59 @@
     "group": "351",
     "subgroup": "3511",
     "sample_cases": [
-      "PLN MEMPERBAIKI KEUSAKAN LISTRIK DAN MEMASANG METER LAMPU"
+      "PLN MEMPERBAIKI KEUSAKAN LISTRIK DAN MEMASANG METER LAMPU",
+      "SATPAM ULPLTD PLN LOPANA"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "35115",
+    "title": "PEMBANGKIT, TRANSMISI, DISTRIBUSI DAN PENJUALAN TENAGA LISTRIK DALAM SATU KESATUAN USAHA",
+    "category": {
+      "code": "D",
+      "name": "Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin",
+      "color": "#EAB308"
+    },
+    "division_code": "35",
+    "division_name": "Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "group": "351",
+    "subgroup": "3511",
+    "sample_cases": [
+      "KARYAWAN/HELPER DI PLTU TAWAANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "35117",
+    "title": "PEMBANGKIT, DISTRIBUSI, DAN PENJUALAN TENAGA LISTRIK DALAM SATU KESATUAN USAHA",
+    "category": {
+      "code": "D",
+      "name": "Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin",
+      "color": "#EAB308"
+    },
+    "division_code": "35",
+    "division_name": "Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "group": "351",
+    "subgroup": "3511",
+    "sample_cases": [
+      "KARYAWAN SWASTA PLTU"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "35122",
+    "title": "PENGOPERASIAN INSTALASI PEMANFAATAN TENAGA LISTRIK",
+    "category": {
+      "code": "D",
+      "name": "Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin",
+      "color": "#EAB308"
+    },
+    "division_code": "35",
+    "division_name": "Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "group": "351",
+    "subgroup": "3512",
+    "sample_cases": [
+      "OUTSOURCING BAGIAN MESIN DI PLTU AMURANG"
     ],
     "frequency": 1
   },
@@ -599,7 +1476,24 @@
       "MEMBERSIHKAN RUMPUT PADA TANAMAN CENGKIH DAN KELAPA MENGGUNAKAN MESIN PARAS PADA PERKEBUNAN MILIK ORANG LAIN",
       "MEMBANGUN RUMAH"
     ],
-    "frequency": 6
+    "frequency": 30
+  },
+  {
+    "code": "41015",
+    "title": "KONSTRUKSI GEDUNG KESEHATAN",
+    "category": {
+      "code": "F",
+      "name": "Konstruksi",
+      "color": "#EC4899"
+    },
+    "division_code": "41",
+    "division_name": "Konstruksi Gedung",
+    "group": "410",
+    "subgroup": "4101",
+    "sample_cases": [
+      "BURUH BANGUNAN MEMBUAT PUSKESMAS"
+    ],
+    "frequency": 1
   },
   {
     "code": "42101",
@@ -614,9 +1508,10 @@
     "group": "421",
     "subgroup": "4210",
     "sample_cases": [
-      "PENGAWAS DI KONSTRUKSI JALAN"
+      "PENGAWAS DI KONSTRUKSI JALAN",
+      "TUKANG BANGUNAN"
     ],
-    "frequency": 1
+    "frequency": 2
   },
   {
     "code": "42201",
@@ -636,6 +1531,40 @@
     "frequency": 1
   },
   {
+    "code": "42919",
+    "title": "KONSTRUKSI BANGUNAN SIPIL LAINNYA YTDL",
+    "category": {
+      "code": "F",
+      "name": "Konstruksi",
+      "color": "#EC4899"
+    },
+    "division_code": "42",
+    "division_name": "Konstruksi Bangunan Sipil",
+    "group": "429",
+    "subgroup": "4291",
+    "sample_cases": [
+      "MEMANEN NILAM"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "42929",
+    "title": "KONSTRUKSI KHUSUS BANGUNAN SIPIL LAINNYA YTDL",
+    "category": {
+      "code": "F",
+      "name": "Konstruksi",
+      "color": "#EC4899"
+    },
+    "division_code": "42",
+    "division_name": "Konstruksi Bangunan Sipil",
+    "group": "429",
+    "subgroup": "4292",
+    "sample_cases": [
+      "MELAKUKAN PLESTERAN LANTAI RUMAH"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "43211",
     "title": "INSTALASI LISTRIK",
     "category": {
@@ -650,9 +1579,10 @@
     "sample_cases": [
       "MELAKUKAN PEMBERSIHAN JARINGAN LISTRIK PLN",
       "CABUT RUMPUT DITANAMAN NILAM",
-      "JASA INSTALASI LISTRIK"
+      "JASA INSTALASI LISTRIK",
+      "PENYAMBUNGAN BARU,GANTI METER LISTRIK,MULTIGUNA/LOSTROM."
     ],
-    "frequency": 2
+    "frequency": 3
   },
   {
     "code": "43304",
@@ -668,9 +1598,27 @@
     "subgroup": "4330",
     "sample_cases": [
       "MENGEMUDI OJEK PRIBADI DARI RUMAH",
-      "USAHA DEKORASI MILIK SENDIRI"
+      "USAHA DEKORASI MILIK SENDIRI",
+      "BEKERJA JASA DEKORASI SESUAI PERMINTAAN CUSTOMER CONTOHNYA DEKORASI ULANG TAHUN,"
     ],
-    "frequency": 2
+    "frequency": 3
+  },
+  {
+    "code": "43309",
+    "title": "PENYELESAIAN KONSTRUKSI BANGUNAN LAINNYA",
+    "category": {
+      "code": "F",
+      "name": "Konstruksi",
+      "color": "#EC4899"
+    },
+    "division_code": "43",
+    "division_name": "Konstruksi Khusus",
+    "group": "433",
+    "subgroup": "4330",
+    "sample_cases": [
+      "BAS BANGUNAN RUMAH"
+    ],
+    "frequency": 1
   },
   {
     "code": "45104",
@@ -708,7 +1656,24 @@
       "USAHA BENGKEL MOBIL",
       "MEMBANTU ORANG TUAH DI BENGKEL"
     ],
-    "frequency": 4
+    "frequency": 6
+  },
+  {
+    "code": "45401",
+    "title": "PERDAGANGAN BESAR SEPEDA MOTOR BARU",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "45",
+    "division_name": "Perdagangan, Reparasi dan Perawatan Mobil dan Sepeda Motor",
+    "group": "454",
+    "subgroup": "4540",
+    "sample_cases": [
+      "MENJUAL SUKU CADANG MOTOR"
+    ],
+    "frequency": 1
   },
   {
     "code": "45403",
@@ -740,7 +1705,28 @@
     "group": "454",
     "subgroup": "4540",
     "sample_cases": [
-      "MONTIR DI BENGKEL MOBIL"
+      "MONTIR DI BENGKEL MOBIL",
+      "MEMPERBAIKI MOBIL/MOTOR RUSAK",
+      "MEMPERBAIKI MOTOR DI BENGKEL MILIK ORANG LAIN",
+      "BENGKEL TAMBAL BAN",
+      "MENAMBAL BAN DI BENGKEL"
+    ],
+    "frequency": 5
+  },
+  {
+    "code": "46202",
+    "title": "PERDAGANGAN BESAR BUAH YANG MENGANDUNG MINYAK",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "46",
+    "division_name": "Perdagangan Besar, Bukan Mobil dan Sepeda Motor",
+    "group": "462",
+    "subgroup": "4620",
+    "sample_cases": [
+      "PETANI KOPRA"
     ],
     "frequency": 0
   },
@@ -757,9 +1743,13 @@
     "group": "462",
     "subgroup": "4620",
     "sample_cases": [
-      "USAHA JUAL BELI KOPRA"
+      "USAHA JUAL BELI KOPRA",
+      "MEMBANTU DALAM USAHA JUAL BELI PISANG DI DESA-DESA",
+      "MEMBELIH DAN MENJUAL KOPRA",
+      "JUAL BELI KOPRA",
+      "PEMILIK KEBUN KELAPA"
     ],
-    "frequency": 1
+    "frequency": 6
   },
   {
     "code": "46312",
@@ -777,6 +1767,58 @@
       "MEMBELI DAN MENJUAL BUAH BUAHAN"
     ],
     "frequency": 1
+  },
+  {
+    "code": "46313",
+    "title": "PERDAGANGAN BESAR SAYURAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "46",
+    "division_name": "Perdagangan Besar, Bukan Mobil dan Sepeda Motor",
+    "group": "463",
+    "subgroup": "4631",
+    "sample_cases": [
+      "PENGEPUL HASIL PERTANIAN DARI PETANI (BURUH MENCARI BAHAN UNTUK MEMBORONG SAYUR-SAYUR KENTANG, WORTEL, SAWI PUTIH, KOL DLL)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "46319",
+    "title": "PERDAGANGAN BESAR BAHAN MAKANAN DAN MINUMAN HASIL PERTANIAN LAINNYA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "46",
+    "division_name": "Perdagangan Besar, Bukan Mobil dan Sepeda Motor",
+    "group": "463",
+    "subgroup": "4631",
+    "sample_cases": [
+      "MEMBELIH DAN MENJUAL KOPRA",
+      "MEMBANTU MENCATAT TIMBANGAN KOPRA"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "46321",
+    "title": "PERDAGANGAN BESAR DAGING SAPI DAN DAGING SAPI OLAHAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "46",
+    "division_name": "Perdagangan Besar, Bukan Mobil dan Sepeda Motor",
+    "group": "463",
+    "subgroup": "4632",
+    "sample_cases": [
+      "BURUH PANJAT KELAPA"
+    ],
+    "frequency": 0
   },
   {
     "code": "46323",
@@ -797,6 +1839,45 @@
     "frequency": 2
   },
   {
+    "code": "46491",
+    "title": "PERDAGANGAN BESAR PERALATAN DAN PERLENGKAPAN RUMAH TANGGA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "46",
+    "division_name": "Perdagangan Besar, Bukan Mobil dan Sepeda Motor",
+    "group": "464",
+    "subgroup": "4649",
+    "sample_cases": [
+      "MEMBANTU KELUARGA MEMANEN DAN MENJEMUR NILAM",
+      "MELAYANI PEMBELI DI TOKO PEGI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47111",
+    "title": "PERDAGANGAN ECERAN BERBAGAI MACAM BARANG YANG UTAMANYA MAKANAN, MINUMAN ATAU TEMBAKAU DI MINIMARKET/SUPERMARKET/HYPERMARKET",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "471",
+    "subgroup": "4711",
+    "sample_cases": [
+      "PEGAWAI DI GUDANG AQUA",
+      "PENYORTIRAN KELAPA PUTIH TANPA KULIT DI PERUSAHAN KELAPA",
+      "SOPIR TRUK MENGANGKUT BAHAN TOKO SERBA ADA",
+      "MEMBATU MELAYANI PEMBELI DI WARUNG",
+      "MEMBANTU MELAYANI PEMBELI DI WARUNG"
+    ],
+    "frequency": 7
+  },
+  {
     "code": "47112",
     "title": "PERDAGANGAN ECERAN BERBAGAI MACAM BARANG YANG UTAMANYA MAKANAN, MINUMAN ATAU TEMBAKAU BUKAN DI MINIMARKET/SUPERMARKET/HYPERMARKET (TRADISIONAL)",
     "category": {
@@ -815,7 +1896,26 @@
       "PETANI JAGUNG PIPILAN MILIK SENDIRI (MENUNGGU PANEN DAN AKTIFITAS DI KEBUN MEMBERSIHKAN RUMPUT RUMPUT DI SEKITAR JAGUNG)",
       "MEMBANTU ORANG TUAH MENJAGA WARUNG"
     ],
-    "frequency": 17
+    "frequency": 71
+  },
+  {
+    "code": "47192",
+    "title": "PERDAGANGAN ECERAN BERBAGAI MACAM BARANG YANG UTAMANYA BUKAN MAKANAN, MINUMAN ATAU TEMBAKAU (BARANG-BARANG KELONTONG) BUKAN DI TOSERBA (DEPARTMENT STORE)",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "471",
+    "subgroup": "4719",
+    "sample_cases": [
+      "MENJUAL BARANG KELONTONG DI PASAR",
+      "PETANI KOPRA",
+      "MENJUAL KEBUTUHAN POKOK SEMBAKO"
+    ],
+    "frequency": 2
   },
   {
     "code": "47212",
@@ -830,7 +1930,27 @@
     "group": "472",
     "subgroup": "4721",
     "sample_cases": [
-      "MENJUAL BUAH PISANG DI PASAR"
+      "MENJUAL BUAH PISANG DI PASAR",
+      "JUAL BELI BUAH ALPUKAT",
+      "MEMBANTU JUALAN BUAH DIPASAR",
+      "MEMBELI BUAH ALPUKAT KEMUDIAN DIJUAL KEMBALI"
+    ],
+    "frequency": 5
+  },
+  {
+    "code": "47213",
+    "title": "PERDAGANGAN ECERAN SAYURAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "472",
+    "subgroup": "4721",
+    "sample_cases": [
+      "MENJUAL SAYURAN DI PASAR"
     ],
     "frequency": 1
   },
@@ -847,9 +1967,10 @@
     "group": "472",
     "subgroup": "4721",
     "sample_cases": [
-      "MENJUAL TELUR AYAM"
+      "MENJUAL TELUR AYAM",
+      "MENJUAL TELUR AYAM KELILING"
     ],
-    "frequency": 1
+    "frequency": 2
   },
   {
     "code": "47215",
@@ -865,9 +1986,29 @@
     "subgroup": "4721",
     "sample_cases": [
       "MEMBANTU SUAMI UNTUK MENJUAL IKAN HASIL TANGKAPAN",
-      "USAHA PENJUALAN IKAN SEGAR"
+      "USAHA PENJUALAN IKAN SEGAR",
+      "MEMBORONG IKAN UNTUK DI JUAL",
+      "JUAL BELI IKAN SEGAR",
+      "PEDAGANG IKAN"
     ],
-    "frequency": 2
+    "frequency": 9
+  },
+  {
+    "code": "47216",
+    "title": "PERDAGANGAN ECERAN HASIL KEHUTANAN DAN PERBURUAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "472",
+    "subgroup": "4721",
+    "sample_cases": [
+      "MEMBANTU SUAMI MENJUAL HASIL TANGKAPAN"
+    ],
+    "frequency": 1
   },
   {
     "code": "47221",
@@ -887,6 +2028,41 @@
     "frequency": 0
   },
   {
+    "code": "47222",
+    "title": "PERDAGANGAN ECERAN MINUMAN TIDAK BERALKOHOL",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "472",
+    "subgroup": "4722",
+    "sample_cases": [
+      "MENJUAL MINUMAN DINGIN DI RUMAH",
+      "KARYAWAN PT BUDI KARYA DISTRIBUTOR AQUA (SOPIR PENGANTAR AQUA)"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "47249",
+    "title": "PERDAGANGAN ECERAN MAKANAN LAINNYA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "472",
+    "subgroup": "4724",
+    "sample_cases": [
+      "MEMBANTU MENJUAL SATE TUSUK"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "47301",
     "title": "PERDAGANGAN ECERAN BAHAN BAKAR MINYAK, BAHAN BAKAR GAS (BBG), DAN LIQUEFIED PETROLEUM GAS (LPG) DI SARANA PENGISIAN BAHAN BAKAR TRANSPORTASI DARAT, LAUT, DAN UDARA",
     "category": {
@@ -899,9 +2075,114 @@
     "group": "473",
     "subgroup": "4730",
     "sample_cases": [
-      "KARYAWAN DI POM BENSIN"
+      "KARYAWAN DI POM BENSIN",
+      "PETUGAS STASIUN PENGISIAN BAHAN BAKAR UMUM (SPBU)"
     ],
-    "frequency": 2
+    "frequency": 3
+  },
+  {
+    "code": "47302",
+    "title": "PERDAGANGAN ECERAN BAHAN BAKAR MINYAK, BAHAN BAKAR GAS (BBG), DAN LIQUEFIED PETROLEUM GAS (LPG) SELAIN DI SARANA PENGISIAN BAHAN BAKAR TRANSPORTASI DARAT, LAUT, DAN UDARA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "473",
+    "subgroup": "4730",
+    "sample_cases": [
+      "MEMBANTU ORANG TUA MENJUAL BENSIN ECERAN",
+      "MENJUAL BENSIN ECERAN",
+      "MEMBANTU ANAK MENJUAL BENSIN ECERAN"
+    ],
+    "frequency": 4
+  },
+  {
+    "code": "47512",
+    "title": "PERDAGANGAN ECERAN PERLENGKAPAN RUMAH TANGGA DARI TEKSTIL",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "475",
+    "subgroup": "4751",
+    "sample_cases": [
+      "MENJUAL BARANG ONLINE"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47524",
+    "title": "PERDAGANGAN ECERAN SEMEN, KAPUR, PASIR DAN BATU",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "475",
+    "subgroup": "4752",
+    "sample_cases": [
+      "BURUH PABRIK DI TOKO SEMEN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47526",
+    "title": "PERDAGANGAN ECERAN BAHAN KONSTRUKSI DARI KAYU",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "475",
+    "subgroup": "4752",
+    "sample_cases": [
+      "PEMASOK KAYU/PAPAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47528",
+    "title": "PERDAGANGAN ECERAN BERBAGAI MACAM MATERIAL BANGUNAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "475",
+    "subgroup": "4752",
+    "sample_cases": [
+      "SOPIR ANGKUTAN TOKO BAHAN BANGUNAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47591",
+    "title": "PERDAGANGAN ECERAN FURNITUR",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "475",
+    "subgroup": "4759",
+    "sample_cases": [
+      "SUPERVISOR DI TOKO MEUBLE"
+    ],
+    "frequency": 1
   },
   {
     "code": "47599",
@@ -916,9 +2197,10 @@
     "group": "475",
     "subgroup": "4759",
     "sample_cases": [
-      "USAHA PEMBELIAN DAN PEMBAYARAN BARANG ONLINE"
+      "USAHA PEMBELIAN DAN PEMBAYARAN BARANG ONLINE",
+      "KARYAWAN TOKO"
     ],
-    "frequency": 1
+    "frequency": 2
   },
   {
     "code": "47711",
@@ -933,9 +2215,12 @@
     "group": "477",
     "subgroup": "4771",
     "sample_cases": [
-      "MENJUAL ECERAN PAKAIAN DIRUMAH"
+      "MENJUAL ECERAN PAKAIAN DIRUMAH",
+      "MENJUAL PAKAIAN DI RUMAH SENDIRI",
+      "MENJAGA TOKO PAKAIAN",
+      "SALES BARANG CAMPUR DI MATAHARI INTI PERKASA"
     ],
-    "frequency": 1
+    "frequency": 4
   },
   {
     "code": "47712",
@@ -953,6 +2238,24 @@
       "MEMBELI CEPATU DI TOKO ONLINE KEMUDIAN DIJUAL KEMBALI SECARA ONLINE"
     ],
     "frequency": 1
+  },
+  {
+    "code": "47742",
+    "title": "PERDAGANGAN ECERAN PAKAIAN, ALAS KAKI DAN PELENGKAP PAKAIAN BEKAS",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "477",
+    "subgroup": "4774",
+    "sample_cases": [
+      "MENJUAL PAKAIAN BEKAS(CABO) DI RUMAH",
+      "MENJUAL PAKAIAN BEKAS ( CABO) DIRUMAH"
+    ],
+    "frequency": 2
   },
   {
     "code": "47754",
@@ -974,6 +2277,43 @@
     "frequency": 4
   },
   {
+    "code": "47763",
+    "title": "PERDAGANGAN ECERAN PUPUK DAN PEMBERANTAS HAMA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "477",
+    "subgroup": "4776",
+    "sample_cases": [
+      "TENAGA HONORER DI SMP N 1 MAESAAN",
+      "USAHA JUAL BAHAN DAN ALAT PERTANIAN DAN PETERNAKAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47772",
+    "title": "PERDAGANGAN ECERAN GAS ELPIJI",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "477",
+    "subgroup": "4777",
+    "sample_cases": [
+      "MENJUAL GAS LPG",
+      "MENJUAL GAS LPG(PANGKALAN)",
+      "PANGKALAN LPG"
+    ],
+    "frequency": 3
+  },
+  {
     "code": "47774",
     "title": "PERDAGANGAN ECERAN AROMATIK/PENYEGAR (MINYAK ATSIRI)",
     "category": {
@@ -991,6 +2331,58 @@
     "frequency": 1
   },
   {
+    "code": "47781",
+    "title": "PERDAGANGAN ECERAN BARANG KERAJINAN DARI KAYU, BAMBU, ROTAN, PANDAN, RUMPUT DAN SEJENISNYA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "477",
+    "subgroup": "4778",
+    "sample_cases": [
+      "BEKERJA DI TOKO MEBEL (MEJUAL KURSI MEJA)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47789",
+    "title": "PERDAGANGAN ECERAN BARANG KERAJINAN DAN LUKISAN LAINNYA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "477",
+    "subgroup": "4778",
+    "sample_cases": [
+      "MENJUAL PERLENGKAPAN AKSESORIS DI PASAR",
+      "MEMBANTU ANAK MENJUAL AKSESORIS DIPASAR"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "47812",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR KOMODITI BUAH-BUAHAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4781",
+    "sample_cases": [
+      "MENJUAL PISANG DI PASAR"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "47813",
     "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR KOMODITI SAYUR-SAYURAN",
     "category": {
@@ -1003,7 +2395,114 @@
     "group": "478",
     "subgroup": "4781",
     "sample_cases": [
-      "MENANAM SAYUR KANGKUNG DAN MENJUAL SAYUR KANGKUNG DI PASAR"
+      "MENANAM SAYUR KANGKUNG DAN MENJUAL SAYUR KANGKUNG DI PASAR",
+      "PEDAGANG ECERAN",
+      "MENJUAL REMPAH-REMPAH DI PASAR",
+      "MENJUAL SAYUR DI PASAR (TIBO)"
+    ],
+    "frequency": 4
+  },
+  {
+    "code": "47815",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR KOMODITI HASIL PERIKANAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4781",
+    "sample_cases": [
+      "PERDAGANGAN ECERAN IKAN LAUT DI LOS PASAR",
+      "MENJUAL IKAN DI PASAR"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "47826",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR MINUMAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4782",
+    "sample_cases": [
+      "MEMBANTU SUAMI DALAM JUAL BELI CAPTIKUS",
+      "JUAL BELI CAPTIKUS"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "47852",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR BARANG PERHIASAN",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4785",
+    "sample_cases": [
+      "JUAL BELI PERHIASAN EMAS DI PASAR"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47861",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR BARANG ELEKTRONIK",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4786",
+    "sample_cases": [
+      "MENJUAL BARANG BARANG ELEKTRONIK DI PASAR"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47862",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR ALAT DAN PERLENGKAPAN LISTRIK",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4786",
+    "sample_cases": [
+      "MENJUAL BARANG BARANG ELEKTRONIK DI PASAR"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "47869",
+    "title": "PERDAGANGAN ECERAN KAKI LIMA DAN LOS PASAR PERLENGKAPAN RUMAH TANGGA LAINNYA",
+    "category": {
+      "code": "G",
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6"
+    },
+    "division_code": "47",
+    "division_name": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "group": "478",
+    "subgroup": "4786",
+    "sample_cases": [
+      "MENJUAL BERMACAM AKSESORIS DI PASAR"
     ],
     "frequency": 1
   },
@@ -1020,9 +2519,10 @@
     "group": "479",
     "subgroup": "4791",
     "sample_cases": [
-      "MENJUAL BARANG BARANG RUMAH TANGGA ONLINE"
+      "MENJUAL BARANG BARANG RUMAH TANGGA ONLINE",
+      "MENJUAL AKSESORIS AMELALUI ONLINE"
     ],
-    "frequency": 1
+    "frequency": 2
   },
   {
     "code": "47991",
@@ -1037,9 +2537,79 @@
     "group": "479",
     "subgroup": "4799",
     "sample_cases": [
-      "WARUNG SEMBAKO MILIK SENDRI"
+      "WARUNG SEMBAKO MILIK SENDRI",
+      "MENJUAL MAKANAN BUBUR MANADO (MIEDAL)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "49214",
+    "title": "ANGKUTAN BUS KOTA",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "49",
+    "division_name": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "group": "492",
+    "subgroup": "4921",
+    "sample_cases": [
+      "MEMBERSIHKAN KAYU SENGON MILIK ORANG LAIN",
+      "SOPIR BUS MENGANGKUT PENUMPANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "49414",
+    "title": "ANGKUTAN PERDESAAN BUKAN BUS, DALAM TRAYEK",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "49",
+    "division_name": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "group": "494",
+    "subgroup": "4941",
+    "sample_cases": [
+      "SOPIR ANGKUTAN UMUM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "49419",
+    "title": "ANGKUTAN DARAT BUKAN BUS UNTUK PENUMPANG LAINNYA, DALAM TRAYEK",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "49",
+    "division_name": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "group": "494",
+    "subgroup": "4941",
+    "sample_cases": [
+      "MENJUAL BERMACAM AKSESORIS DI PASAR"
     ],
     "frequency": 0
+  },
+  {
+    "code": "49422",
+    "title": "ANGKUTAN SEWA",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "49",
+    "division_name": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "group": "494",
+    "subgroup": "4942",
+    "sample_cases": [
+      "SOPIR ANGKUTAN PRIBADI"
+    ],
+    "frequency": 1
   },
   {
     "code": "49424",
@@ -1060,7 +2630,28 @@
       "MEKANIK MOBIL",
       "MENGEMUDI OJEK PRIBADI DARI RUMAH"
     ],
-    "frequency": 7
+    "frequency": 26
+  },
+  {
+    "code": "49429",
+    "title": "ANGKUTAN DARAT LAINNYA UNTUK PENUMPANG",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "49",
+    "division_name": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "group": "494",
+    "subgroup": "4942",
+    "sample_cases": [
+      "SOPIR ANGKOT MILIK SENDIRI",
+      "SOPIR MENGANTAR PENUMPANG DARI KUMELEMBUAI MENUJU AMURANG",
+      "MENGEMUDI MOBIL TAKSI GELAP",
+      "SOPIR MIKRO",
+      "SOPIR TAXI GELAP"
+    ],
+    "frequency": 6
   },
   {
     "code": "49431",
@@ -1078,9 +2669,31 @@
       "PENAMBANG EMAS",
       "USAHA MENGGUNTING RAMBUT DI BARBER MILIK SENDIRI",
       "PENAMBANG EMAS MILIK ORANG LAIN",
-      "SEWA HARI SOPIR MOBIL PRIBADI"
+      "SEWA HARI SOPIR MOBIL PRIBADI",
+      "SOPIR TRUK PENGANGKUT MATERIAL"
     ],
-    "frequency": 0
+    "frequency": 1
+  },
+  {
+    "code": "49432",
+    "title": "ANGKUTAN BERMOTOR UNTUK BARANG KHUSUS",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "49",
+    "division_name": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "group": "494",
+    "subgroup": "4943",
+    "sample_cases": [
+      "PEKERJA BEBAS NON PERTANIAN",
+      "SOPIR DI TOKO BANGUNAN PEKERJA BEBAS NON PERTANIAN DENGAN MAJIKAN LEBIH DARI SATU",
+      "MENGANGKUT KELAPA DENGAN RODA SAPI MILIK ORANG LAIN",
+      "SOPIR TRUK PENGANGKUT BAHAN BANGUNAN",
+      "MENGANGKUT KELAPA DENGAN KENDARAAN RODA EMPAT MILIK ORANG LAIN"
+    ],
+    "frequency": 8
   },
   {
     "code": "49433",
@@ -1095,9 +2708,102 @@
     "group": "494",
     "subgroup": "4943",
     "sample_cases": [
-      "MENGANGKUT HASIL PANEN NILAM"
+      "MENGANGKUT HASIL PANEN NILAM",
+      "MENGANGKAT KELAPA",
+      "BURUH ANGKUT KELAPA MENGGUNAKAN RODA SAPI"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "52219",
+    "title": "AKTIVITAS PENUNJANG ANGKUTAN DARAT LAINNYA",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "52",
+    "division_name": "Pergudangan dan Aktivitas Penunjang Angkutan",
+    "group": "522",
+    "subgroup": "5221",
+    "sample_cases": [
+      "MENCANGKUL RUMPUT DI KEBUN NILAM",
+      "SOPIR DUMP TRUK",
+      "PEMBELI KELAPA BIJI DAN DIOLAH MENJADI KOPRA"
     ],
     "frequency": 1
+  },
+  {
+    "code": "53201",
+    "title": "AKTIVITAS KURIR",
+    "category": {
+      "code": "H",
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6"
+    },
+    "division_code": "53",
+    "division_name": "Pos dan Kurir",
+    "group": "532",
+    "subgroup": "5320",
+    "sample_cases": [
+      "MENGANTAR BARANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "55110",
+    "title": "HOTEL BINTANG",
+    "category": {
+      "code": "I",
+      "name": "Penyediaan Akomodasi Dan Makan Minum",
+      "color": "#F97316"
+    },
+    "division_code": "55",
+    "division_name": "Penyediaan Akomodasi",
+    "group": "551",
+    "subgroup": "5511",
+    "sample_cases": [
+      "HOTEL SUTANRAJA SELES MASKETING"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "55120",
+    "title": "HOTEL MELATI",
+    "category": {
+      "code": "I",
+      "name": "Penyediaan Akomodasi Dan Makan Minum",
+      "color": "#F97316"
+    },
+    "division_code": "55",
+    "division_name": "Penyediaan Akomodasi",
+    "group": "551",
+    "subgroup": "5512",
+    "sample_cases": [
+      "SECURITY DI HOTEL"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "55900",
+    "title": "PENYEDIAAN AKOMODASI LAINNYA",
+    "category": {
+      "code": "I",
+      "name": "Penyediaan Akomodasi Dan Makan Minum",
+      "color": "#F97316"
+    },
+    "division_code": "55",
+    "division_name": "Penyediaan Akomodasi",
+    "group": "559",
+    "subgroup": "5590",
+    "sample_cases": [
+      "MEMBUAT DAN MENJUAL MAKANAN MIEDAL",
+      "GURU HONORER DI SD NEGERI",
+      "KOKI DI RM. NASARET KAPITU",
+      "MEMBANTU ISTRI UNTUK MEMBUAT IKAN MASAK DAN MENGANTAR MEMBELI BAHAN MASAK",
+      "MEMBUAT DAN MENJUAL IKAN MASAK DARI RUMAH"
+    ],
+    "frequency": 8
   },
   {
     "code": "56101",
@@ -1131,9 +2837,12 @@
     "subgroup": "5610",
     "sample_cases": [
       "MELAYANI PEMBELI DI WARUNG MAKAN",
-      "KARYAWAN RUMAH MAKAN"
+      "KARYAWAN RUMAH MAKAN",
+      "PELAYAN DI WARUNG MAKAN",
+      "MEMBANTU ORANG TUA MENJAGA WARUNG",
+      "PENJUAL MAKANAN MASAK"
     ],
-    "frequency": 2
+    "frequency": 12
   },
   {
     "code": "56103",
@@ -1154,7 +2863,45 @@
       "MENJUAL BAHAN SEMBAKO",
       "PELAYAN DI KEDAI MAKAN"
     ],
-    "frequency": 8
+    "frequency": 32
+  },
+  {
+    "code": "56104",
+    "title": "PENYEDIAAN MAKANAN KELILING/TEMPAT TIDAK TETAP",
+    "category": {
+      "code": "I",
+      "name": "Penyediaan Akomodasi Dan Makan Minum",
+      "color": "#F97316"
+    },
+    "division_code": "56",
+    "division_name": "Penyediaan Makanan dan Minuman",
+    "group": "561",
+    "subgroup": "5610",
+    "sample_cases": [
+      "MENJUAL MAKANAN",
+      "MENJUAL IKAN MASAK KELILING",
+      "MEMBUAT DAN MENJUAL MAKAN MASAK",
+      "MEMBANTU MELAYANI PEMBELI",
+      "MENJUAL AYAM GORENG DI KEDAI"
+    ],
+    "frequency": 5
+  },
+  {
+    "code": "56210",
+    "title": "JASA BOGA UNTUK SUATU EVENT TERTENTU (EVENT CATERING)",
+    "category": {
+      "code": "I",
+      "name": "Penyediaan Akomodasi Dan Makan Minum",
+      "color": "#F97316"
+    },
+    "division_code": "56",
+    "division_name": "Penyediaan Makanan dan Minuman",
+    "group": "562",
+    "subgroup": "5621",
+    "sample_cases": [
+      "MEMASAK MAKANAN"
+    ],
+    "frequency": 1
   },
   {
     "code": "56290",
@@ -1169,9 +2916,12 @@
     "group": "562",
     "subgroup": "5629",
     "sample_cases": [
-      "KARYAWAN BAGIAN MENCUCI PIRING DI SPPG MBG"
+      "KARYAWAN BAGIAN MENCUCI PIRING DI SPPG MBG",
+      "MEMBANTU USAHA KELUARGA MENYEDIAKAN MAKANAN",
+      "MEMBANTU USAHA KELUARGA MENYIAPKAN MAKANAN UNTUK TARUNA",
+      "MENGOLAH MAKANAN UNTUK TARUNA PELAYARAN"
     ],
-    "frequency": 1
+    "frequency": 4
   },
   {
     "code": "56304",
@@ -1191,6 +2941,23 @@
     "frequency": 1
   },
   {
+    "code": "59112",
+    "title": "AKTIVITAS PRODUKSI FILM, VIDEO DAN PROGRAM TELEVISI OLEH SWASTA",
+    "category": {
+      "code": "J",
+      "name": "Informasi Dan Komunikasi",
+      "color": "#6366F1"
+    },
+    "division_code": "59",
+    "division_name": "Aktivitas Produksi Gambar Bergerak, Video, Suara dan Musik",
+    "group": "591",
+    "subgroup": "5911",
+    "sample_cases": [
+      "MEMBANTU ORANG TUA DI KEBUN NILAM"
+    ],
+    "frequency": 0
+  },
+  {
     "code": "61200",
     "title": "AKTIVITAS TELEKOMUNIKASI TANPA KABEL",
     "category": {
@@ -1204,6 +2971,96 @@
     "subgroup": "6120",
     "sample_cases": [
       "TEKNISI OPERATOR TELKOMSEL"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "61921",
+    "title": "INTERNET SERVICE PROVIDER",
+    "category": {
+      "code": "J",
+      "name": "Informasi Dan Komunikasi",
+      "color": "#6366F1"
+    },
+    "division_code": "61",
+    "division_name": "Telekomunikasi",
+    "group": "619",
+    "subgroup": "6192",
+    "sample_cases": [
+      "PEMASANG INTERNET JARINGAN WIFI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "61999",
+    "title": "AKTIVITAS TELEKOMUNIKASI LAINNYA YTDL",
+    "category": {
+      "code": "J",
+      "name": "Informasi Dan Komunikasi",
+      "color": "#6366F1"
+    },
+    "division_code": "61",
+    "division_name": "Telekomunikasi",
+    "group": "619",
+    "subgroup": "6199",
+    "sample_cases": [
+      "SEKRETARIS DESA",
+      "MENJUAL VOUCER DATA AWNET",
+      "PELAYAN DI KONTER PULSA",
+      "PELAYAN DI TEMPAT BILIART",
+      "MENJUAL PULSA DI KONTER"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "64121",
+    "title": "BANK UMUM KONVENSIONAL",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "64",
+    "division_name": "Aktivitas Jasa Keuangan, Bukan Asuransi dan Dana Pensiun",
+    "group": "641",
+    "subgroup": "6412",
+    "sample_cases": [
+      "KARYAWAN BANK MANDIRI TUGAS LAPANGAN BAGIAN PENAGIH",
+      "PEGAWAI BANK BRI DIVISI PENGKREDITAN"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "64141",
+    "title": "KOPERASI SIMPAN PINJAM PRIMER (KSP PRIMER)",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "64",
+    "division_name": "Aktivitas Jasa Keuangan, Bukan Asuransi dan Dana Pensiun",
+    "group": "641",
+    "subgroup": "6414",
+    "sample_cases": [
+      "KARYAWAN KOPERASI SIMPAN PINJAM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "64143",
+    "title": "KOPERASI SIMPAN PINJAM SEKUNDER (KSP SEKUNDER)",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "64",
+    "division_name": "Aktivitas Jasa Keuangan, Bukan Asuransi dan Dana Pensiun",
+    "group": "641",
+    "subgroup": "6414",
+    "sample_cases": [
+      "MENAGIH UANG HUTANG NASABAH"
     ],
     "frequency": 1
   },
@@ -1225,6 +3082,125 @@
     "frequency": 1
   },
   {
+    "code": "64190",
+    "title": "PERANTARA MONETER LAINNYA",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "64",
+    "division_name": "Aktivitas Jasa Keuangan, Bukan Asuransi dan Dana Pensiun",
+    "group": "641",
+    "subgroup": "6419",
+    "sample_cases": [
+      "MEMINJAMKAN UANG KEPADA ORANG LAIN DENGAN BUNGA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "64921",
+    "title": "PERGADAIAN KONVENSIONAL",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "64",
+    "division_name": "Aktivitas Jasa Keuangan, Bukan Asuransi dan Dana Pensiun",
+    "group": "649",
+    "subgroup": "6492",
+    "sample_cases": [
+      "SATPAM DI PEGADAIAN AMURANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "65131",
+    "title": "PERUSAHAAN PENJAMINAN KONVENSIONAL",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "65",
+    "division_name": "Asuransi, Reasuransi dan Dana Pensiun",
+    "group": "651",
+    "subgroup": "6513",
+    "sample_cases": [
+      "SECURITY DI PEGADAIAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "66199",
+    "title": "AKTIVITAS PENUNJANG JASA KEUANGAN LAINNYA YTDL",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "66",
+    "division_name": "Aktivitas Penunjang Jasa Keuangan dan Asuransi",
+    "group": "661",
+    "subgroup": "6619",
+    "sample_cases": [
+      "MARKETING DI PERUSAHAAN PT VIDAK"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "66221",
+    "title": "AKTIVITAS AGEN ASURANSI",
+    "category": {
+      "code": "K",
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6"
+    },
+    "division_code": "66",
+    "division_name": "Aktivitas Penunjang Jasa Keuangan dan Asuransi",
+    "group": "662",
+    "subgroup": "6622",
+    "sample_cases": [
+      "PENJUAL MAKANAN DI RUMAH"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "74902",
+    "title": "AKTIVITAS KONSULTASI BISNIS DAN BROKER BISNIS",
+    "category": {
+      "code": "M",
+      "name": "Aktivitas Profesional, Ilmiah Dan Teknis",
+      "color": "#A855F7"
+    },
+    "division_code": "74",
+    "division_name": "Aktivitas Profesional, Ilmiah dan Teknis Lainnya",
+    "group": "749",
+    "subgroup": "7490",
+    "sample_cases": [
+      "APPRAISAL BEKERJA SAMA DENGAN SEMUA BANK"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "77100",
+    "title": "AKTIVITAS PENYEWAAN DAN SEWA GUNA USAHA TANPA HAK OPSI MOBIL, BUS, TRUK DAN SEJENISNYA",
+    "category": {
+      "code": "N",
+      "name": "Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha",
+      "color": "#0EA5E9"
+    },
+    "division_code": "77",
+    "division_name": "Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi",
+    "group": "771",
+    "subgroup": "7710",
+    "sample_cases": [
+      "MENGAJARI ANAK SMP NEGERI"
+    ],
+    "frequency": 0
+  },
+  {
     "code": "77299",
     "title": "AKTIVITAS PENYEWAAN DAN SEWA GUNA USAHA TANPA HAK OPSI BARANG KEPERLUAN RUMAH TANGGA DAN PRIBADI LAINNYA YTDL",
     "category": {
@@ -1242,6 +3218,76 @@
     "frequency": 0
   },
   {
+    "code": "77323",
+    "title": "AKTIVITAS PENYEWAAN DAN SEWA GUNA TANPA HAK OPSI ALAT KEBUTUHAN MICE",
+    "category": {
+      "code": "N",
+      "name": "Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha",
+      "color": "#0EA5E9"
+    },
+    "division_code": "77",
+    "division_name": "Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi",
+    "group": "773",
+    "subgroup": "7732",
+    "sample_cases": [
+      "MENYEDIAKAN PAKET DEKORASI ACARA PESTA ULANG TAHUN & PERNIKAHAN DAN PENYEWAAN SOUNDSISTEM",
+      "MENYEDIKAN PENYEWAAN PAKET DEKORASI DAN PERNIKAHAN DAN PENYEWAAN SOUNDSISTEM"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "78103",
+    "title": "AKTIVITAS PENEMPATAN PEKERJA RUMAH TANGGA",
+    "category": {
+      "code": "N",
+      "name": "Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha",
+      "color": "#0EA5E9"
+    },
+    "division_code": "78",
+    "division_name": "Aktivitas Ketenagakerjaan",
+    "group": "781",
+    "subgroup": "7810",
+    "sample_cases": [
+      "MENJAGA DAN MELAYANI PEMBELI DI WARUNG SEMBAKO MILIK SENDIRI"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "82110",
+    "title": "AKTIVITAS PENYEDIA GABUNGAN JASA ADMINISTRASI KANTOR",
+    "category": {
+      "code": "N",
+      "name": "Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha",
+      "color": "#0EA5E9"
+    },
+    "division_code": "82",
+    "division_name": "Aktivitas Administrasi dan Penunjang Kantor",
+    "group": "821",
+    "subgroup": "8211",
+    "sample_cases": [
+      "MENGELOLAH SURAT MASUK DAN KELUAR",
+      "MEMBUAT LAPORAN KEGIATAN DI KANTOR BASARNAS BAGIAN UMUM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "82302",
+    "title": "JASA PENYELENGGARA EVENT KHUSUS (SPECIAL EVENT)",
+    "category": {
+      "code": "N",
+      "name": "Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha",
+      "color": "#0EA5E9"
+    },
+    "division_code": "82",
+    "division_name": "Aktivitas Administrasi dan Penunjang Kantor",
+    "group": "823",
+    "subgroup": "8230",
+    "sample_cases": [
+      "SEBAGAI GURU HONOR DI SMA/GURU MATA PELAJARAN"
+    ],
+    "frequency": 0
+  },
+  {
     "code": "84112",
     "title": "PENYELENGGARAAN PEMERINTAH NEGARA DAN KESEKRETARIATAN NEGARA",
     "category": {
@@ -1254,9 +3300,30 @@
     "group": "841",
     "subgroup": "8411",
     "sample_cases": [
-      "PERANGKAT DESA"
+      "PERANGKAT DESA",
+      "PPPK PEMDA MINAHASA SELATAN DINAS KEHUTANAN",
+      "PERANGKAT DESA/KAUR KEUANGAN",
+      "SEKRETARIS DESA",
+      "SEBAGAI KADER POSYANDU DI DESA"
     ],
-    "frequency": 1
+    "frequency": 17
+  },
+  {
+    "code": "84115",
+    "title": "LEMBAGA PEMERINTAH NON KEMENTRIAN DENGAN TUGAS KHUSUS",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "841",
+    "subgroup": "8411",
+    "sample_cases": [
+      "HONOR GURU DI SD"
+    ],
+    "frequency": 0
   },
   {
     "code": "84119",
@@ -1273,9 +3340,65 @@
     "sample_cases": [
       "CLEANING SERVICE DI KANTOR BPS MINSEL",
       "KETUA SLS TERKECIL",
-      "DAMKAR ( BAGIAN PENCEGAHAN PIKET )"
+      "DAMKAR ( BAGIAN PENCEGAHAN PIKET )",
+      "MENGELOLAH SURAT MASUK DAN KELUAR",
+      "MEMBANTU KEGIATAN POSYANDU DI DESA"
     ],
-    "frequency": 3
+    "frequency": 23
+  },
+  {
+    "code": "84121",
+    "title": "ADMINISTRASI PELAYANAN PEMERINTAH BIDANG PENDIDIKAN",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "841",
+    "subgroup": "8412",
+    "sample_cases": [
+      "PEGAWAI NEGERI DI DINAS PENDIDIKAN KAB. MINSEL",
+      "PEGAWAI NEGERI DI DINAS PENDIDIKAN"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "84122",
+    "title": "ADMINISTRASI PELAYANAN PEMERINTAH BIDANG KESEHATAN",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "841",
+    "subgroup": "8412",
+    "sample_cases": [
+      "MEMBANTU KEGIATAN POSYANDU DI DESA",
+      "ASN PEMKAB MINSEL PLT KASUBAG PROTOKOLER BUPATI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "84129",
+    "title": "ADMINISTRASI PELAYANAN PEMERINTAH BIDANG SOSIAL LAINNYA BUKAN KESEHATAN, PENDIDIKAN, KEAGAMAAN DAN KEBUDAYAAN",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "841",
+    "subgroup": "8412",
+    "sample_cases": [
+      "ASN, KASUBAG DI KANTOR BAGIAN PENGADAAN BARANG DAN JASA DI KANTOR BUPATI MINAHASA SELATAN",
+      "DINAS PERTANIAN"
+    ],
+    "frequency": 2
   },
   {
     "code": "84131",
@@ -1291,6 +3414,23 @@
     "subgroup": "8413",
     "sample_cases": [
       "STAFF PENYULUH PERTANIAN BPP TOMPASOBARU"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "84136",
+    "title": "KEGIATAN LEMBAGA PEMERINTAHAN BIDANG PERDAGANGAN DAN PARIWISATA",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "841",
+    "subgroup": "8413",
+    "sample_cases": [
+      "MEMBUAT DAFTAR HADIR PEGAWAI, PELAYANAN MASYARAKAT"
     ],
     "frequency": 1
   },
@@ -1312,6 +3452,57 @@
     "frequency": 1
   },
   {
+    "code": "84222",
+    "title": "ANGKATAN DARAT",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "842",
+    "subgroup": "8422",
+    "sample_cases": [
+      "PENAGIHAN KARCIS DI PASAR/ RETRIBUSI DAERAH"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "84231",
+    "title": "KEPOLISIAN",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "842",
+    "subgroup": "8423",
+    "sample_cases": [
+      "BABINKAMTIBMAS (ANGGOTA POLISI)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "84232",
+    "title": "PERTAHANAN SIPIL",
+    "category": {
+      "code": "O",
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A"
+    },
+    "division_code": "84",
+    "division_name": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "group": "842",
+    "subgroup": "8423",
+    "sample_cases": [
+      "PERANGKAT DESA / KEPALA JAGA"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "85111",
     "title": "PENDIDIKAN DASAR/IBTIDAIYAH PEMERINTAH",
     "category": {
@@ -1326,9 +3517,11 @@
     "sample_cases": [
       "PNS SEBAGAI GURU DI SD NEGERI",
       "PNS GURU SD NEGERI MANADO",
-      "PNS GURU SD TEWASEN"
+      "PNS GURU SD TEWASEN",
+      "GURU P3K DI SD NEGERI PAKUURE III.",
+      "GURU HONORER DI SD NEGERI INPRES KUMELEMBUAI"
     ],
-    "frequency": 3
+    "frequency": 9
   },
   {
     "code": "85112",
@@ -1345,9 +3538,65 @@
     "sample_cases": [
       "PNS DI SMP N TEWASEN S DI BAGIAN STAF ADMINISTASI TATA USAHA",
       "PNS GURU DI SMP N1 AMURANG GOLONGAN 3 C",
-      "MENGAJAR PJOK DI SMP"
+      "MENGAJAR PJOK DI SMP",
+      "ASN GURU DI SEKOLAH SMP, MATA PELAJARAN OLAHRAGA JUGA SEBAGAI KEPALA SEKOLAH",
+      "MENGAJAR"
+    ],
+    "frequency": 7
+  },
+  {
+    "code": "85121",
+    "title": "PENDIDIKAN DASAR/IBTIDAIYAH SWASTA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8512",
+    "sample_cases": [
+      "HONORER GURU SD",
+      "GURU SD",
+      "GURU HONORER DI SD SWASTA MENGAJAR OLAHRAGA"
     ],
     "frequency": 3
+  },
+  {
+    "code": "85122",
+    "title": "PENDIDIKAN MENENGAH PERTAMA/TSANAWIYAH SWASTA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8512",
+    "sample_cases": [
+      "TENAGA HONORER DI SMP N 1 MAESAAN",
+      "GURU HONOR DI SMP KATOLIK"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "85131",
+    "title": "PENDIDIKAN TAMAN KANAK-KANAK PEMERINTAH",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8513",
+    "sample_cases": [
+      "GURU TK"
+    ],
+    "frequency": 1
   },
   {
     "code": "85132",
@@ -1368,6 +3617,76 @@
     "frequency": 2
   },
   {
+    "code": "85133",
+    "title": "PENDIDIKAN KELOMPOK BERMAIN",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8513",
+    "sample_cases": [
+      "TENAGA HONORER DI TK GMIM MARANATHA TAMBELANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85139",
+    "title": "PENDIDIKAN ANAK USIA DINI SEJENIS LAINNYA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8513",
+    "sample_cases": [
+      "MENGAJAR DI PAUD POOPO BARAT",
+      "HONOR GURU PAUD",
+      "MENGAJAR ANAK ANAK PAUD SEBAGAI GURU HONORER"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "85142",
+    "title": "SATUAN PENDIDIKAN KERJASAMA TAMAN KANAK-KANAK",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8514",
+    "sample_cases": [
+      "GURU TK GMIM RIBKA LOPANA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85162",
+    "title": "SATUAN PENDIDIKAN KEAGAMAAN DASAR",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "851",
+    "subgroup": "8516",
+    "sample_cases": [
+      "GURU AGAMA KRISTEN DI SD GMIM LINELEAN"
+    ],
+    "frequency": 1
+  },
+  {
     "code": "85210",
     "title": "PENDIDIKAN MENENGAH ATAS/ALIYAH PEMERINTAH",
     "category": {
@@ -1381,7 +3700,199 @@
     "subgroup": "8521",
     "sample_cases": [
       "PNS SEBAGAI GURU DI SEKOLAH MENENGAH ATAS NEGERI 1 MOTOLING",
-      "GURU DI SMP NEGERI"
+      "GURU DI SMP NEGERI",
+      "PNS GURU",
+      "SEBAGAI GURU HONOR DI SMA/GURU MATA PELAJARAN",
+      "MENGAJAR SISWA DISEKOLAH"
+    ],
+    "frequency": 6
+  },
+  {
+    "code": "85220",
+    "title": "PENDIDIKAN MENENGAH/ALIYAH SWASTA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "852",
+    "subgroup": "8522",
+    "sample_cases": [
+      "GURU DI SMP N1 AMURANG TIMUR"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85230",
+    "title": "PENDIDIKAN MENENGAH KEJURUAN DAN TEKNIS/ALIYAH KEJURUAN PEMERINTAH",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "852",
+    "subgroup": "8523",
+    "sample_cases": [
+      "ASN GURU MATA PELAJARAN DI SMK NEGERI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85410",
+    "title": "JASA PENDIDIKAN OLAHRAGA DAN REKREASI",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "854",
+    "subgroup": "8541",
+    "sample_cases": [
+      "HONOR GURU DI SD"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85420",
+    "title": "PENDIDIKAN KEBUDAYAAN",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "854",
+    "subgroup": "8542",
+    "sample_cases": [
+      "GURU DI SDGP TOMPASO BARU"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85430",
+    "title": "PENDIDIKAN LAINNYA PEMERINTAH",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "854",
+    "subgroup": "8543",
+    "sample_cases": [
+      "GURU HONOR DI SMP N 2 AMURANG",
+      "CLEANING SERVICE DI SEKOLAH PELAYARAN"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "85494",
+    "title": "PENDIDIKAN KESEHATAN SWASTA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "854",
+    "subgroup": "8549",
+    "sample_cases": [
+      "TENAGA TEKNIS KEFARMASIAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85495",
+    "title": "PENDIDIKAN BIMBINGAN BELAJAR DAN KONSELING SWASTA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "854",
+    "subgroup": "8549",
+    "sample_cases": [
+      "MENGELOLA ADMINISTRASI DAN KEUANGAN DI PUSAT PENGEMBANGAN ANAK DESA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85499",
+    "title": "PENDIDIKAN LAINNYA SWASTA",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "854",
+    "subgroup": "8549",
+    "sample_cases": [
+      "MENTOR DI PUSAT PENGEMBANGAN ANAK"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "85500",
+    "title": "KEGIATAN PENUNJANG PENDIDIKAN",
+    "category": {
+      "code": "P",
+      "name": "Pendidikan",
+      "color": "#4F46E5"
+    },
+    "division_code": "85",
+    "division_name": "Pendidikan",
+    "group": "855",
+    "subgroup": "8550",
+    "sample_cases": [
+      "MEMBUAT DAN MENJUAL NASI KUNING DIRUMAH"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "86101",
+    "title": "AKTIVITAS RUMAH SAKIT PEMERINTAH",
+    "category": {
+      "code": "Q",
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444"
+    },
+    "division_code": "86",
+    "division_name": "Aktivitas Kesehatan Manusia",
+    "group": "861",
+    "subgroup": "8610",
+    "sample_cases": [
+      "MERAWAT PASIEN SEBAGAI SEORANG BIDAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "86102",
+    "title": "AKTIVITAS PUSKESMAS",
+    "category": {
+      "code": "Q",
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444"
+    },
+    "division_code": "86",
+    "division_name": "Aktivitas Kesehatan Manusia",
+    "group": "861",
+    "subgroup": "8610",
+    "sample_cases": [
+      "PNS PERAWAT DI PUSKESMAS AMURANG BARAT",
+      "HONORER DI PUSKESMAS"
     ],
     "frequency": 2
   },
@@ -1400,9 +3911,46 @@
     "sample_cases": [
       "BAGIAN ADMINISTRASI PENDAFTARAN PASIEN DI RUMAH SAKIT KALOORAN AMURANG",
       "MENGEMUDI MOBIL AMBULANCE MILIK RUMAH SAKIT SWASTA",
-      "MERAWAT PASIEN DI RUMAH SAKIT SWASTA"
+      "MERAWAT PASIEN DI RUMAH SAKIT SWASTA",
+      "MERAWAT PASIEN DI RS KALOORAN AMURANG",
+      "BIDAN DI RS KALOORANG AMURANG"
     ],
-    "frequency": 3
+    "frequency": 8
+  },
+  {
+    "code": "86105",
+    "title": "AKTIVITAS KLINIK SWASTA",
+    "category": {
+      "code": "Q",
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444"
+    },
+    "division_code": "86",
+    "division_name": "Aktivitas Kesehatan Manusia",
+    "group": "861",
+    "subgroup": "8610",
+    "sample_cases": [
+      "HONORER DI PUSKESMAS"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "86901",
+    "title": "AKTIVITAS PELAYANAN KESEHATAN YANG DILAKUKAN OLEH TENAGA KESEHATAN SELAIN DOKTER DAN DOKTER GIGI",
+    "category": {
+      "code": "Q",
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444"
+    },
+    "division_code": "86",
+    "division_name": "Aktivitas Kesehatan Manusia",
+    "group": "869",
+    "subgroup": "8690",
+    "sample_cases": [
+      "MENCANGKUL RUMPUT DI KEBUN NILAM",
+      "PERAWAT DIRUMAH SAKIT KALAORAN AMURANG"
+    ],
+    "frequency": 1
   },
   {
     "code": "86902",
@@ -1417,7 +3965,76 @@
     "group": "869",
     "subgroup": "8690",
     "sample_cases": [
-      "MEMBANTU ORANG MELAHIRKAN"
+      "MEMBANTU ORANG MELAHIRKAN",
+      "TUKANG URUT"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "86903",
+    "title": "AKTIVITAS PELAYANAN PENUNJANG KESEHATAN",
+    "category": {
+      "code": "Q",
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444"
+    },
+    "division_code": "86",
+    "division_name": "Aktivitas Kesehatan Manusia",
+    "group": "869",
+    "subgroup": "8690",
+    "sample_cases": [
+      "MEMBUAT KUE BASAH UNTUK DIJUAL"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "88992",
+    "title": "AKTIVITAS SOSIAL SWASTA TANPA AKOMODASI LAINNYA YTDL",
+    "category": {
+      "code": "Q",
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444"
+    },
+    "division_code": "88",
+    "division_name": "Aktivitas Sosial Tanpa Akomodasi",
+    "group": "889",
+    "subgroup": "8899",
+    "sample_cases": [
+      "STAF PERLINDUNGAN ANAK DI PPA( PUSAT PENGEMBANGAN ANAK)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "90022",
+    "title": "PELAKU KREATIF SENI MUSIK",
+    "category": {
+      "code": "R",
+      "name": "Kesenian, Hiburan Dan Rekreasi",
+      "color": "#D946EF"
+    },
+    "division_code": "90",
+    "division_name": "Aktivitas Hiburan, Seni dan Kreativitas",
+    "group": "900",
+    "subgroup": "9002",
+    "sample_cases": [
+      "MEMAINKAN MUSIK PIANO DI GEREJA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "93199",
+    "title": "AKTIVITAS LAINNYA YANG BERKAITAN DENGAN OLAHRAGA",
+    "category": {
+      "code": "R",
+      "name": "Kesenian, Hiburan Dan Rekreasi",
+      "color": "#D946EF"
+    },
+    "division_code": "93",
+    "division_name": "Aktivitas Olahraga dan Rekreasi Lainnya",
+    "group": "931",
+    "subgroup": "9319",
+    "sample_cases": [
+      "PELAYAN DI TEMPAT BILIART"
     ],
     "frequency": 1
   },
@@ -1436,9 +4053,28 @@
     "sample_cases": [
       "PENDETA DI JEMAAT GMIM SOLAGRATIA MOLINOW",
       "PEMBANTU GEMBALA DALAM MELAYANI MEMIMPIN IBADAH",
-      "MELAKUKAN PEKERJAAN ADMINISTRASI DI GEREJA"
+      "MELAKUKAN PEKERJAAN ADMINISTRASI DI GEREJA",
+      "MELAYANI JEMAAT / MEMIMPIN IBADAH",
+      "MELAYANI /MEMIMPIN IBADAH"
     ],
-    "frequency": 3
+    "frequency": 8
+  },
+  {
+    "code": "95120",
+    "title": "REPARASI PERALATAN KOMUNIKASI",
+    "category": {
+      "code": "S",
+      "name": "Aktivitas Jasa Lainnya",
+      "color": "#475569"
+    },
+    "division_code": "95",
+    "division_name": "Reparasi Komputer dan Barang Pribadi Rumah Tangga",
+    "group": "951",
+    "subgroup": "9512",
+    "sample_cases": [
+      "HOTEL SUTANRAJA SELES MASKETING"
+    ],
+    "frequency": 0
   },
   {
     "code": "95240",
@@ -1470,7 +4106,27 @@
     "group": "961",
     "subgroup": "9611",
     "sample_cases": [
-      "USAHA MENGGUNTING RAMBUT DI BARBER MILIK SENDIRI"
+      "USAHA MENGGUNTING RAMBUT DI BARBER MILIK SENDIRI",
+      "TUKANG PANGKAS RAMBUT ORANG DI BARBERSHOP MILIK SENDIRI",
+      "MEMOTONG RAMBUT DI BARBER SHOP"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "96112",
+    "title": "AKTIVITAS SALON KECANTIKAN",
+    "category": {
+      "code": "S",
+      "name": "Aktivitas Jasa Lainnya",
+      "color": "#475569"
+    },
+    "division_code": "96",
+    "division_name": "Aktivitas Jasa Perorangan Lainnya",
+    "group": "961",
+    "subgroup": "9611",
+    "sample_cases": [
+      "PERAWAT KECANTIKAN DI SALON",
+      "PPPK"
     ],
     "frequency": 1
   },
@@ -1492,6 +4148,27 @@
     "frequency": 0
   },
   {
+    "code": "96990",
+    "title": "AKTIVITAS JASA PERORANGAN LAINNYA YTDL",
+    "category": {
+      "code": "S",
+      "name": "Aktivitas Jasa Lainnya",
+      "color": "#475569"
+    },
+    "division_code": "96",
+    "division_name": "Aktivitas Jasa Perorangan Lainnya",
+    "group": "969",
+    "subgroup": "9699",
+    "sample_cases": [
+      "JASA SOPIR PENGANTAR AQUA DAN BERAS MILIK TUAN",
+      "TENAGA HONORER DI TK GMIM MARANATHA TAMBELANG",
+      "TUKANG REPARASI BARANG DAN AIR",
+      "BABY SITER",
+      "MELAYANI JEMAAT MEMIMPIN IBADAH"
+    ],
+    "frequency": 6
+  },
+  {
     "code": "97000",
     "title": "AKTIVITAS RUMAH TANGGA SEBAGAI PEMBERI KERJA DARI PERSONIL DOMESTIK",
     "category": {
@@ -1505,8 +4182,28 @@
     "subgroup": "9700",
     "sample_cases": [
       "SEWA HARI SOPIR MOBIL PRIBADI",
-      "BURUH HARIAN MENCUCI BAJU"
+      "BURUH HARIAN MENCUCI BAJU",
+      "MEMBANTU SAUDARA MEMBERSIHKAN RUMAH",
+      "PEMBANTU RUMAH TANGGA",
+      "MENGAJAR ANAK ANAK PAUD SEBAGAI GURU HONORER"
     ],
-    "frequency": 2
+    "frequency": 8
+  },
+  {
+    "code": "98200",
+    "title": "AKTIVITAS YANG MENGHASILKAN JASA OLEH RUMAH TANGGA YANG DIGUNAKAN UNTUK MEMENUHI KEBUTUHAN SENDIRI",
+    "category": {
+      "code": "T",
+      "name": "Aktivitas Rumah Tangga Sebagai Pemberi Kerja",
+      "color": "#78716C"
+    },
+    "division_code": "98",
+    "division_name": "Aktivitas Produksi Rumah Tangga Sendiri",
+    "group": "982",
+    "subgroup": "9820",
+    "sample_cases": [
+      "MEMBERSIHKAN HALAMAN RUMAH"
+    ],
+    "frequency": 1
   }
 ]

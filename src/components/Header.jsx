@@ -13,7 +13,7 @@ export default function Header({
   toggleTheme, 
   onOpenContribute, 
   pendingCount = 0,
-  approvedCount = 137
+  approvedCount = 538
 }) {
   const navItems = [
     { path: '/', label: 'Pencarian Kode', icon: Search },

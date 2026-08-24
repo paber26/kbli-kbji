@@ -1,69 +1,70 @@
 {
-  "total_cases": 234,
-  "unique_kbli": 83,
-  "unique_kbji": 64,
-  "cases_with_secondary_job": 34,
-  "cases_with_past_job": 42,
+  "total_samples": 1195,
+  "total_cases": 538,
+  "unique_kbli": 230,
+  "unique_kbji": 137,
+  "cases_with_secondary_job": 80,
+  "cases_with_past_job": 44,
   "top_kbli": [
     {
       "code": "01284",
       "title": "PERKEBUNAN TANAMAN AROMATIK/PENYEGAR",
       "category": "Pertanian, Kehutanan Dan Perikanan",
-      "count": 20
-    },
-    {
-      "code": "01261",
-      "title": "PERKEBUNAN BUAH KELAPA",
-      "category": "Pertanian, Kehutanan Dan Perikanan",
-      "count": 17
-    },
-    {
-      "code": "47112",
-      "title": "PERDAGANGAN ECERAN BERBAGAI MACAM BARANG YANG UTAMANYA MAKANAN, MINUMAN ATAU TEMBAKAU BUKAN DI MINIMARKET/SUPERMARKET/HYPERMARKET (TRADISIONAL)",
-      "category": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
-      "count": 17
+      "count": 141
     },
     {
       "code": "10421",
       "title": "INDUSTRI KOPRA",
       "category": "Industri Pengolahan",
-      "count": 13
+      "count": 86
     },
     {
-      "code": "07301",
-      "title": "PERTAMBANGAN EMAS DAN PERAK",
-      "category": "Pertambangan Dan Penggalian",
-      "count": 11
+      "code": "47112",
+      "title": "PERDAGANGAN ECERAN BERBAGAI MACAM BARANG YANG UTAMANYA MAKANAN, MINUMAN ATAU TEMBAKAU BUKAN DI MINIMARKET/SUPERMARKET/HYPERMARKET (TRADISIONAL)",
+      "category": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "count": 71
     },
     {
-      "code": "01133",
-      "title": "PERTANIAN HORTIKULTURA SAYURAN BUAH",
+      "code": "01261",
+      "title": "PERKEBUNAN BUAH KELAPA",
       "category": "Pertanian, Kehutanan Dan Perikanan",
-      "count": 10
+      "count": 64
     },
     {
-      "code": "01111",
-      "title": "PERTANIAN JAGUNG",
+      "code": "11010",
+      "title": "INDUSTRI MINUMAN BERALKOHOL HASIL DESTILASI",
+      "category": "Industri Pengolahan",
+      "count": 39
+    },
+    {
+      "code": "01131",
+      "title": "PERTANIAN HORTIKULTURA SAYURAN DAUN",
       "category": "Pertanian, Kehutanan Dan Perikanan",
-      "count": 9
+      "count": 33
     },
     {
       "code": "56103",
       "title": "KEDAI MAKANAN",
       "category": "Penyediaan Akomodasi Dan Makan Minum",
-      "count": 8
+      "count": 32
     },
     {
-      "code": "49424",
-      "title": "ANGKUTAN OJEK MOTOR",
-      "category": "Pengangkutan Dan Pergudangan",
-      "count": 7
+      "code": "41011",
+      "title": "KONSTRUKSI GEDUNG HUNIAN",
+      "category": "Konstruksi",
+      "count": 30
     },
     {
-      "code": "10773",
-      "title": "INDUSTRI PRODUK MASAK DARI KELAPA",
-      "category": "Industri Pengolahan",
-      "count": 7
+      "code": "01111",
+      "title": "PERTANIAN JAGUNG",
+      "category": "Pertanian, Kehutanan Dan Perikanan",
+      "count": 30
+    },
+    {
+      "code": "07301",
+      "title": "PERTAMBANGAN EMAS DAN PERAK",
+      "category": "Pertambangan Dan Penggalian",
+      "count": 28
     }
   ],
   "top_kbji": [
@@ -71,90 +72,94 @@
       "code": "6111",
       "title": "PEKERJA PERTANIAN TANAMAN PANGAN DAN TANAMAN SEMUSIM",
       "major": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
-      "count": 43
-    },
-    {
-      "code": "5221",
-      "title": "PEMILIK TOKO",
-      "major": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
-      "count": 23
+      "count": 167
     },
     {
       "code": "9211",
       "title": "BURUH PERTANIAN",
       "major": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
-      "count": 20
-    },
-    {
-      "code": "7549",
-      "title": "PEKERJA PENGOLAHAN LAINNYA YTDL",
-      "major": "Pekerja Pengolahan, Kerajinan Dan YBTD",
-      "count": 19
+      "count": 92
     },
     {
       "code": "6112",
       "title": "PEKERJA PERTANIAN TANAMAN TAHUNAN DAN TANAMAN SEMAK",
       "major": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
-      "count": 11
+      "count": 69
     },
     {
       "code": "9329",
       "title": "BURUH INDUSTRI PENGOLAHAN YTDL",
       "major": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
-      "count": 9
+      "count": 64
     },
     {
-      "code": "5223",
-      "title": "ASISTEN PENJUALAN TOKO",
+      "code": "7549",
+      "title": "PEKERJA PENGOLAHAN LAINNYA YTDL",
+      "major": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "count": 56
+    },
+    {
+      "code": "5221",
+      "title": "PEMILIK TOKO",
       "major": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
-      "count": 8
+      "count": 55
     },
     {
-      "code": "9311",
-      "title": "BURUH PERTAMBANGAN DAN PENGGALIAN",
-      "major": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
-      "count": 8
+      "code": "7514",
+      "title": "PENGAWET BUAH, SAYUR, DAN YBDI",
+      "major": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "count": 52
+    },
+    {
+      "code": "6113",
+      "title": "PEKERJA PERTANIAN TANAMAN KEBUN BIBIT DAN TANAMAN TAMAN",
+      "major": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "count": 39
     },
     {
       "code": "5249",
       "title": "PEKERJA PENJUALAN YTDL",
       "major": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
-      "count": 8
+      "count": 37
     },
     {
       "code": "8321",
       "title": "PENGEMUDI SEPEDA MOTOR",
       "major": "Operator Dan Perakit Mesin",
-      "count": 7
+      "count": 27
     }
   ],
   "category_distribution": {
-    "A - Pertanian, Kehutanan Dan Perikanan": 76,
-    "G - Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor": 43,
-    "C - Industri Pengolahan": 39,
-    "I - Penyediaan Akomodasi Dan Makan Minum": 14,
-    "F - Konstruksi": 12,
-    "B - Pertambangan Dan Penggalian": 11,
-    "P - Pendidikan": 10,
-    "H - Pengangkutan Dan Pergudangan": 8,
-    "O - Administrasi Pemerintahan, Pertahanan & Jamsos Wajib": 6,
-    "S - Aktivitas Jasa Lainnya": 5,
-    "Q - Aktivitas Kesehatan Manusia Dan Sosial": 4,
-    "D - Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin": 2,
-    "T - Aktivitas Rumah Tangga Sebagai Pemberi Kerja": 2,
-    "J - Informasi Dan Komunikasi": 1,
-    "K - Aktivitas Keuangan Dan Asuransi": 1
+    "A - Pertanian, Kehutanan Dan Perikanan": 415,
+    "C - Industri Pengolahan": 247,
+    "G - Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor": 177,
+    "I - Penyediaan Akomodasi Dan Makan Minum": 67,
+    "O - Administrasi Pemerintahan, Pertahanan & Jamsos Wajib": 51,
+    "H - Pengangkutan Dan Pergudangan": 49,
+    "P - Pendidikan": 45,
+    "F - Konstruksi": 42,
+    "B - Pertambangan Dan Penggalian": 30,
+    "S - Aktivitas Jasa Lainnya": 19,
+    "Q - Aktivitas Kesehatan Manusia Dan Sosial": 15,
+    "D - Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin": 9,
+    "K - Aktivitas Keuangan Dan Asuransi": 9,
+    "T - Aktivitas Rumah Tangga Sebagai Pemberi Kerja": 9,
+    "J - Informasi Dan Komunikasi": 5,
+    "N - Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha": 3,
+    "R - Kesenian, Hiburan Dan Rekreasi": 2,
+    "M - Aktivitas Profesional, Ilmiah Dan Teknis": 1
   },
   "kbji_major_distribution": {
-    "Gol 6: Pekerja Terampil Pertanian, Kehutanan Dan Perikanan": 55,
-    "Gol 5: Tenaga Usaha Jasa Dan Tenaga Penjualan": 53,
-    "Gol 9: Tenaga Kebersihan Dan Tenaga Kasar (Buruh)": 50,
-    "Gol 7: Pekerja Pengolahan, Kerajinan Dan YBTD": 36,
-    "Gol 8: Operator Dan Perakit Mesin": 13,
-    "Gol 2: Profesional": 12,
-    "Gol 3: Teknisi Dan Asisten Profesional": 8,
-    "Gol 4: Tenaga Tata Usaha": 4,
-    "Gol 1: Manajer": 3
+    "Gol 6: Pekerja Terampil Pertanian, Kehutanan Dan Perikanan": 303,
+    "Gol 9: Tenaga Kebersihan Dan Tenaga Kasar (Buruh)": 229,
+    "Gol 5: Tenaga Usaha Jasa Dan Tenaga Penjualan": 213,
+    "Gol 7: Pekerja Pengolahan, Kerajinan Dan YBTD": 202,
+    "Gol 8: Operator Dan Perakit Mesin": 85,
+    "Gol 2: Profesional": 59,
+    "Gol 1: Manajer": 41,
+    "Gol 4: Tenaga Tata Usaha": 39,
+    "Gol 3: Teknisi Dan Asisten Profesional": 23,
+    "Gol 0: Angkatan Bersenjata": 1
   },
   "categories_meta": {
     "A": {

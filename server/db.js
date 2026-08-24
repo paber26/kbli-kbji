@@ -141,7 +141,7 @@ export function reseedDatabase() {
 
 // Auto seed if empty or outdated
 const countRow = db.prepare("SELECT COUNT(*) as count FROM survey_cases WHERE status = 'APPROVED'").get();
-if (countRow.count === 0 || countRow.count > 200) {
+if (countRow.count < 500) {
   reseedDatabase();
 }
 

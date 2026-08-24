@@ -17,7 +17,7 @@ fieldCases.forEach(fc => {
 });
 
 if (invalidKbli === 0 && invalidKbji === 0) {
-  console.log('✓ PASS: All 234 field cases have valid 5-digit KBLI and 4-digit KBJI format.');
+  console.log(`✓ PASS: All ${fieldCases.length} field cases have valid 5-digit KBLI and 4-digit KBJI format.`);
 } else {
   console.error(`✗ FAIL: ${invalidKbli} invalid KBLI, ${invalidKbji} invalid KBJI`);
 }
