@@ -98,7 +98,7 @@ export default function ExplorerView() {
                 <BookOpen size={13} /> Katalog Master Standar BPS
               </span>
               <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                {isKbli ? 'Klasifikasi Baku Lapangan Usaha Indonesia (KBLI 2020)' : 'Klasifikasi Baku Jabatan Indonesia (KBJI 2014)'}
+                {isKbli ? 'Klasifikasi Baku Lapangan Usaha Indonesia (KBLI 2025)' : 'Klasifikasi Baku Jabatan Indonesia (KBJI 2014)'}
               </span>
             </div>
             <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>
@@ -113,7 +113,7 @@ export default function ExplorerView() {
               className={`btn ${isKbli ? 'btn-primary' : 'btn-secondary'}`}
               style={{ fontSize: '0.84rem', padding: '8px 16px' }}
             >
-              <Building size={16} /> Katalog KBLI 2020 ({masterKbli.length})
+              <Building size={16} /> Katalog KBLI 2025 ({masterKbli.length})
             </button>
             <button
               onClick={() => { setActiveCatalog('kbji'); setSelectedCategory('ALL'); }}

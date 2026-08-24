@@ -146,7 +146,7 @@ export default function SmartCoderView({ liveCases }) {
               </span>
             </div>
             <h2 style={{ fontSize: '1.45rem', fontWeight: 800, marginBottom: '6px' }}>
-              Pencarian Kode KBLI 2020 & KBJI 2014
+              Pencarian Kode KBLI 2025 & KBJI 2014
             </h2>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', maxWidth: '750px' }}>
               Ketikkan uraian pekerjaan, komoditas, atau tempat usaha responden. Sistem mencocokkan kode statistik standar BPS berdasarkan kemiripan kata kunci dan data riil survei.
@@ -375,7 +375,7 @@ export default function SmartCoderView({ liveCases }) {
             {/* KBLI Primary Card */}
             <div>
               <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', textTransform: 'uppercase' }}>
-                🏢 Klasifikasi Lapangan Usaha (KBLI 2020):
+                🏢 Klasifikasi Lapangan Usaha (KBLI 2025):
               </div>
               {topKbli ? (
                 <RecommendationCard type="kbli" data={topKbli} rank={1} />

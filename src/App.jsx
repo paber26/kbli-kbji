@@ -94,7 +94,7 @@ export default function App() {
       }}>
         <div style={{ maxWidth: '1380px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
           <div>
-            <strong>SI-KODING</strong> • Sistem Klasifikasi & Pencarian KBLI 2020 & KBJI 2014
+            <strong>SI-KODING</strong> • Sistem Klasifikasi & Pencarian KBLI 2025 & KBJI 2014
           </div>
           <div>
             Badan Pusat Statistik Kabupaten Minahasa Selatan (Provinsi Sulawesi Utara)

@@ -47,7 +47,7 @@ export default function Header({
               SI-KODING
               <span className="brand-tag">BPS MINSEL</span>
             </h1>
-            <p>Sistem Klasifikasi & Pencarian KBLI 2020 & KBJI 2014</p>
+            <p>Sistem Klasifikasi & Pencarian KBLI 2025 & KBJI 2014</p>
           </div>
         </Link>
 
