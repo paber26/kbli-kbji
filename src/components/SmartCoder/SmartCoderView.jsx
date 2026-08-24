@@ -139,17 +139,17 @@ export default function SmartCoderView({ liveCases }) {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
               <span className="badge badge-kbli">
-                <Sparkles size={13} /> Asisten Koding BPS
+                <Search size={13} /> Pencarian & Rekomendasi Kode
               </span>
               <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                Didukung 234 Kasus Riil BPS Kabupaten Minahasa Selatan
+                Didukung Data Kasus Lapangan BPS Kabupaten Minahasa Selatan
               </span>
             </div>
             <h2 style={{ fontSize: '1.45rem', fontWeight: 800, marginBottom: '6px' }}>
-              Penentu Kode KBLI 2020 & KBJI 2014
+              Pencarian Kode KBLI 2020 & KBJI 2014
             </h2>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', maxWidth: '750px' }}>
-              Ketikkan uraian pekerjaan, komoditas, atau tempat usaha responden. Sistem secara otomatis merekomendasikan kode statistik standar BPS yang paling sesuai.
+              Ketikkan uraian pekerjaan, komoditas, atau tempat usaha responden. Sistem mencocokkan kode statistik standar BPS berdasarkan kemiripan kata kunci dan data riil survei.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Sparkles, 
+  Search, 
   BookOpen, 
   Database, 
   BarChart3, 
@@ -21,8 +21,8 @@ export default function Header({
   approvedCount = 234
 }) {
   const navItems = [
-    { id: 'smart-coder', label: 'Asisten Koding', icon: Sparkles, badge: 'Cerdas' },
-    { id: 'master-explorer', label: 'Katalog KBLI & KBJI', icon: BookOpen, count: `${analyticsSummary.unique_kbli}+` },
+    { id: 'smart-coder', label: 'Pencarian Koding', icon: Search },
+    { id: 'master-explorer', label: 'Katalog KBLI & KBJI', icon: BookOpen },
     { id: 'field-database', label: 'Bank Data Minsel', icon: Database, count: approvedCount },
     { id: 'analytics', label: 'Statistik & Sebaran', icon: BarChart3 },
     { 
@@ -49,7 +49,7 @@ export default function Header({
               SI-KODING
               <span className="brand-tag">BPS MINSEL</span>
             </h1>
-            <p>Sistem Cerdas Klasifikasi KBLI 2020 & KBJI 2014</p>
+            <p>Sistem Klasifikasi & Pencarian KBLI 2020 & KBJI 2014</p>
           </div>
         </div>
 

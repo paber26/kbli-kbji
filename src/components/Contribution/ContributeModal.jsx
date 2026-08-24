@@ -246,7 +246,7 @@ export default function ContributeModal({ isOpen, onClose, onSuccess }) {
                 />
               </div>
 
-              {/* Live AI Recommendation Preview */}
+              {/* Usulan Rekomendasi Kode Otomatis */}
               {predictions && (predictions.kbliRecommendations[0] || predictions.kbjiRecommendations[0]) && (
                 <div style={{
                   background: 'var(--bg-subtle)',
@@ -256,7 +256,7 @@ export default function ContributeModal({ isOpen, onClose, onSuccess }) {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
                     <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0284c7', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                      <Sparkles size={14} /> Rekomendasi Kode Otomatis:
+                      <Search size={14} /> Usulan Rekomendasi Kode:
                     </div>
                     <button
                       type="button"
@@ -264,7 +264,7 @@ export default function ContributeModal({ isOpen, onClose, onSuccess }) {
                       className="btn btn-secondary"
                       style={{ fontSize: '0.74rem', padding: '4px 10px' }}
                     >
-                      Gunakan Kode Rekomendasi Ini
+                      Gunakan Usulan Kode Ini
                     </button>
                   </div>
 
