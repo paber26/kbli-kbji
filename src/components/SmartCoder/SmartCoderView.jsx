@@ -422,7 +422,7 @@ export default function SmartCoderView({ liveCases }) {
                     Ditemukan {results.similarCases.length} Kasus Lapangan Serupa di Minsel
                   </div>
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                    Lihat bagaimana responden survei sebelumnya dengan profil pekerjaan serupa dikoding oleh BPS.
+                    Lihat bagaimana responden survei sebelumnya dengan profil pekerjaan serupa diberi kode klasifikasi oleh BPS.
                   </div>
                 </div>
               </div>
@@ -475,10 +475,10 @@ export default function SmartCoderView({ liveCases }) {
             <Search size={28} />
           </div>
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '6px' }}>
-            Mulai Koding dengan Mengetikkan Uraian Lapangan
+            Mulai dengan Mengetikkan Uraian Lapangan
           </h3>
           <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', maxWidth: '520px', margin: '0 auto 20px' }}>
-            Pilih salah satu tombol contoh cepat di atas atau isi form uraian kegiatan untuk mendapatkan rekomendasi instan KBLI & KBJI.
+            Pilih salah satu contoh cepat di atas atau isi form uraian kegiatan untuk mendapatkan rekomendasi kode KBLI 2025 & KBJI 2014.
           </p>
         </div>
       )}

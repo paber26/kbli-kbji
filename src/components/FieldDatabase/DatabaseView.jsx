@@ -216,7 +216,7 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
               </span>
             </div>
             <h2 style={{ fontSize: '1.35rem', fontWeight: 800 }}>
-              Pusat Data Lapangan & Verifikasi Koding
+              Pusat Data Lapangan & Verifikasi Kode
             </h2>
           </div>
 
