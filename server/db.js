@@ -29,6 +29,8 @@ db.exec(`
     mjj_kbli_label TEXT NOT NULL,
     mjj_kbji_code TEXT NOT NULL,
     mjj_kbji_label TEXT NOT NULL,
+    sample_count INTEGER DEFAULT 1,
+    variants TEXT,
     status TEXT CHECK(status IN ('PENDING', 'APPROVED', 'REJECTED')) DEFAULT 'PENDING',
     admin_notes TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -41,10 +43,41 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_kbji ON survey_cases(mjj_kbji_code);
 `);
 
-// Seed initial 234 records if table is empty
-const countRow = db.prepare('SELECT COUNT(*) as count FROM survey_cases').get();
-if (countRow.count === 0) {
-  console.log('Seeding initial 234 cases from fieldCases.json into SQLite...');
+export function reseedDatabase() {
+  console.log('Re-seeding SQLite database with consolidated deduplicated records...');
+  
+  // Recreate table with new columns
+  db.exec(`
+    DROP TABLE IF EXISTS survey_cases;
+    CREATE TABLE survey_cases (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      case_code TEXT UNIQUE,
+      contributor_name TEXT,
+      contributor_role TEXT,
+      kode_prov TEXT DEFAULT '71',
+      kode_kab TEXT DEFAULT '05',
+      nama_wilayah TEXT DEFAULT 'Kabupaten Minahasa Selatan, Sulawesi Utara',
+      mjj_occtle TEXT NOT NULL,
+      mjj_occmtd TEXT NOT NULL,
+      mjj_bidang TEXT NOT NULL,
+      mjj_kbli_code TEXT NOT NULL,
+      mjj_kbli_label TEXT NOT NULL,
+      mjj_kbji_code TEXT NOT NULL,
+      mjj_kbji_label TEXT NOT NULL,
+      sample_count INTEGER DEFAULT 1,
+      variants TEXT,
+      status TEXT CHECK(status IN ('PENDING', 'APPROVED', 'REJECTED')) DEFAULT 'PENDING',
+      admin_notes TEXT,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      reviewed_at DATETIME,
+      reviewed_by TEXT
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_status ON survey_cases(status);
+    CREATE INDEX IF NOT EXISTS idx_kbli ON survey_cases(mjj_kbli_code);
+    CREATE INDEX IF NOT EXISTS idx_kbji ON survey_cases(mjj_kbji_code);
+  `);
+
   const jsonPath = path.resolve(__dirname, '../src/data/fieldCases.json');
   if (fs.existsSync(jsonPath)) {
     const raw = fs.readFileSync(jsonPath, 'utf8');
@@ -55,11 +88,13 @@ if (countRow.count === 0) {
         case_code, contributor_name, contributor_role, kode_prov, kode_kab,
         nama_wilayah, mjj_occtle, mjj_occmtd, mjj_bidang,
         mjj_kbli_code, mjj_kbli_label, mjj_kbji_code, mjj_kbji_label,
+        sample_count, variants,
         status, created_at, reviewed_at, reviewed_by
       ) VALUES (
         ?, ?, ?, ?, ?,
         ?, ?, ?, ?,
         ?, ?, ?, ?,
+        ?, ?,
         'APPROVED', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'SISTEM BPS MINSEL'
       )
     `);
@@ -79,14 +114,22 @@ if (countRow.count === 0) {
           r.mjj.kbli_code,
           r.mjj.kbli_label,
           r.mjj.kbji_code,
-          r.mjj.kbji_label
+          r.mjj.kbji_label,
+          r.sample_count || 1,
+          JSON.stringify(r.variants || [])
         );
       }
     });
 
     insertMany(cases);
-    console.log(`Successfully seeded ${cases.length} records into SQLite database.`);
+    console.log(`Successfully seeded ${cases.length} clean consolidated records into SQLite.`);
   }
+}
+
+// Auto seed if empty or outdated
+const countRow = db.prepare("SELECT COUNT(*) as count FROM survey_cases WHERE status = 'APPROVED'").get();
+if (countRow.count === 0 || countRow.count > 200) {
+  reseedDatabase();
 }
 
 export default db;

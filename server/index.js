@@ -11,6 +11,13 @@ app.use(express.json());
 
 // Helper function to format DB row to Frontend Case schema
 function formatCaseRow(row) {
+  let parsedVariants = [];
+  try {
+    if (row.variants) {
+      parsedVariants = typeof row.variants === 'string' ? JSON.parse(row.variants) : row.variants;
+    }
+  } catch {}
+
   return {
     id: row.case_code || `CASE-${row.id}`,
     db_id: row.id,
@@ -22,6 +29,8 @@ function formatCaseRow(row) {
     nama_wilayah: row.nama_wilayah || 'Kabupaten Minahasa Selatan, Sulawesi Utara',
     status: row.status,
     admin_notes: row.admin_notes || '',
+    sample_count: row.sample_count || 1,
+    variants: parsedVariants,
     created_at: row.created_at,
     reviewed_at: row.reviewed_at,
     reviewed_by: row.reviewed_by,

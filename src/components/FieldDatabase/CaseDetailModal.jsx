@@ -102,58 +102,64 @@ export default function CaseDetailModal({ isOpen, onClose, record }) {
             </div>
           </div>
 
-          {/* Pekerjaan Tambahan (sjj) if exists */}
-          {sjj && (
-            <div style={{
-              background: 'var(--bg-subtle)',
-              borderRadius: 'var(--radius-lg)',
-              padding: '16px',
-              borderLeft: '4px solid #10b981'
-            }}>
-              <div style={{ fontWeight: 800, fontSize: '0.9rem', color: '#059669', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Layers size={16} /> 2. PEKERJAAN TAMBAHAN (SJJ)
-              </div>
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                {sjj.kbli_code && (
-                  <div style={{ background: 'var(--bg-card-solid)', padding: '10px 14px', borderRadius: 'var(--radius-md)', flex: 1 }}>
-                    <span className="badge badge-kbli">KBLI [{sjj.kbli_code}]</span>
-                    <div style={{ fontWeight: 600, fontSize: '0.84rem', marginTop: '4px' }}>{sjj.kbli_label}</div>
+          {/* Pekerjaan Tambahan (sjj) & (mpk) */}
+          {(sjj || mpk) && (
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+              {sjj && (
+                <div style={{ background: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', padding: '14px', border: '1px solid var(--border-card)' }}>
+                  <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#10b981', marginBottom: '8px' }}>
+                    2. Pekerjaan Tambahan (SJJ)
                   </div>
-                )}
-                {sjj.kbji_code && (
-                  <div style={{ background: 'var(--bg-card-solid)', padding: '10px 14px', borderRadius: 'var(--radius-md)', flex: 1 }}>
-                    <span className="badge badge-kbji">KBJI [{sjj.kbji_code}]</span>
-                    <div style={{ fontWeight: 600, fontSize: '0.84rem', marginTop: '4px' }}>{sjj.kbji_label}</div>
+                  <div style={{ fontSize: '0.8rem' }}><strong>Uraian:</strong> {sjj.occtle}</div>
+                  <div style={{ fontSize: '0.8rem' }}><strong>Komoditas:</strong> {sjj.occmtd}</div>
+                  <div style={{ fontSize: '0.8rem' }}><strong>Bidang:</strong> {sjj.bidang}</div>
+                  <div style={{ marginTop: '6px', fontSize: '0.75rem' }}>
+                    <span className="badge badge-kbli font-mono">KBLI: {sjj.kbli_code}</span>
+                    <span className="badge badge-kbji font-mono" style={{ marginLeft: '4px' }}>KBJI: {sjj.kbji_code}</span>
                   </div>
-                )}
-              </div>
+                </div>
+              )}
+
+              {mpk && (
+                <div style={{ background: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', padding: '14px', border: '1px solid var(--border-card)' }}>
+                  <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#f59e0b', marginBottom: '8px' }}>
+                    3. Pekerjaan Sebelumnya (MPK)
+                  </div>
+                  <div style={{ fontSize: '0.8rem' }}><strong>Uraian:</strong> {mpk.occtle}</div>
+                  <div style={{ fontSize: '0.8rem' }}><strong>Komoditas:</strong> {mpk.occmtd}</div>
+                  <div style={{ fontSize: '0.8rem' }}><strong>Bidang:</strong> {mpk.bidang}</div>
+                  <div style={{ marginTop: '6px', fontSize: '0.75rem' }}>
+                    <span className="badge badge-kbli font-mono">KBLI: {mpk.kbli_code}</span>
+                    <span className="badge badge-kbji font-mono" style={{ marginLeft: '4px' }}>KBJI: {mpk.kbji_code}</span>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
-          {/* Pekerjaan Masa Lalu (mpk) if exists */}
-          {mpk && (
+          {/* Variasi Kalimat Responden Serupa */}
+          {record.sample_count > 1 && record.variants && record.variants.length > 0 && (
             <div style={{
-              background: 'var(--bg-subtle)',
-              borderRadius: 'var(--radius-lg)',
-              padding: '16px',
-              borderLeft: '4px solid #f59e0b'
+              background: 'rgba(2, 132, 199, 0.05)',
+              border: '1px solid rgba(2, 132, 199, 0.2)',
+              borderRadius: 'var(--radius-md)',
+              padding: '14px'
             }}>
-              <div style={{ fontWeight: 800, fontSize: '0.9rem', color: '#d97706', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Calendar size={16} /> 3. PEKERJAAN MASA LALU / MODALITAS (MPK)
+              <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#0284c7', marginBottom: '8px' }}>
+                📝 Variasi Kalimat Responden Serupa di Lapangan ({record.sample_count} Sampel):
               </div>
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                {mpk.kbli_code && (
-                  <div style={{ background: 'var(--bg-card-solid)', padding: '10px 14px', borderRadius: 'var(--radius-md)', flex: 1 }}>
-                    <span className="badge badge-kbli">KBLI [{mpk.kbli_code}]</span>
-                    <div style={{ fontWeight: 600, fontSize: '0.84rem', marginTop: '4px' }}>{mpk.kbli_label}</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {record.variants.map((v, idx) => (
+                  <div key={idx} style={{
+                    fontSize: '0.78rem',
+                    background: 'var(--bg-card-solid)',
+                    padding: '6px 10px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1px solid var(--border-subtle)'
+                  }}>
+                    <strong style={{ color: '#0284c7' }}>Pekerjaan:</strong> "{v.occtle}" • <strong style={{ color: '#10b981' }}>Komoditas:</strong> "{v.occmtd}" • <strong style={{ color: '#f59e0b' }}>Bidang:</strong> "{v.bidang}"
                   </div>
-                )}
-                {mpk.kbji_code && (
-                  <div style={{ background: 'var(--bg-card-solid)', padding: '10px 14px', borderRadius: 'var(--radius-md)', flex: 1 }}>
-                    <span className="badge badge-kbji">KBJI [{mpk.kbji_code}]</span>
-                    <div style={{ fontWeight: 600, fontSize: '0.84rem', marginTop: '4px' }}>{mpk.kbji_label}</div>
-                  </div>
-                )}
+                ))}
               </div>
             </div>
           )}

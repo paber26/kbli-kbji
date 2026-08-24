@@ -129,11 +129,28 @@ export function matchKbliKbji(input) {
     const bidangSim = calculateSimilarity(tokenizeText(bidang || rawCombined), tokenizeText(fc.mjj.bidang));
     const generalSim = calculateSimilarity(expandedQueryTokens, caseTokens);
 
-    const weightedScore = (occtleSim * 0.35) + (occmtdSim * 0.25) + (bidangSim * 0.25) + (generalSim * 0.15) + exactBonus;
+    let bestScore = (occtleSim * 0.35) + (occmtdSim * 0.25) + (bidangSim * 0.25) + (generalSim * 0.15) + exactBonus;
+
+    // Check similarity with variants if any
+    if (fc.variants && fc.variants.length > 0) {
+      for (const v of fc.variants) {
+        const vText = `${v.occtle} ${v.occmtd} ${v.bidang}`;
+        const vTokens = tokenizeText(vText);
+        let vExact = (lowerRaw.length > 4 && vText.toLowerCase().includes(lowerRaw)) ? 0.4 : 0;
+        const vOcctleSim = calculateSimilarity(tokenizeText(occtle || rawCombined), tokenizeText(v.occtle));
+        const vOccmtdSim = calculateSimilarity(tokenizeText(occmtd || rawCombined), tokenizeText(v.occmtd));
+        const vBidangSim = calculateSimilarity(tokenizeText(bidang || rawCombined), tokenizeText(v.bidang));
+        const vGenSim = calculateSimilarity(expandedQueryTokens, vTokens);
+        const vScore = (vOcctleSim * 0.35) + (vOccmtdSim * 0.25) + (vBidangSim * 0.25) + (vGenSim * 0.15) + vExact;
+        if (vScore > bestScore) {
+          bestScore = vScore;
+        }
+      }
+    }
 
     return {
       ...fc,
-      score: Math.min(1, weightedScore),
+      score: Math.min(1, bestScore),
       matchedTokens: queryTokens.filter(t => caseTokens.includes(t))
     };
   }).filter(c => c.score > 0.05).sort((a, b) => b.score - a.score);

@@ -80,7 +80,7 @@ export default function DatabaseView({ liveCases }) {
               </span>
             </div>
             <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>
-              Bank Data Kasus Nyata Survei BPS ({fieldCases.length} Kasus)
+              Bank Data Kasus Nyata Survei BPS ({casesData.length} Kasus Terkonsolidasi)
             </h2>
           </div>
 
@@ -175,12 +175,15 @@ export default function DatabaseView({ liveCases }) {
                       <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
                         <span style={{ fontWeight: 600 }}>Komoditas:</span> {row.mjj.occmtd} • <span style={{ fontWeight: 600 }}>Tempat:</span> {row.mjj.bidang}
                       </div>
-                      {(row.sjj || row.mpk) && (
-                        <div style={{ display: 'flex', gap: '6px', marginTop: '6px' }}>
-                          {row.sjj && <span className="badge badge-high" style={{ fontSize: '0.65rem' }}>+ Pekerjaan Tambahan</span>}
-                          {row.mpk && <span className="badge badge-medium" style={{ fontSize: '0.65rem' }}>+ Modalitas Lalu</span>}
-                        </div>
-                      )}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap', marginTop: '6px' }}>
+                        {row.sample_count > 1 && (
+                          <span className="badge badge-medium" style={{ fontSize: '0.66rem' }}>
+                            x{row.sample_count} Sampel Terkonsolidasi
+                          </span>
+                        )}
+                        {row.sjj && <span className="badge badge-high" style={{ fontSize: '0.65rem' }}>+ Pekerjaan Tambahan</span>}
+                        {row.mpk && <span className="badge badge-medium" style={{ fontSize: '0.65rem' }}>+ Modalitas Lalu</span>}
+                      </div>
                     </td>
 
                     {/* KBLI */}
