@@ -1,0 +1,452 @@
+{
+  "total_cases": 234,
+  "unique_kbli": 83,
+  "unique_kbji": 64,
+  "cases_with_secondary_job": 34,
+  "cases_with_past_job": 42,
+  "top_kbli": [
+    {
+      "code": "01284",
+      "title": "PERKEBUNAN TANAMAN AROMATIK/PENYEGAR",
+      "category": "Pertanian, Kehutanan Dan Perikanan",
+      "count": 20
+    },
+    {
+      "code": "01261",
+      "title": "PERKEBUNAN BUAH KELAPA",
+      "category": "Pertanian, Kehutanan Dan Perikanan",
+      "count": 17
+    },
+    {
+      "code": "47112",
+      "title": "PERDAGANGAN ECERAN BERBAGAI MACAM BARANG YANG UTAMANYA MAKANAN, MINUMAN ATAU TEMBAKAU BUKAN DI MINIMARKET/SUPERMARKET/HYPERMARKET (TRADISIONAL)",
+      "category": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "count": 17
+    },
+    {
+      "code": "10421",
+      "title": "INDUSTRI KOPRA",
+      "category": "Industri Pengolahan",
+      "count": 13
+    },
+    {
+      "code": "07301",
+      "title": "PERTAMBANGAN EMAS DAN PERAK",
+      "category": "Pertambangan Dan Penggalian",
+      "count": 11
+    },
+    {
+      "code": "01133",
+      "title": "PERTANIAN HORTIKULTURA SAYURAN BUAH",
+      "category": "Pertanian, Kehutanan Dan Perikanan",
+      "count": 10
+    },
+    {
+      "code": "01111",
+      "title": "PERTANIAN JAGUNG",
+      "category": "Pertanian, Kehutanan Dan Perikanan",
+      "count": 9
+    },
+    {
+      "code": "56103",
+      "title": "KEDAI MAKANAN",
+      "category": "Penyediaan Akomodasi Dan Makan Minum",
+      "count": 8
+    },
+    {
+      "code": "49424",
+      "title": "ANGKUTAN OJEK MOTOR",
+      "category": "Pengangkutan Dan Pergudangan",
+      "count": 7
+    },
+    {
+      "code": "10773",
+      "title": "INDUSTRI PRODUK MASAK DARI KELAPA",
+      "category": "Industri Pengolahan",
+      "count": 7
+    }
+  ],
+  "top_kbji": [
+    {
+      "code": "6111",
+      "title": "PEKERJA PERTANIAN TANAMAN PANGAN DAN TANAMAN SEMUSIM",
+      "major": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "count": 43
+    },
+    {
+      "code": "5221",
+      "title": "PEMILIK TOKO",
+      "major": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "count": 23
+    },
+    {
+      "code": "9211",
+      "title": "BURUH PERTANIAN",
+      "major": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "count": 20
+    },
+    {
+      "code": "7549",
+      "title": "PEKERJA PENGOLAHAN LAINNYA YTDL",
+      "major": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "count": 19
+    },
+    {
+      "code": "6112",
+      "title": "PEKERJA PERTANIAN TANAMAN TAHUNAN DAN TANAMAN SEMAK",
+      "major": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "count": 11
+    },
+    {
+      "code": "9329",
+      "title": "BURUH INDUSTRI PENGOLAHAN YTDL",
+      "major": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "count": 9
+    },
+    {
+      "code": "5223",
+      "title": "ASISTEN PENJUALAN TOKO",
+      "major": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "count": 8
+    },
+    {
+      "code": "9311",
+      "title": "BURUH PERTAMBANGAN DAN PENGGALIAN",
+      "major": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "count": 8
+    },
+    {
+      "code": "5249",
+      "title": "PEKERJA PENJUALAN YTDL",
+      "major": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "count": 8
+    },
+    {
+      "code": "8321",
+      "title": "PENGEMUDI SEPEDA MOTOR",
+      "major": "Operator Dan Perakit Mesin",
+      "count": 7
+    }
+  ],
+  "category_distribution": {
+    "A - Pertanian, Kehutanan Dan Perikanan": 76,
+    "G - Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor": 43,
+    "C - Industri Pengolahan": 39,
+    "I - Penyediaan Akomodasi Dan Makan Minum": 14,
+    "F - Konstruksi": 12,
+    "B - Pertambangan Dan Penggalian": 11,
+    "P - Pendidikan": 10,
+    "H - Pengangkutan Dan Pergudangan": 8,
+    "O - Administrasi Pemerintahan, Pertahanan & Jamsos Wajib": 6,
+    "S - Aktivitas Jasa Lainnya": 5,
+    "Q - Aktivitas Kesehatan Manusia Dan Sosial": 4,
+    "D - Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin": 2,
+    "T - Aktivitas Rumah Tangga Sebagai Pemberi Kerja": 2,
+    "J - Informasi Dan Komunikasi": 1,
+    "K - Aktivitas Keuangan Dan Asuransi": 1
+  },
+  "kbji_major_distribution": {
+    "Gol 6: Pekerja Terampil Pertanian, Kehutanan Dan Perikanan": 55,
+    "Gol 5: Tenaga Usaha Jasa Dan Tenaga Penjualan": 53,
+    "Gol 9: Tenaga Kebersihan Dan Tenaga Kasar (Buruh)": 50,
+    "Gol 7: Pekerja Pengolahan, Kerajinan Dan YBTD": 36,
+    "Gol 8: Operator Dan Perakit Mesin": 13,
+    "Gol 2: Profesional": 12,
+    "Gol 3: Teknisi Dan Asisten Profesional": 8,
+    "Gol 4: Tenaga Tata Usaha": 4,
+    "Gol 1: Manajer": 3
+  },
+  "categories_meta": {
+    "A": {
+      "name": "Pertanian, Kehutanan Dan Perikanan",
+      "color": "#10B981",
+      "desc": "Mencakup pemanfaatan sumber daya alam hayati nabati dan hewani."
+    },
+    "B": {
+      "name": "Pertambangan Dan Penggalian",
+      "color": "#64748B",
+      "desc": "Mencakup ekstraksi mineral padat, cair, atau gas yang terbentuk secara alami."
+    },
+    "C": {
+      "name": "Industri Pengolahan",
+      "color": "#F59E0B",
+      "desc": "Kegiatan transformasi fisik atau kimiawi dari material menjadi produk baru."
+    },
+    "D": {
+      "name": "Pengadaan Listrik, Gas, Uap/Air Panas Dan Udara Dingin",
+      "color": "#EAB308",
+      "desc": "Penyediaan tenaga listrik, gas alam, uap dan pendingin udara."
+    },
+    "E": {
+      "name": "Pengelolaan Air, Air Limbah, Sampah & Remediasi",
+      "color": "#06B6D4",
+      "desc": "Pengumpulan, pengolahan, dan pembuangan berbagai bentuk limbah."
+    },
+    "F": {
+      "name": "Konstruksi",
+      "color": "#EC4899",
+      "desc": "Konstruksi umum dan spesialis untuk bangunan gedung dan pekerjaan sipil."
+    },
+    "G": {
+      "name": "Perdagangan Besar Dan Eceran; Reparasi Mobil & Motor",
+      "color": "#3B82F6",
+      "desc": "Perdagangan partai besar dan eceran tanpa mengubah bentuk barang."
+    },
+    "H": {
+      "name": "Pengangkutan Dan Pergudangan",
+      "color": "#8B5CF6",
+      "desc": "Angkutan penumpang atau barang (darat, air, udara) dan pergudangan."
+    },
+    "I": {
+      "name": "Penyediaan Akomodasi Dan Makan Minum",
+      "color": "#F97316",
+      "desc": "Penyediaan penginapan jangka pendek dan makanan/minuman siap saji."
+    },
+    "J": {
+      "name": "Informasi Dan Komunikasi",
+      "color": "#6366F1",
+      "desc": "Produksi dan distribusi informasi, media, penyiaran, telekomunikasi dan TI."
+    },
+    "K": {
+      "name": "Aktivitas Keuangan Dan Asuransi",
+      "color": "#14B8A6",
+      "desc": "Transaksi keuangan, perbankan, asuransi, dan dana pensiun."
+    },
+    "L": {
+      "name": "Real Estat",
+      "color": "#84CC16",
+      "desc": "Penyewaan, pembelian, penjualan, dan pengelolaan properti real estat."
+    },
+    "M": {
+      "name": "Aktivitas Profesional, Ilmiah Dan Teknis",
+      "color": "#A855F7",
+      "desc": "Aktivitas keahlian khusus ilmiah, hukum, akuntansi, dan teknik."
+    },
+    "N": {
+      "name": "Aktivitas Penyewaan, Ketenagakerjaan & Penunjang Usaha",
+      "color": "#0EA5E9",
+      "desc": "Penyewaan barang, penyedia tenaga kerja, agen travel, keamanan."
+    },
+    "O": {
+      "name": "Administrasi Pemerintahan, Pertahanan & Jamsos Wajib",
+      "color": "#1E3A8A",
+      "desc": "Kegiatan pemerintahan, peradilan, kepolisian, dan pertahanan."
+    },
+    "P": {
+      "name": "Pendidikan",
+      "color": "#4F46E5",
+      "desc": "Pendidikan formal dan non-formal pada semua tingkatan tingkatan."
+    },
+    "Q": {
+      "name": "Aktivitas Kesehatan Manusia Dan Sosial",
+      "color": "#EF4444",
+      "desc": "Pelayanan kesehatan medis, rumah sakit, klinik, dan panti sosial."
+    },
+    "R": {
+      "name": "Kesenian, Hiburan Dan Rekreasi",
+      "color": "#D946EF",
+      "desc": "Aktivitas seni, pertunjukan, museum, olahraga, dan rekreasi."
+    },
+    "S": {
+      "name": "Aktivitas Jasa Lainnya",
+      "color": "#475569",
+      "desc": "Aktivitas organisasi, reparasi perlengkapan rumah tangga, pangkas rambut, dll."
+    },
+    "T": {
+      "name": "Aktivitas Rumah Tangga Sebagai Pemberi Kerja",
+      "color": "#78716C",
+      "desc": "Pekerjaan asisten rumah tangga dan produksi keluarga untuk konsumsi sendiri."
+    },
+    "U": {
+      "name": "Aktivitas Badan Internasional",
+      "color": "#334155",
+      "desc": "Aktivitas kedutaan, konsulat, PBB, dan lembaga internasional."
+    }
+  },
+  "divisions_meta": {
+    "01": "Pertanian Tanaman, Peternakan, Perburuan dan Kegiatan YBDI",
+    "02": "Kehutanan dan Penebangan Kayu",
+    "03": "Perikanan",
+    "05": "Pertambangan Batu Bara dan Lignit",
+    "06": "Pertambangan Minyak Bumi dan Gas Alam dan Panas Bumi",
+    "07": "Pertambangan Bijih Logam",
+    "08": "Pertambangan dan Penggalian Lainnya",
+    "09": "Aktivitas Jasa Penunjang Pertambangan",
+    "10": "Industri Makanan",
+    "11": "Industri Minuman",
+    "12": "Industri Pengolahan Tembakau",
+    "13": "Industri Tekstil",
+    "14": "Industri Pakaian Jadi",
+    "15": "Industri Kulit, Barang dari Kulit dan Alas Kaki",
+    "16": "Industri Kayu, Barang dari Kayu dan Gabus",
+    "17": "Industri Kertas dan Barang dari Kertas",
+    "18": "Industri Pencetakan dan Reproduksi Media Rekaman",
+    "19": "Industri Produk dari Batu Bara dan Pengilangan Minyak Bumi",
+    "20": "Industri Bahan Kimia dan Barang dari Bahan Kimia",
+    "21": "Industri Farmasi, Obat Kimia dan Tradisional",
+    "22": "Industri Karet, Barang dari Karet dan Plastik",
+    "23": "Industri Barang Galian Bukan Logam",
+    "24": "Industri Logam Dasar",
+    "25": "Industri Barang Logam, Bukan Mesin dan Peralatannya",
+    "26": "Industri Komputer, Barang Elektronik dan Optik",
+    "27": "Industri Peralatan Listrik",
+    "28": "Industri Mesin dan Perlengkapan YTDL",
+    "29": "Industri Kendaraan Bermotor, Trailer dan Semi Trailer",
+    "30": "Industri Alat Angkutan Lainnya",
+    "31": "Industri Furnitur",
+    "32": "Industri Pengolahan Lainnya",
+    "33": "Jasa Reparasi dan Pemasangan Mesin dan Peralatan",
+    "35": "Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "36": "Pengelolaan Air",
+    "37": "Pengelolaan Air Limbah",
+    "38": "Pengelolaan dan Daur Ulang Sampah",
+    "39": "Aktivitas Remediasi dan Pengelolaan Limbah Lainnya",
+    "41": "Konstruksi Gedung",
+    "42": "Konstruksi Bangunan Sipil",
+    "43": "Konstruksi Khusus",
+    "45": "Perdagangan, Reparasi dan Perawatan Mobil dan Sepeda Motor",
+    "46": "Perdagangan Besar, Bukan Mobil dan Sepeda Motor",
+    "47": "Perdagangan Eceran, Bukan Mobil dan Sepeda Motor",
+    "49": "Angkutan Darat dan Angkutan Melalui Saluran Pipa",
+    "50": "Angkutan Perairan",
+    "51": "Angkutan Udara",
+    "52": "Pergudangan dan Aktivitas Penunjang Angkutan",
+    "53": "Pos dan Kurir",
+    "55": "Penyediaan Akomodasi",
+    "56": "Penyediaan Makanan dan Minuman",
+    "58": "Aktivitas Penerbitan",
+    "59": "Aktivitas Produksi Gambar Bergerak, Video, Suara dan Musik",
+    "60": "Aktivitas Penyiaran dan Pemrograman",
+    "61": "Telekomunikasi",
+    "62": "Aktivitas Pemrograman, Konsultasi Komputer dan TI",
+    "63": "Aktivitas Jasa Informasi",
+    "64": "Aktivitas Jasa Keuangan, Bukan Asuransi dan Dana Pensiun",
+    "65": "Asuransi, Reasuransi dan Dana Pensiun",
+    "66": "Aktivitas Penunjang Jasa Keuangan dan Asuransi",
+    "68": "Real Estat",
+    "69": "Aktivitas Hukum dan Akuntansi",
+    "70": "Aktivitas Kantor Pusat dan Konsultasi Manajemen",
+    "71": "Aktivitas Arsitektur, Keinsinyuran dan Analisis Teknis",
+    "72": "Penelitian dan Pengembangan Ilmu Pengetahuan",
+    "73": "Periklanan dan Penelitian Pasar",
+    "74": "Aktivitas Profesional, Ilmiah dan Teknis Lainnya",
+    "75": "Aktivitas Kesehatan Hewan",
+    "77": "Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi",
+    "78": "Aktivitas Ketenagakerjaan",
+    "79": "Aktivitas Agen Perjalanan dan Jasa Reservasi",
+    "80": "Aktivitas Keamanan dan Penyelidikan",
+    "81": "Aktivitas Jasa Untuk Gedung dan Pertamanan",
+    "82": "Aktivitas Administrasi dan Penunjang Kantor",
+    "84": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+    "85": "Pendidikan",
+    "86": "Aktivitas Kesehatan Manusia",
+    "87": "Aktivitas Perawatan di Lembaga Sosial",
+    "88": "Aktivitas Sosial Tanpa Akomodasi",
+    "90": "Aktivitas Hiburan, Seni dan Kreativitas",
+    "91": "Perpustakaan, Arsip, Museum dan Kebudayaan",
+    "92": "Aktivitas Perjudian dan Pertaruhan",
+    "93": "Aktivitas Olahraga dan Rekreasi Lainnya",
+    "94": "Aktivitas Keanggotaan Organisasi",
+    "95": "Reparasi Komputer dan Barang Pribadi Rumah Tangga",
+    "96": "Aktivitas Jasa Perorangan Lainnya",
+    "97": "Aktivitas Rumah Tangga Sebagai Pemberi Kerja",
+    "98": "Aktivitas Produksi Rumah Tangga Sendiri",
+    "99": "Aktivitas Badan Internasional"
+  },
+  "kbji_majors_meta": {
+    "1": {
+      "name": "Manajer",
+      "color": "#4F46E5",
+      "desc": "Merencanakan, memimpin, mengkoordinasikan dan mengevaluasi aktivitas bisnis/organisasi."
+    },
+    "2": {
+      "name": "Profesional",
+      "color": "#06B6D4",
+      "desc": "Menerapkan pengetahuan ilmiah/artistik tingkat tinggi dalam bidang spesifik."
+    },
+    "3": {
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981",
+      "desc": "Melakukan tugas teknis penunjang profesional dan operasional terapan."
+    },
+    "4": {
+      "name": "Tenaga Tata Usaha",
+      "color": "#3B82F6",
+      "desc": "Mengatur, mengolah, dan mencatat informasi operasional kantor/organisasi."
+    },
+    "5": {
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B",
+      "desc": "Menyediakan layanan pribadi, perlindungan, dan penjualan barang/jasa."
+    },
+    "6": {
+      "name": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "color": "#84CC16",
+      "desc": "Menanam, memanen tanaman dan memelihara/menangkap hewan untuk pasar."
+    },
+    "7": {
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899",
+      "desc": "Membuat, merawat, dan memperbaiki struktur bangunan, mesin, atau kerajinan."
+    },
+    "8": {
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6",
+      "desc": "Mengoperasikan mesin pabrik, peralatan stasioner, dan mengemudikan kendaraan."
+    },
+    "9": {
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444",
+      "desc": "Melakukan tugas fisik sederhana dan rutin dengan tenaga manual."
+    },
+    "0": {
+      "name": "Angkatan Bersenjata",
+      "color": "#1E3A8A",
+      "desc": "Personel militer dan pertahanan negara."
+    }
+  },
+  "kbji_submajors_meta": {
+    "11": "Manajer Eksekutif, Pejabat Tinggi dan Anggota Badan Legislatif",
+    "12": "Manajer Administrasi dan Komersial",
+    "13": "Manajer Produksi dan Pelayanan Khusus",
+    "14": "Manajer Perhotelan, Ritel dan Pelayanan Lainnya",
+    "21": "Profesional Sains dan Teknik",
+    "22": "Profesional Kesehatan",
+    "23": "Profesional Pendidikan",
+    "24": "Profesional Bisnis dan Administrasi",
+    "25": "Profesional Teknologi Informasi dan Komunikasi",
+    "26": "Profesional Hukum, Sosial dan Kebudayaan",
+    "31": "Teknisi Sains dan Teknik",
+    "32": "Tenaga Madya Kesehatan",
+    "33": "Tenaga Madya Bisnis dan Administrasi",
+    "34": "Tenaga Madya Hukum, Sosial dan Budaya",
+    "35": "Teknisi Informasi dan Komunikasi",
+    "41": "Tenaga Tata Usaha Umum dan Kantor",
+    "42": "Tenaga Layanan Pelanggan",
+    "43": "Tenaga Pencatat Angka dan Material",
+    "44": "Tenaga Tata Usaha Lainnya",
+    "51": "Tenaga Jasa Perorangan",
+    "52": "Tenaga Penjualan",
+    "53": "Tenaga Perawatan Pribadi",
+    "54": "Tenaga Jasa Perlindungan dan Keamanan",
+    "61": "Pekerja Terampil Pertanian Tanaman dan Peternakan",
+    "62": "Pekerja Terampil Kehutanan, Perikanan dan Perburuan",
+    "63": "Petani, Nelayan dan Pengumpul Subsisten",
+    "71": "Tukang Bangunan dan Tukang Terkait",
+    "72": "Pekerja Logam, Mesin dan Kerajinan Terkait",
+    "73": "Pekerja Kerajinan Tangan dan Percetakan",
+    "74": "Pekerja Listrik dan Elektronik",
+    "75": "Pekerja Pengolahan Makanan, Kayu, Pakaian dan Barang Lainnya",
+    "81": "Operator Mesin dan Pabrik Stasioner",
+    "82": "Perakit Mesin",
+    "83": "Pengemudi dan Operator Mesin Bergerak",
+    "91": "Tenaga Kebersihan dan Pembantu Rumah Tangga",
+    "92": "Buruh Pertanian, Kehutanan dan Perikanan",
+    "93": "Buruh Pertambangan, Konstruksi, Industri Pengolahan dan Transportasi",
+    "94": "Asisten Penyiapan Makanan",
+    "95": "Pekerja Jalanan dan Penjual Barang Jasa Terkait",
+    "96": "Pekerja Sampah dan Tenaga Kasar Lainnya",
+    "01": "Perwira Angkatan Bersenjata",
+    "02": "Bintara dan Tamtama Angkatan Bersenjata"
+  }
+}

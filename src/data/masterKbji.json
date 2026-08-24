@@ -1,0 +1,1104 @@
+[
+  {
+    "code": "1113",
+    "title": "KETUA ADAT DAN KEPALA WILAYAH",
+    "major": {
+      "code": "1",
+      "name": "Manajer",
+      "color": "#4F46E5"
+    },
+    "submajor_code": "11",
+    "submajor_name": "Manajer Eksekutif, Pejabat Tinggi dan Anggota Badan Legislatif",
+    "minor": "111",
+    "sample_cases": [
+      "PERANGKAT DESA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "1321",
+    "title": "MANAJER MANUFAKTUR",
+    "major": {
+      "code": "1",
+      "name": "Manajer",
+      "color": "#4F46E5"
+    },
+    "submajor_code": "13",
+    "submajor_name": "Manajer Produksi dan Pelayanan Khusus",
+    "minor": "132",
+    "sample_cases": [
+      "MEMASAK,MENJUAL SAYUR MASAK"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "1412",
+    "title": "MANAJER PENYEDIAAN MAKANAN DAN MINUMAN",
+    "major": {
+      "code": "1",
+      "name": "Manajer",
+      "color": "#4F46E5"
+    },
+    "submajor_code": "14",
+    "submajor_name": "Manajer Perhotelan, Ritel dan Pelayanan Lainnya",
+    "minor": "141",
+    "sample_cases": [
+      "BELANJA,MEMASAK, MENJUAL TINUTUAN,SAYUR MASAK DLL"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "2132",
+    "title": "PENASIHAT PERTANIAN, KEHUTANAN DAN PERIKANAN",
+    "major": {
+      "code": "2",
+      "name": "Profesional",
+      "color": "#06B6D4"
+    },
+    "submajor_code": "21",
+    "submajor_name": "Profesional Sains dan Teknik",
+    "minor": "213",
+    "sample_cases": [
+      "STAFF PENYULUH PERTANIAN BPP TOMPASOBARU"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "2221",
+    "title": "PROFESIONAL KEPERAWATAN",
+    "major": {
+      "code": "2",
+      "name": "Profesional",
+      "color": "#06B6D4"
+    },
+    "submajor_code": "22",
+    "submajor_name": "Profesional Kesehatan",
+    "minor": "222",
+    "sample_cases": [
+      "MERAWAT PASIEN DI RUMAH SAKIT SWASTA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "2330",
+    "title": "GURU PENDIDIKAN MENENGAH",
+    "major": {
+      "code": "2",
+      "name": "Profesional",
+      "color": "#06B6D4"
+    },
+    "submajor_code": "23",
+    "submajor_name": "Profesional Pendidikan",
+    "minor": "233",
+    "sample_cases": [
+      "PNS GURU DI SMP N1 AMURANG GOLONGAN 3 C",
+      "PNS SEBAGAI GURU DI SEKOLAH MENENGAH ATAS NEGERI 1 MOTOLING",
+      "MENGAJAR PJOK DI SMP",
+      "GURU DI SMP NEGERI"
+    ],
+    "frequency": 4
+  },
+  {
+    "code": "2341",
+    "title": "GURU SEKOLAH DASAR",
+    "major": {
+      "code": "2",
+      "name": "Profesional",
+      "color": "#06B6D4"
+    },
+    "submajor_code": "23",
+    "submajor_name": "Profesional Pendidikan",
+    "minor": "234",
+    "sample_cases": [
+      "PNS SEBAGAI GURU DI SD NEGERI",
+      "PNS GURU SD NEGERI MANADO",
+      "PNS GURU SD TEWASEN"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "2342",
+    "title": "GURU ANAK USIA DINI",
+    "major": {
+      "code": "2",
+      "name": "Profesional",
+      "color": "#06B6D4"
+    },
+    "submajor_code": "23",
+    "submajor_name": "Profesional Pendidikan",
+    "minor": "234",
+    "sample_cases": [
+      "GURU HONOR/MENGAJAR DI TK GMIM POOPO BARAT",
+      "HONORER,MENGAJAR DI TK GMIM POOPO BARAT"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "2636",
+    "title": "PROFESIONAL PEMIMPIN KEAGAMAAN",
+    "major": {
+      "code": "2",
+      "name": "Profesional",
+      "color": "#06B6D4"
+    },
+    "submajor_code": "26",
+    "submajor_name": "Profesional Hukum, Sosial dan Kebudayaan",
+    "minor": "263",
+    "sample_cases": [
+      "PENDETA DI JEMAAT GMIM SOLAGRATIA MOLINOW"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3113",
+    "title": "TEKNISI TEKNIK LISTRIK",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "31",
+    "submajor_name": "Teknisi Sains dan Teknik",
+    "minor": "311",
+    "sample_cases": [
+      "MELAKUKAN PEMBERSIHAN JARINGAN LISTRIK PLN",
+      "JASA INSTALASI LISTRIK"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "3121",
+    "title": "SUPERVISOR PERTAMBANGAN",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "31",
+    "submajor_name": "Teknisi Sains dan Teknik",
+    "minor": "312",
+    "sample_cases": [
+      "MENYEDIAKAN PEKERJA,ALAT,LOGISTIK LAINNYA BAHKAN KEBUTUHAN LAIN YANG DIBUTUHKAN DI LOKASI GALIAN EMAS"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3221",
+    "title": "ASISTEN PROFESIONAL KEPERAWATAN",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "32",
+    "submajor_name": "Tenaga Madya Kesehatan",
+    "minor": "322",
+    "sample_cases": [
+      "MEMBANTU ORANG MELAHIRKAN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3258",
+    "title": "PEKERJA AMBULAN",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "32",
+    "submajor_name": "Tenaga Madya Kesehatan",
+    "minor": "325",
+    "sample_cases": [
+      "MENGEMUDI MOBIL AMBULANCE MILIK RUMAH SAKIT SWASTA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3359",
+    "title": "PROFESIONAL PEMERINTAHAN YTDL",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "33",
+    "submajor_name": "Tenaga Madya Bisnis dan Administrasi",
+    "minor": "335",
+    "sample_cases": [
+      "ASN DI BAGIAN LLAJR"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3413",
+    "title": "ASISTEN PROFESIONAL KEAGAMAAN",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "34",
+    "submajor_name": "Tenaga Madya Hukum, Sosial dan Budaya",
+    "minor": "341",
+    "sample_cases": [
+      "PEMBANTU GEMBALA DALAM MELAYANI MEMIMPIN IBADAH"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3432",
+    "title": "DESAINER DAN DEKORATOR INTERIOR",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "34",
+    "submajor_name": "Tenaga Madya Hukum, Sosial dan Budaya",
+    "minor": "343",
+    "sample_cases": [
+      "USAHA DEKORASI MILIK SENDIRI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "3521",
+    "title": "TEKNISI PENYIARAN DAN AUDIO-VISUAL",
+    "major": {
+      "code": "3",
+      "name": "Teknisi Dan Asisten Profesional",
+      "color": "#10B981"
+    },
+    "submajor_code": "35",
+    "submajor_name": "Teknisi Informasi dan Komunikasi",
+    "minor": "352",
+    "sample_cases": [
+      "USAHA DEKORASI MILIK SENDIRI"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "4110",
+    "title": "TENAGA PERKANTORAN UMUM",
+    "major": {
+      "code": "4",
+      "name": "Tenaga Tata Usaha",
+      "color": "#3B82F6"
+    },
+    "submajor_code": "41",
+    "submajor_name": "Tenaga Tata Usaha Umum dan Kantor",
+    "minor": "411",
+    "sample_cases": [
+      "KETUA SLS TERKECIL",
+      "DAMKAR ( BAGIAN PENCEGAHAN PIKET )"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "4229",
+    "title": "TENAGA TATA USAHA INFORMASI PELANGGAN YTDL",
+    "major": {
+      "code": "4",
+      "name": "Tenaga Tata Usaha",
+      "color": "#3B82F6"
+    },
+    "submajor_code": "42",
+    "submajor_name": "Tenaga Layanan Pelanggan",
+    "minor": "422",
+    "sample_cases": [
+      "BAGIAN ADMINISTRASI PENDAFTARAN PASIEN DI RUMAH SAKIT KALOORAN AMURANG"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "4419",
+    "title": "JURU TATA USAHA YTDL",
+    "major": {
+      "code": "4",
+      "name": "Tenaga Tata Usaha",
+      "color": "#3B82F6"
+    },
+    "submajor_code": "44",
+    "submajor_name": "Tenaga Tata Usaha Lainnya",
+    "minor": "441",
+    "sample_cases": [
+      "PNS DI SMP N TEWASEN S DI BAGIAN STAF ADMINISTASI TATA USAHA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "5131",
+    "title": "PRAMUSAJI",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "51",
+    "submajor_name": "Tenaga Jasa Perorangan",
+    "minor": "513",
+    "sample_cases": [
+      "PELAYAN DI KEDAI MAKAN",
+      "MELAYANI PEMBELI DI WARUNG MAKAN",
+      "MELAYANI PEMBELI DI RUMAH MAKAN"
+    ],
+    "frequency": 3
+  },
+  {
+    "code": "5141",
+    "title": "PENATA RAMBUT",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "51",
+    "submajor_name": "Tenaga Jasa Perorangan",
+    "minor": "514",
+    "sample_cases": [
+      "USAHA MENGGUNTING RAMBUT DI BARBER MILIK SENDIRI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "5169",
+    "title": "TENAGA USAHA JASA PERORANGAN YTDL",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "51",
+    "submajor_name": "Tenaga Jasa Perorangan",
+    "minor": "516",
+    "sample_cases": [
+      "MENGEMUDI OJEK PRIBADI DARI RUMAH",
+      "USAHA DEKORASI MILIK SENDIRI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "5211",
+    "title": "PEDAGANG DI KIOS DAN LOS PASAR",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "521",
+    "sample_cases": [
+      "JUAL BELI DAGING BABI (PEMBORONG DAGING BABI) BELI DI KOTAMOBAGU DAN JUAL DI PASAR AMURANG (DISTRIBUTOR)"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "5212",
+    "title": "PEDAGANG MAKANAN KAKI LIMA",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "521",
+    "sample_cases": [
+      "MENJAGA DAN MENYAJIKAN MAKANAN DAN MINUMAN KEPADA PELANGGAN DI WARUNG MAKAN MILIK SENDIRI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "5221",
+    "title": "PEMILIK TOKO",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "522",
+    "sample_cases": [
+      "JASA PERANTARA PENJUAL MOBIL BEKAS ( CALO) MENCARI PEMBELI MOBIL",
+      "MENJUAL MINUMAN DINGIN POP ICE",
+      "MEMBANTU SUAMI UNTUK MENJUAL IKAN HASIL TANGKAPAN",
+      "MENJUAL SEMBAKO/WARUNG SEMBAKO",
+      "WARUNG SEMBAKO MILIK SENDRI"
+    ],
+    "frequency": 23
+  },
+  {
+    "code": "5223",
+    "title": "ASISTEN PENJUALAN TOKO",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "522",
+    "sample_cases": [
+      "MENJAGA WARUNG SEMBAKO",
+      "MEMBANTU ORANG TUA MENJAGA WARUNG",
+      "PETANI JAGUNG PIPILAN MILIK SENDIRI (MENUNGGU PANEN DAN AKTIFITAS DI KEBUN MEMBERSIHKAN RUMPUT RUMPUT DI SEKITAR JAGUNG)",
+      "MEMBANTU ORANG TUAH MENJAGA WARUNG",
+      "MENJUAL BAHAN SEMBAKO"
+    ],
+    "frequency": 8
+  },
+  {
+    "code": "5242",
+    "title": "PERAGA PENJUALAN",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "524",
+    "sample_cases": [
+      "WARUNG SEMBAKO MILIK SENDRI"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "5246",
+    "title": "PETUGAS KONTER LAYANAN MAKANAN",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "524",
+    "sample_cases": [
+      "MENJUAL PISANG GORENG & MINUMAN LAINNYA",
+      "BEKERJA MEMASAK DAN CUCI PIRING DI SEBUAH USAHA KETRING",
+      "MEMASAK MAKANAN DI WARUNG MAKAN MILIK SENDIRI",
+      "PENJUAL MAKANAN RINGAN / KERIPIK UBI GULA MERAH",
+      "WAITRES DI BABIBOO / USAHA MILIK ORANG LAIN"
+    ],
+    "frequency": 7
+  },
+  {
+    "code": "5249",
+    "title": "PEKERJA PENJUALAN YTDL",
+    "major": {
+      "code": "5",
+      "name": "Tenaga Usaha Jasa Dan Tenaga Penjualan",
+      "color": "#F59E0B"
+    },
+    "submajor_code": "52",
+    "submajor_name": "Tenaga Penjualan",
+    "minor": "524",
+    "sample_cases": [
+      "MENANAM SAYUR KANGKUNG DAN MENJUAL SAYUR KANGKUNG DI PASAR",
+      "MEMBELI CEPATU DI TOKO ONLINE KEMUDIAN DIJUAL KEMBALI SECARA ONLINE",
+      "KOPRASI SIMPAN PINJAM",
+      "KARYAWAN DI POM BENSIN",
+      "MELAYANI PEMBELI DI TOKO SEMBAKO MILIK ORANG LAIN"
+    ],
+    "frequency": 8
+  },
+  {
+    "code": "6111",
+    "title": "PEKERJA PERTANIAN TANAMAN PANGAN DAN TANAMAN SEMUSIM",
+    "major": {
+      "code": "6",
+      "name": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "color": "#84CC16"
+    },
+    "submajor_code": "61",
+    "submajor_name": "Pekerja Terampil Pertanian Tanaman dan Peternakan",
+    "minor": "611",
+    "sample_cases": [
+      "MENANAM NILAM DIKEBUN SENDIRI",
+      "PETANI JAGUNG PIPILAN MILIK SENDIRI (MENUNGGU PANEN DAN AKTIFITAS DI KEBUN MEMBERSIHKAN RUMPUT RUMPUT DI SEKITAR JAGUNG)",
+      "MENCANGKUL DI TANAMAN JAGUNG",
+      "MENVANGKUL DITANAMAN PANGAN",
+      "MENGGALI MENGAMBIL BATU REP DI TAMBANG"
+    ],
+    "frequency": 43
+  },
+  {
+    "code": "6112",
+    "title": "PEKERJA PERTANIAN TANAMAN TAHUNAN DAN TANAMAN SEMAK",
+    "major": {
+      "code": "6",
+      "name": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "color": "#84CC16"
+    },
+    "submajor_code": "61",
+    "submajor_name": "Pekerja Terampil Pertanian Tanaman dan Peternakan",
+    "minor": "611",
+    "sample_cases": [
+      "DI SEWA MEMANJAT KELAPA MILIK ORANG",
+      "PEMANJAT KELAPA",
+      "MENGUPAS SERABUT KELAPA DARI BUAH KELAPA",
+      "BURUH HARIAN MEMBERSIKAN DI KEBUN NILAM",
+      "BURUH PANJAT KELAPA"
+    ],
+    "frequency": 11
+  },
+  {
+    "code": "6121",
+    "title": "PEKERJA PETERNAKAN HEWAN BESAR DAN KECIL SERTA PENGHASIL SUSU",
+    "major": {
+      "code": "6",
+      "name": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "color": "#84CC16"
+    },
+    "submajor_code": "61",
+    "submajor_name": "Pekerja Terampil Pertanian Tanaman dan Peternakan",
+    "minor": "612",
+    "sample_cases": [
+      "MENJUAL PAKAN TERNAK",
+      "BURUH HARIAN MENJEMUR PADI"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "6122",
+    "title": "PEKERJA PETERNAKAN UNGGAS",
+    "major": {
+      "code": "6",
+      "name": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "color": "#84CC16"
+    },
+    "submajor_code": "61",
+    "submajor_name": "Pekerja Terampil Pertanian Tanaman dan Peternakan",
+    "minor": "612",
+    "sample_cases": [
+      "PERTANIAN - TANAM JAGUNG"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "6340",
+    "title": "NELAYAN, PEMBURU, PENANGKAP DAN PENGUMPUL SUBSISTEN",
+    "major": {
+      "code": "6",
+      "name": "Pekerja Terampil Pertanian, Kehutanan Dan Perikanan",
+      "color": "#84CC16"
+    },
+    "submajor_code": "63",
+    "submajor_name": "Petani, Nelayan dan Pengumpul Subsisten",
+    "minor": "634",
+    "sample_cases": [
+      "MENCARI IKAN DI LAUT MEMAKAI PERAHU MOTOR KETINTING",
+      "PANEN NILAM",
+      "PENGOLAHAN LIMBA DI PEEUSAHAN TEPUNG KELAPA",
+      "KARYWAN PENYULINGAN NILAM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "7111",
+    "title": "PEKERJA BANGUNAN RUMAH",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "71",
+    "submajor_name": "Tukang Bangunan dan Tukang Terkait",
+    "minor": "711",
+    "sample_cases": [
+      "MEMBANGUN RUMAH",
+      "TUKANG BANGUNAN"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "7231",
+    "title": "MEKANIK DAN TUKANG REPARASI KENDARAAN BERMOTOR",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "72",
+    "submajor_name": "Pekerja Logam, Mesin dan Kerajinan Terkait",
+    "minor": "723",
+    "sample_cases": [
+      "MELAKUKAN PEMBERSIHAN JARINGAN LISTRIK PLN",
+      "MONTIR DI BENGKEL MOBIL",
+      "MEKANIK MOBIL",
+      "USAHA BENGKEL MOBIL",
+      "MEMBANTU ORANG TUAH DI BENGKEL"
+    ],
+    "frequency": 4
+  },
+  {
+    "code": "7411",
+    "title": "PEKERJA KELISTRIKAN BANGUNAN DAN YBDI",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "74",
+    "submajor_name": "Pekerja Listrik dan Elektronik",
+    "minor": "741",
+    "sample_cases": [
+      "KARYAWAN MAINTENANCE ELECTRICAL ENGINEERING DI PT SASA INTI MINSEL"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "7413",
+    "title": "PEKERJA INSTALASI DAN REPARASI JARINGAN LISTRIK",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "74",
+    "submajor_name": "Pekerja Listrik dan Elektronik",
+    "minor": "741",
+    "sample_cases": [
+      "CABUT RUMPUT DITANAMAN NILAM",
+      "PLN MEMPERBAIKI KEUSAKAN LISTRIK DAN MEMASANG METER LAMPU"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "7422",
+    "title": "PEKERJA INSTALASI DAN SERVIS PERALATAN TEKNOLOGI INFORMASI DAN KOMUNIKASI",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "74",
+    "submajor_name": "Pekerja Listrik dan Elektronik",
+    "minor": "742",
+    "sample_cases": [
+      "TEKNISI OPERATOR TELKOMSEL"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "7512",
+    "title": "PEMBUAT ROTI, KUE, DAN KEMBANG GULA",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "75",
+    "submajor_name": "Pekerja Pengolahan Makanan, Kayu, Pakaian dan Barang Lainnya",
+    "minor": "751",
+    "sample_cases": [
+      "MEMBUAT DAN MENJUAL KUE BASAH",
+      "USAHA DONAT BUATAN SENDIRI"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "7514",
+    "title": "PENGAWET BUAH, SAYUR, DAN YBDI",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "75",
+    "submajor_name": "Pekerja Pengolahan Makanan, Kayu, Pakaian dan Barang Lainnya",
+    "minor": "751",
+    "sample_cases": [
+      "BURUH PEKERJA KOPRA",
+      "MENGOLAH KELAPA MENJADI KOPRA",
+      "PERER DI PERUSAHAAN COCO PRIMA",
+      "MENGERINGKAN KULIT ARI KELAPA"
+    ],
+    "frequency": 4
+  },
+  {
+    "code": "7515",
+    "title": "AHLI PENCICIP DAN PENILAI KUALITAS MAKANAN DAN MINUMAN",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "75",
+    "submajor_name": "Pekerja Pengolahan Makanan, Kayu, Pakaian dan Barang Lainnya",
+    "minor": "751",
+    "sample_cases": [
+      "USAHA KERIPIK PISANGA JA SE MASO DI TOKO-TOKO"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "7522",
+    "title": "PEMBUAT FURNITUR DAN YBDI",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "75",
+    "submajor_name": "Pekerja Pengolahan Makanan, Kayu, Pakaian dan Barang Lainnya",
+    "minor": "752",
+    "sample_cases": [
+      "PEKERJA DI USAHA REPARASI KURSI MILIK ORANG LAIN"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "7549",
+    "title": "PEKERJA PENGOLAHAN LAINNYA YTDL",
+    "major": {
+      "code": "7",
+      "name": "Pekerja Pengolahan, Kerajinan Dan YBTD",
+      "color": "#EC4899"
+    },
+    "submajor_code": "75",
+    "submajor_name": "Pekerja Pengolahan Makanan, Kayu, Pakaian dan Barang Lainnya",
+    "minor": "754",
+    "sample_cases": [
+      "BURUH KUPAS KELAPA BIJI",
+      "MEMBANTU ORANG TUAH DALAM JUAL BELI KOPRA",
+      "MEMBUAT DAN MENJUAL BATAKO",
+      "BURUH KERJA KELAPA",
+      "MEMPRODUKSI TEPUNG DARI KELAPA"
+    ],
+    "frequency": 19
+  },
+  {
+    "code": "8111",
+    "title": "PEKERJA TAMBANG DAN PEKERJA PENGGALIAN",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "81",
+    "submajor_name": "Operator Mesin dan Pabrik Stasioner",
+    "minor": "811",
+    "sample_cases": [
+      "MENGGALI,MENGAMBIL BATU REP DI LOKASI TAMBANG",
+      "PENGGALIAN EMAS"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "8112",
+    "title": "OPERATOR MESIN PENGOLAHAN BIJIH MINERAL DAN BATU",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "81",
+    "submajor_name": "Operator Mesin dan Pabrik Stasioner",
+    "minor": "811",
+    "sample_cases": [
+      "OPERATOR TAMBANG PT FREEPORT INDONESIA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "8114",
+    "title": "OPERATOR MESIN PENGOLAHAN SEMEN, BATU DAN MINERAL LAINNYA",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "81",
+    "submajor_name": "Operator Mesin dan Pabrik Stasioner",
+    "minor": "811",
+    "sample_cases": [
+      "MENJUAL BAHAN BANGUNAN BATAKO DAN PASIR DI TOKO MILIK SENDIRI"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "8172",
+    "title": "OPERATOR MESIN PENGOLAHAN KAYU",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "81",
+    "submajor_name": "Operator Mesin dan Pabrik Stasioner",
+    "minor": "817",
+    "sample_cases": [
+      "PERANGKAT DESA"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "8321",
+    "title": "PENGEMUDI SEPEDA MOTOR",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "83",
+    "submajor_name": "Pengemudi dan Operator Mesin Bergerak",
+    "minor": "832",
+    "sample_cases": [
+      "MENGEMUDI OJEK MOTOR",
+      "MENGEMUDI OJEK MOTOR,MENGANTAR PENUMPANG",
+      "PENAMBANG EMAS",
+      "DI SEWA MEMANJAT KELAPA MILIK ORANG",
+      "MEKANIK MOBIL"
+    ],
+    "frequency": 7
+  },
+  {
+    "code": "8322",
+    "title": "PENGEMUDI MOBIL, TAKSI DAN VAN",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "83",
+    "submajor_name": "Pengemudi dan Operator Mesin Bergerak",
+    "minor": "832",
+    "sample_cases": [
+      "SOPIR KENDARAAN KANTOR",
+      "SEWA HARI SOPIR MOBIL PRIBADI"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "8332",
+    "title": "PENGEMUDI TRUK BERAT DAN TRUK KONTAINER",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "83",
+    "submajor_name": "Pengemudi dan Operator Mesin Bergerak",
+    "minor": "833",
+    "sample_cases": [
+      "SOPIR ALAT BERAT DI PLTU"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "8341",
+    "title": "OPERATOR MESIN BERGERAK PERTANIAN DAN KEHUTANAN",
+    "major": {
+      "code": "8",
+      "name": "Operator Dan Perakit Mesin",
+      "color": "#8B5CF6"
+    },
+    "submajor_code": "83",
+    "submajor_name": "Pengemudi dan Operator Mesin Bergerak",
+    "minor": "834",
+    "sample_cases": [
+      "BURUH HARIAN MEMBERSIKAN DI KEBUN NILAM"
+    ],
+    "frequency": 0
+  },
+  {
+    "code": "9111",
+    "title": "TENAGA KEBERSIHAN DAN JURU BANTU RUMAHTANGGA",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "91",
+    "submajor_name": "Tenaga Kebersihan dan Pembantu Rumah Tangga",
+    "minor": "911",
+    "sample_cases": [
+      "MELAKUKAN PEKERJAAN ADMINISTRASI DI GEREJA"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "9112",
+    "title": "TENAGA KEBERSIHAN DAN JURU BANTU DI KANTOR, HOTEL, DAN TEMPAT LAINNYA",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "91",
+    "submajor_name": "Tenaga Kebersihan dan Pembantu Rumah Tangga",
+    "minor": "911",
+    "sample_cases": [
+      "CLEANING SERVICE DI KANTOR BPS MINSEL"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "9121",
+    "title": "TENAGA CUCI DAN SETRIKA DENGAN TANGAN",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "91",
+    "submajor_name": "Tenaga Kebersihan dan Pembantu Rumah Tangga",
+    "minor": "912",
+    "sample_cases": [
+      "KARYAWAN BAGIAN MENCUCI PIRING DI SPPG MBG",
+      "MENGUMPULKAN KELAPA DI KEBUN YANG TELAH DIPANJAT ORANG LAIN",
+      "BURUH HARIAN MENCUCI BAJU"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "9211",
+    "title": "BURUH PERTANIAN",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "92",
+    "submajor_name": "Buruh Pertanian, Kehutanan dan Perikanan",
+    "minor": "921",
+    "sample_cases": [
+      "DI SEWA MEMANJAT KELAPA MILIK ORANG",
+      "KULI BANGUNAN UNTUK MEMBUAT RUMAH HUNIAN PERMANEN MILIK ORANG LAIN",
+      "TANAM,PANEN,CANGKUL",
+      "MEMBERSIHKAN RUMPUT MENGGUNAKAN MESIN PARAS PADA TANAMAN KELAPA",
+      "MENANAM,PANEN NILAM"
+    ],
+    "frequency": 20
+  },
+  {
+    "code": "9311",
+    "title": "BURUH PERTAMBANGAN DAN PENGGALIAN",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "93",
+    "submajor_name": "Buruh Pertambangan, Konstruksi, Industri Pengolahan dan Transportasi",
+    "minor": "931",
+    "sample_cases": [
+      "MENGGALI MENGAMBIL BATU REP DI TAMBANG",
+      "BURUH MENJAGA TROMOL ATAU ALAT PEMBERSIH EMAS",
+      "PENAMBANG EMAS",
+      "MENGGALI,MENGAMBIL BATU REP DI LOKASI TAMBANG",
+      "PENAMBANG EMAS MILIK ORANG LAIN"
+    ],
+    "frequency": 8
+  },
+  {
+    "code": "9312",
+    "title": "BURUH TEKNIK SIPIL",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "93",
+    "submajor_name": "Buruh Pertambangan, Konstruksi, Industri Pengolahan dan Transportasi",
+    "minor": "931",
+    "sample_cases": [
+      "BURUH HARIAN DI PROYEK IRIGASI",
+      "PENGAWAS DI KONSTRUKSI JALAN"
+    ],
+    "frequency": 2
+  },
+  {
+    "code": "9313",
+    "title": "BURUH BANGUNAN",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "93",
+    "submajor_name": "Buruh Pertambangan, Konstruksi, Industri Pengolahan dan Transportasi",
+    "minor": "931",
+    "sample_cases": [
+      "BURUH BANGUNAN",
+      "KULI BANGUNAN UNTUK MEMBUAT RUMAH HUNIAN PERMANEN MILIK ORANG LAIN",
+      "TUAKANG BANGUNAN,MEMBUAT RUMAH,RENOFASI RUMAH",
+      "MEMBERSIHKAN RUMPUT PADA TANAMAN CENGKIH DAN KELAPA MENGGUNAKAN MESIN PARAS PADA PERKEBUNAN MILIK ORANG LAIN",
+      "DI SEWA MEMBANGUN RUMAH PERMANEN"
+    ],
+    "frequency": 4
+  },
+  {
+    "code": "9329",
+    "title": "BURUH INDUSTRI PENGOLAHAN YTDL",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "93",
+    "submajor_name": "Buruh Pertambangan, Konstruksi, Industri Pengolahan dan Transportasi",
+    "minor": "932",
+    "sample_cases": [
+      "BURUH TANI KOPRA MILIK ORANG",
+      "MEMBANTU ORANG TUA BEKERJA DI KEBUN KELAPA",
+      "MEMBERSIHKAN RUMPUT MENGGUNAKAN MESIN PARAS PADA TANAMAN KELAPA",
+      "BURUH PEKERJA KOPRA",
+      "MENJUAL KUE BASAH"
+    ],
+    "frequency": 9
+  },
+  {
+    "code": "9332",
+    "title": "PENGEMUDI KENDARAAN DAN PERALATAN YANG DITARIK HEWAN",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "93",
+    "submajor_name": "Buruh Pertambangan, Konstruksi, Industri Pengolahan dan Transportasi",
+    "minor": "933",
+    "sample_cases": [
+      "MENGANGKUT HASIL PANEN NILAM"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "9411",
+    "title": "ASISTEN JURU MASAK",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "94",
+    "submajor_name": "Asisten Penyiapan Makanan",
+    "minor": "941",
+    "sample_cases": [
+      "MEMBANTU IBU JUALAN MAKANAN MASAK DI RUMAH"
+    ],
+    "frequency": 1
+  },
+  {
+    "code": "9629",
+    "title": "PEKERJA KASAR YTDL",
+    "major": {
+      "code": "9",
+      "name": "Tenaga Kebersihan Dan Tenaga Kasar (Buruh)",
+      "color": "#EF4444"
+    },
+    "submajor_code": "96",
+    "submajor_name": "Pekerja Sampah dan Tenaga Kasar Lainnya",
+    "minor": "962",
+    "sample_cases": [
+      "MENCARI KELAPA BUTIR DI KEBUN ORANG"
+    ],
+    "frequency": 1
+  }
+]
