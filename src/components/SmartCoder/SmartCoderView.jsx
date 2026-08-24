@@ -77,7 +77,7 @@ const PRESET_EXAMPLES = [
   }
 ];
 
-export default function SmartCoderView() {
+export default function SmartCoderView({ liveCases }) {
   const [mode, setMode] = useState('standard'); // 'standard' (3 fields) | 'quick' (1 query)
   const [occtle, setOcctle] = useState('');
   const [occmtd, setOccmtd] = useState('');
@@ -89,11 +89,11 @@ export default function SmartCoderView() {
   // Compute recommendations
   const results = useMemo(() => {
     if (mode === 'standard') {
-      return matchKbliKbji({ occtle, occmtd, bidang });
+      return matchKbliKbji({ occtle, occmtd, bidang, cases: liveCases });
     } else {
-      return matchKbliKbji({ query: quickQuery });
+      return matchKbliKbji({ query: quickQuery, cases: liveCases });
     }
-  }, [mode, occtle, occmtd, bidang, quickQuery]);
+  }, [mode, occtle, occmtd, bidang, quickQuery, liveCases]);
 
   const topKbli = results.kbliRecommendations[0];
   const topKbji = results.kbjiRecommendations[0];

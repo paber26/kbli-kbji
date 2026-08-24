@@ -95,7 +95,7 @@ function calculateSimilarity(tokensA, tokensB) {
  * @param {Object} input - { occtle, occmtd, bidang, query }
  */
 export function matchKbliKbji(input) {
-  const { occtle = '', occmtd = '', bidang = '', query = '' } = input;
+  const { occtle = '', occmtd = '', bidang = '', query = '', cases = fieldCases } = input;
 
   const rawCombined = `${occtle} ${occmtd} ${bidang} ${query}`.trim();
   const queryTokens = tokenizeText(rawCombined);
@@ -112,7 +112,7 @@ export function matchKbliKbji(input) {
   }
 
   // 1. Match against Historical Field Cases
-  const scoredCases = fieldCases.map(fc => {
+  const scoredCases = (cases || fieldCases).map(fc => {
     const caseText = `${fc.mjj.occtle} ${fc.mjj.occmtd} ${fc.mjj.bidang}`;
     const caseTokens = tokenizeText(caseText);
     

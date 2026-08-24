@@ -3,20 +3,35 @@ import {
   Sparkles, 
   BookOpen, 
   Database, 
-  FileSpreadsheet, 
   BarChart3, 
+  ShieldCheck,
+  PlusCircle,
   Sun, 
-  Moon, 
-  CheckCircle2
+  Moon
 } from 'lucide-react';
 import analyticsSummary from '../data/analyticsSummary.json';
 
-export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) {
+export default function Header({ 
+  activeTab, 
+  setActiveTab, 
+  theme, 
+  toggleTheme, 
+  onOpenContribute, 
+  pendingCount = 0,
+  approvedCount = 234
+}) {
   const navItems = [
     { id: 'smart-coder', label: 'Asisten Koding', icon: Sparkles, badge: 'Cerdas' },
     { id: 'master-explorer', label: 'Katalog KBLI & KBJI', icon: BookOpen, count: `${analyticsSummary.unique_kbli}+` },
-    { id: 'field-database', label: 'Bank Data Minsel', icon: Database, count: analyticsSummary.total_cases },
-    { id: 'analytics', label: 'Statistik & Sebaran', icon: BarChart3 }
+    { id: 'field-database', label: 'Bank Data Minsel', icon: Database, count: approvedCount },
+    { id: 'analytics', label: 'Statistik & Sebaran', icon: BarChart3 },
+    { 
+      id: 'admin-moderation', 
+      label: 'Verifikasi Admin', 
+      icon: ShieldCheck, 
+      badge: pendingCount > 0 ? `${pendingCount} Menunggu` : null,
+      badgeColor: '#f59e0b'
+    }
   ];
 
   return (
@@ -58,7 +73,7 @@ export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) 
                     fontWeight: 700,
                     padding: '1px 6px',
                     borderRadius: '10px',
-                    background: isActive ? '#0284c7' : 'rgba(255,255,255,0.2)',
+                    background: item.badgeColor || (isActive ? '#0284c7' : 'rgba(255,255,255,0.2)'),
                     color: '#ffffff'
                   }}>
                     {item.badge}
@@ -78,28 +93,21 @@ export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) 
           })}
         </nav>
 
-        {/* Actions (Theme Toggle & Status) */}
+        {/* Actions */}
         <div className="header-actions">
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            fontSize: '0.78rem',
-            color: 'rgba(255,255,255,0.85)',
-            background: 'rgba(255,255,255,0.08)',
-            padding: '6px 12px',
-            borderRadius: 'var(--radius-full)',
-            border: '1px solid rgba(255,255,255,0.1)'
-          }}>
-            <span style={{
-              width: '8px',
-              height: '8px',
-              borderRadius: '50%',
-              backgroundColor: '#10b981',
-              boxShadow: '0 0 8px #10b981'
-            }}></span>
-            <span style={{ fontWeight: 600 }}>Offline Ready</span>
-          </div>
+          {/* Public Contribution Button */}
+          <button
+            onClick={onOpenContribute}
+            className="btn btn-primary"
+            style={{
+              fontSize: '0.82rem',
+              padding: '7px 14px',
+              background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+              boxShadow: '0 0 15px rgba(16, 185, 129, 0.4)'
+            }}
+          >
+            <PlusCircle size={15} /> + Kontribusi Data
+          </button>
 
           <button 
             onClick={toggleTheme} 

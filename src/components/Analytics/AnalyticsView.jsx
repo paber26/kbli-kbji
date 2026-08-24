@@ -12,11 +12,12 @@ import {
 } from 'lucide-react';
 import analyticsSummary from '../../data/analyticsSummary.json';
 
-export default function AnalyticsView() {
+export default function AnalyticsView({ liveCases }) {
+  const casesData = liveCases || [];
   const topKbli = analyticsSummary.top_kbli || [];
   const topKbji = analyticsSummary.top_kbji || [];
   const categoryDist = analyticsSummary.category_distribution || {};
-  const totalCases = analyticsSummary.total_cases || 234;
+  const totalCases = casesData.length > 0 ? casesData.length : (analyticsSummary.total_cases || 234);
 
   const maxKbliCount = topKbli.length > 0 ? topKbli[0].count : 1;
   const maxKbjiCount = topKbji.length > 0 ? topKbji[0].count : 1;

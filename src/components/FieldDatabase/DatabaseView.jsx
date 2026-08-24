@@ -13,7 +13,8 @@ import {
 import fieldCases from '../../data/fieldCases.json';
 import CaseDetailModal from './CaseDetailModal';
 
-export default function DatabaseView() {
+export default function DatabaseView({ liveCases }) {
+  const casesData = liveCases || fieldCases;
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('ALL'); // 'ALL' | 'HAS_SJJ' | 'HAS_MPK'
   const [sectorFilter, setSectorFilter] = useState('ALL');
@@ -23,7 +24,7 @@ export default function DatabaseView() {
 
   // Filtered cases
   const filteredCases = useMemo(() => {
-    let list = fieldCases;
+    let list = casesData;
 
     if (statusFilter === 'HAS_SJJ') {
       list = list.filter(c => c.sjj !== null);
