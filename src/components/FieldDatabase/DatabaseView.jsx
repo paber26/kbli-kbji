@@ -325,25 +325,39 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
               type="text"
               className="text-input"
               style={{ paddingLeft: '38px', fontSize: '0.88rem' }}
-              placeholder="Cari uraian, komoditas, tempat kerja, kode..."
+              placeholder="Cari uraian (misal: warung, kelapa, ojek), komoditas, kode..."
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
             />
           </div>
 
-          <select
-            className="select-input"
-            value={sectorFilter}
-            onChange={(e) => { setSectorFilter(e.target.value); setCurrentPage(1); }}
-          >
-            <option value="ALL">Semua Sektor Lapangan Usaha</option>
-            <option value="01">Sektor Pertanian, Perkebunan & Peternakan (01)</option>
-            <option value="03">Sektor Perikanan & Kelautan (03)</option>
-            <option value="10">Sektor Industri Pengolahan Makanan (10)</option>
-            <option value="47">Sektor Perdagangan Eceran / Warung (47)</option>
-            <option value="49">Sektor Transportasi Darat / Ojek (49)</option>
-            <option value="56">Sektor Penyediaan Makanan & Minuman (56)</option>
-          </select>
+          <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+            <select
+              className="select-input"
+              value={sectorFilter}
+              onChange={(e) => { setSectorFilter(e.target.value); setCurrentPage(1); }}
+              style={{ flex: 1 }}
+            >
+              <option value="ALL">🌐 Semua Sektor Lapangan Usaha</option>
+              <option value="01">🌾 Sektor Pertanian, Perkebunan & Peternakan (01)</option>
+              <option value="03">🐟 Sektor Perikanan & Kelautan (03)</option>
+              <option value="10">🏭 Sektor Industri Pengolahan Makanan (10)</option>
+              <option value="47">🛒 Sektor Perdagangan Eceran / Warung Sembako (47)</option>
+              <option value="49">🛵 Sektor Transportasi Darat / Ojek (49)</option>
+              <option value="56">🍲 Sektor Penyediaan Makanan & Minuman / Warung Makan (56)</option>
+            </select>
+
+            {sectorFilter !== 'ALL' && (
+              <button
+                onClick={() => setSectorFilter('ALL')}
+                className="btn btn-secondary"
+                style={{ fontSize: '0.78rem', padding: '8px 12px', whiteSpace: 'nowrap' }}
+                title="Tampilkan Semua Sektor"
+              >
+                ✕ Reset Sektor
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -521,8 +535,27 @@ export default function DatabaseView({ liveCases, onDataUpdated, onOpenAddModal 
                 ))
               ) : (
                 <tr>
-                  <td colSpan={5} style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
-                    Tidak ada data dalam kategori ini.
+                  <td colSpan={5} style={{ padding: '48px 20px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                    <div style={{ maxWidth: '420px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+                      <Search size={32} style={{ opacity: 0.3 }} />
+                      <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text-main)' }}>
+                        {searchQuery ? `Tidak ada data '${searchQuery}' pada filter ini.` : 'Tidak ada data dalam kategori ini.'}
+                      </div>
+                      {sectorFilter !== 'ALL' && (
+                        <div style={{ fontSize: '0.82rem' }}>
+                          Pencarian Anda saat ini dibatasi oleh pilihan sektor.
+                          <div style={{ marginTop: '8px' }}>
+                            <button
+                              onClick={() => setSectorFilter('ALL')}
+                              className="btn btn-primary"
+                              style={{ fontSize: '0.8rem', padding: '6px 14px' }}
+                            >
+                              🌐 Cari di Semua Sektor Lapangan Usaha
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </td>
                 </tr>
               )}
