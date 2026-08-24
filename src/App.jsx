@@ -2,10 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import SmartCoderView from './components/SmartCoder/SmartCoderView';
-import ExplorerView from './components/Explorer/ExplorerView';
 import DatabaseView from './components/FieldDatabase/DatabaseView';
-import AnalyticsView from './components/Analytics/AnalyticsView';
-import AdminModerationView from './components/Admin/AdminModerationView';
 import ContributeModal from './components/Contribution/ContributeModal';
 import { fetchApprovedCases, fetchStats } from './utils/api';
 import localFieldCases from './data/fieldCases.json';
@@ -51,7 +48,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Header with NavLink Routing */}
+      {/* Streamlined Header: 2 Menu Utama */}
       <Header
         theme={theme}
         toggleTheme={toggleTheme}
@@ -60,34 +57,37 @@ export default function App() {
         approvedCount={liveCases.length}
       />
 
-      {/* Main Content with Route Matching */}
+      {/* 2 Focused Routes */}
       <main className="main-content">
         <Routes>
           <Route path="/" element={<SmartCoderView liveCases={liveCases} />} />
-          <Route path="/katalog" element={<ExplorerView />} />
-          <Route path="/bank-data" element={<DatabaseView liveCases={liveCases} />} />
-          <Route path="/statistik" element={<AnalyticsView liveCases={liveCases} />} />
           <Route 
-            path="/admin" 
-            element={<AdminModerationView onCaseApproved={loadData} />} 
+            path="/bank-data" 
+            element={
+              <DatabaseView 
+                liveCases={liveCases} 
+                onDataUpdated={loadData} 
+                onOpenAddModal={() => setIsContributeOpen(true)} 
+              />
+            } 
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 
-      {/* Public Contribution Modal */}
+      {/* Quick Add / Contribution Modal */}
       <ContributeModal
         isOpen={isContributeOpen}
         onClose={() => setIsContributeOpen(false)}
         onSuccess={loadData}
       />
 
-      {/* Footer */}
+      {/* Clean Footer */}
       <footer style={{
         marginTop: 'auto',
         borderTop: '1px solid var(--border-subtle)',
         background: 'var(--bg-card)',
-        padding: '24px 20px',
+        padding: '20px',
         textAlign: 'center',
         fontSize: '0.82rem',
         color: 'var(--text-muted)'
@@ -97,10 +97,7 @@ export default function App() {
             <strong>SI-KODING</strong> • Sistem Klasifikasi & Pencarian KBLI 2025 & KBJI 2014
           </div>
           <div>
-            Badan Pusat Statistik Kabupaten Minahasa Selatan (Provinsi Sulawesi Utara)
-          </div>
-          <div>
-            Database: SQLite • Routing: React Router
+            Badan Pusat Statistik Kabupaten Minahasa Selatan
           </div>
         </div>
       </footer>
