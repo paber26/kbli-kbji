@@ -174,7 +174,7 @@ export default function SmartCoderView({ liveCases }) {
         {/* Preset Sample Pills */}
         <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
           <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            ⚡ Contoh Kasus Nyata Kuesioner Survei BPS:
+            Contoh Kasus yang Sering Ada:
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
             {PRESET_EXAMPLES.map((preset, idx) => (
